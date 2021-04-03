@@ -41,7 +41,6 @@ namespace CreateNav
                 if (article == null) continue;
                 UpdateArticle(Path.Combine(absolutePath, file), article);
                 articles.Add(article);
-
             }
 
             WriteCategoryMarkdownFile();
@@ -60,7 +59,7 @@ namespace CreateNav
         private string CreateArticleTagLine(Article article, string prefix, string path, List<string> elements, Dictionary<string, List<Article>> globalElementList)
         {
             if (elements == null || elements.Count == 0) return null;
-            string line = $"_{prefix}_:";
+            string line = $"_{prefix}_: ";
             bool isFirstElement = true;
             foreach (var element in elements)
             {
@@ -72,61 +71,55 @@ namespace CreateNav
                 globalElementList[elementLower].Add(article);
             }
             return line;
-
         }
 
         private void UpdateArticle(string path, Article article)
         {
-            if (article.ModifyVersion == _currentVersion) return;
-
-
+            bool updateContents = article.ModifyVersion != _currentVersion;
             var newFile = new List<string>();
 
+            var content = File.ReadAllLines(path);
+            bool inHeader = false;
+            bool afterHeader = false;
+            bool finished = false;
 
-            
+            foreach (var line in content)
             {
+                if (!line.StartsWith("createnav:")) newFile.Add(line);
 
-                var content = File.ReadAllLines(path);
-                bool inHeader = false;
-                bool afterHeader = false;
-                bool finished = false;
-
-                foreach (var line in content)
+                if (!inHeader && !afterHeader && line == "---")
                 {
-                    newFile.Add(line);
-                    if (!inHeader && !afterHeader && line == "---")
-                    {
-                        inHeader = true;
-                    }
-                    else if (inHeader && !afterHeader && line == "---")
-                    {
-                        afterHeader = true;
-                        inHeader = false;
-                    }
-                    if (!afterHeader || finished) continue;
+                    inHeader = true;
+                    newFile.Add($"createnav: \"{_currentVersion}\"");
+                }
+                else if (inHeader && !afterHeader && line == "---")
+                {
+                    afterHeader = true;
+                    inHeader = false;
+                }
+                if (!afterHeader || finished) continue;
 
-                    newFile.Add($"# {article.Title}");
-                    newFile.Add($"_Published:_ {article.Published}");
+                newFile.Add($"# {article.Title}");
+                newFile.Add($"_Published:_ {article.Published}");
+                newFile.Add(string.Empty);
+                string categoryLine = CreateArticleTagLine(article, "Categories", "categories", article.Categories, _categories);
+                string tagLine = CreateArticleTagLine(article, "Tags", "tags", article.Tags, _tags);
+
+                if (categoryLine != null)
+                {
+                    newFile.Add(categoryLine);
                     newFile.Add(string.Empty);
-                    string categoryLine = CreateArticleTagLine(article, "Categories", "categories", article.Categories, _categories);
-                    string tagLine = CreateArticleTagLine(article, "Tags", "tags", article.Tags, _tags);
-
-                    if (categoryLine != null)
-                    {
-                        newFile.Add(categoryLine);
-                        newFile.Add(string.Empty);
-                    }
-                    if (tagLine != null)
-                    {
-                        newFile.Add(tagLine);
-                        newFile.Add(string.Empty);
-                    }
-
-                    finished = true;
+                }
+                if (tagLine != null)
+                {
+                    newFile.Add(tagLine);
+                    newFile.Add(string.Empty);
                 }
 
-                File.WriteAllLines(path, newFile);
+                finished = true;
             }
+
+            if (updateContents) File.WriteAllLines(path, newFile);
         }
 
         private void WriteCategoryMarkdownFile()

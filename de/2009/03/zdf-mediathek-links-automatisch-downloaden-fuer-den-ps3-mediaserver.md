@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver"
 date: "2009-03-25"
 categories: 
@@ -12,9 +13,9 @@ tags:
 # ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver
 _Published:_ 25.03.2009 00:00:00
 
-_Categories_:[anwendungen](/dotnetwork/de/categories#anwendungen) - [c](/dotnetwork/de/categories#c) - [windows](/dotnetwork/de/categories#windows)
+_Categories_: [anwendungen](/dotnetwork/de/categories#anwendungen) - [c](/dotnetwork/de/categories#c) - [windows](/dotnetwork/de/categories#windows)
 
-_Tags_:[mediathek](/dotnetwork/de/tags#mediathek) - [ps3](/dotnetwork/de/tags#ps3)
+_Tags_: [mediathek](/dotnetwork/de/tags#mediathek) - [ps3](/dotnetwork/de/tags#ps3)
 
 
 Ich habe es ja bereits angedroht: Das Downloadtool für die Mediathek ist fertig.  Das Ganze ist noch eine Beta-Version, die Hilfe fehlt beispielsweise noch völlig.  Die Bedienung sollte aber relativ eingängig sein, also kann schon gerne damit rumgespielt werden.

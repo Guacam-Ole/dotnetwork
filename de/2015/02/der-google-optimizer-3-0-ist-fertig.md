@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Der Google+ - Optimizer 3.0 ist fertig!"
 date: "2015-02-22"
 categories: 
@@ -12,9 +13,9 @@ tags:
 # Der Google+ - Optimizer 3.0 ist fertig!
 _Published:_ 22.02.2015 00:00:00
 
-_Categories_:[anwendungen](/dotnetwork/de/categories#anwendungen) - [javascript-programmierung](/dotnetwork/de/categories#javascript-programmierung) - [jquery-programmierung](/dotnetwork/de/categories#jquery-programmierung)
+_Categories_: [anwendungen](/dotnetwork/de/categories#anwendungen) - [javascript-programmierung](/dotnetwork/de/categories#javascript-programmierung) - [jquery-programmierung](/dotnetwork/de/categories#jquery-programmierung)
 
-_Tags_:[chrome-extensions](/dotnetwork/de/tags#chrome-extensions) - [optimizer](/dotnetwork/de/tags#optimizer)
+_Tags_: [chrome-extensions](/dotnetwork/de/tags#chrome-extensions) - [optimizer](/dotnetwork/de/tags#optimizer)
 
 
 Ja. Endlich ist es soweit. Version 3.0 wird auf die Menschheit (also Euch :) ) losgelassen. Die wesentlichen Änderungen zur 2er-Version im Überblick:
