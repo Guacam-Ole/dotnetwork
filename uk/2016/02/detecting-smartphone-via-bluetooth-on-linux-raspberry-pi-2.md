@@ -18,8 +18,10 @@ First of all you need a Bluetooth USB dongle. I buyed the Logilink BT00015 (avai
 
 Before installing drivers it is always a good idea to update everything:
 
+```
 sudo apt-get update
- sudo apt-get upgrade
+sudo apt-get upgrade
+```
 
 Then install the libraries needed for bluetooth
 
@@ -27,12 +29,16 @@ sudo apt-get install --no-install-recommends bluetooth
 
 I received an error that some dependencies could not be resolved. I fixed that by entering the following commands:
 
+```
 sudo dpkg --configure -a
- sudo apt-get install -f
+sudo apt-get install -f
+```
 
 Now insert the USB dongle and restart the raspberry
 
+```
 sudo shutdown -r now
+```
 
 To check if the USB-dongle is detected,  enter the following command:
 
@@ -42,10 +48,12 @@ This lists all USB devices. There should be one offering Bluetooth - services
 
 Now lets check if the Bluetooth itself works:
 
+```
 /etc/init.d/bluetooth status
+```
 
 The response should now contain the word "Running":
-
+```
 pi@raspberrypi:~ $ /etc/init.d/bluetooth status
 ● bluetooth.service - Bluetooth service
  Loaded: loaded (/lib/systemd/system/bluetooth.service; enabled)
@@ -55,26 +63,29 @@ pi@raspberrypi:~ $ /etc/init.d/bluetooth status
  Status: "Running"
  CGroup: /system.slice/bluetooth.service
  └─7841 /usr/lib/bluetooth/bluetoothd
+```
 
 Now it's time to check for devices. Do nothing with your phone right now and enter:
-
+```
 hcitool scan
+```
 
 This should display all Bluetooth-devices in Range. As you haven't done anything with your phone yet it should not be displayed there. The output should be something like this:
 
+```
 Scanning ...
  7C:2F:BE:EF:FA:CE Ole
  00:04:BE:EF:FA:CE SHIELD
  B8:86:BE:EF:FA:CE Fette Glotze
  88:53:BE:EF:FA:CE TOMATO-PC
  48:44:BE:EF:FA:CE TVBluetooth
-
+```
  
 
 (I modified the MAC addresses. I am not absolutely sure if anyone could do evil things using the MACs, but I prefer not to find that out :) )
 
 Now put your phone into discovery mode. On Android Marshmallow you just have to enter your Bluetooth-settings for this. Then re-scan your devices. There should be one more, now:
-
+```
 hcitool scan
 
 7C:2F:BE:EF:FA:CE Ole
@@ -84,30 +95,36 @@ B8:86:BE:EF:FA:CE Fette Glotze
 48:44:BE:EF:FA:CE TVBluetooth
 
 F8:95:C7:H0:0H:0H G4
+```
 
 Now just note your Mac-Address. We will **not** pair our device. That takes a few steps and additional packages and additional problems. Pairing is not needed once we know the mac-address.
 
 Now we cam just check the presence by using the info command. Simply leave your Bluetooth-settings on the phone and enter
-
- sudo hcitool info F8:95:C7:H0:0H:0H
+```
+sudo hcitool info F8:95:C7:H0:0H:0H
+```
 
 Event though your phone isn't in discovery-mode anymore you will get some status information like the device name:
-
+```
 Requesting information ...
  BD Address: F8:95:C7:H0:0H:0H
  Device Name: G4
  LMP Version: 4.1 (0x7) LMP Subversion: 0x6109
  Manufacturer: Broadcom Corporation (15)
+```
 
 if you turn off Bluetooth on your phone and re-enter that command you will receive a different response:
 
+```
 Requesting information ...
 Can't create connection: Input/output error
+```
 
 So that's it. Just use the good old grep in your bash-script to check whether the phone is there or not:
-
+```
 if hcitool info F8:95:C7:H0:0H:0H | grep -q 'Device Name'; then
  // Do whatever you like if you found it
 fi
+```
 
 Again: Have fun :)
