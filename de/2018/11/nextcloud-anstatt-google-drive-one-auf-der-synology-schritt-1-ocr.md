@@ -59,7 +59,9 @@ Die Felder $renamerules und $tagrules sollte man anpassen, bzw. einfach leeren, 
 
 zum Testen kann man nun am Besten
 
+```
 php FileBasedMiniDMS.php -d -t >> ocr.log 2>&1
+```
 
 aufrufen. Das "tut so", als würde es alle Dokumente Scannen und loggt die Ausgabe. Wenn nichts gescanned wird, zusätzlich mit "-o" prüfen. Tauchen jetzt die Dateien auf, ist der Wert von $matchWithoutOCR nicht in Ordnung.
 
