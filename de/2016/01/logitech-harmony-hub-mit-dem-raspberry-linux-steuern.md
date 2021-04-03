@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Logitech Harmony Hub mit dem Raspberry / Linux steuern"
 date: "2016-01-15"
 categories: 
@@ -9,6 +10,13 @@ tags:
   - "logitech"
   - "raspberry-pi-de"
 ---
+# Logitech Harmony Hub mit dem Raspberry / Linux steuern
+_Published:_ 15.01.2016 00:00:00
+
+_Categories_: [linux](/dotnetwork/de/categories#linux) - [os](/dotnetwork/de/categories#os)
+
+_Tags_: [home-automation-de](/dotnetwork/de/tags#home-automation-de) - [logitech](/dotnetwork/de/tags#logitech) - [raspberry-pi-de](/dotnetwork/de/tags#raspberry-pi-de)
+
 
 Meine Überwachungskamera [zeichnet nun also alles auf, wenn ich weg bin](http://dotnet.work/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren/), die LEDs [gehen korrekt an und aus](http://dotnet.work/2016/01/leds-einer-ueberwachungskamera-per-linux-ein-und-ausschalten/). Aber was ist, wenn der Fernseher läuft? Es soll ja Leute geben, die vergessen, ihn auszuschalten. Auch dafür gibt es eine Lösung, denn wenn eine Harmony Hub - Fernbedienung vorhanden ist, lässt sie sich über das kleine, aber feine Tool "HarmonyHubControl" fernsteuern.
 

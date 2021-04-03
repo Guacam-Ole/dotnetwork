@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Truncate für Sharepoint-Listen"
 date: "2011-11-14"
 categories: 
@@ -9,6 +10,13 @@ tags:
   - "sharepoint"
   - "splist"
 ---
+# Truncate für Sharepoint-Listen
+_Published:_ 14.11.2011 00:00:00
+
+_Categories_: [c](/dotnetwork/de/categories#c) - [programmierung](/dotnetwork/de/categories#programmierung) - [sharepoint](/dotnetwork/de/categories#sharepoint)
+
+_Tags_: [sharepoint](/dotnetwork/de/tags#sharepoint) - [splist](/dotnetwork/de/tags#splist)
+
 
 Wir alle wissen, dass einige elementare SQL-Tasks in SharePoint schlicht und einfach nicht funktionieren. Eines dieser Dinge ist das leeren von Listen. Das löschen einzelner Zeilen dauert eine Ewigkeit.
 

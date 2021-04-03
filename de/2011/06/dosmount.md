@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "DosMount"
 date: "2011-06-18"
 categories: 
@@ -7,6 +8,13 @@ tags:
   - "dos"
   - "ps3"
 ---
+# DosMount
+_Published:_ 18.06.2011 00:00:00
+
+_Categories_: [linux](/dotnetwork/de/categories#linux)
+
+_Tags_: [dos](/dotnetwork/de/tags#dos) - [ps3](/dotnetwork/de/tags#ps3)
+
 
 Ich habe ein Paket für den DOS-Emulator DOsBox für die PS3 erstellt um leicht und komfortabel alte DOS-Games oder was auch immer auf der PS3 zu spielen.
 

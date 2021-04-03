@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren"
 date: "2016-12-14"
 categories: 
@@ -12,6 +13,13 @@ tags:
   - "sharepoint2016-de"
   - "visual-studio"
 ---
+# Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren
+_Published:_ 14.12.2016 00:00:00
+
+_Categories_: [c](/dotnetwork/de/categories#c) - [sharepoint](/dotnetwork/de/categories#sharepoint)
+
+_Tags_: [csom-de](/dotnetwork/de/tags#csom-de) - [office365-de](/dotnetwork/de/tags#office365-de) - [sharepoint](/dotnetwork/de/tags#sharepoint) - [sharepoint2013-de](/dotnetwork/de/tags#sharepoint2013-de) - [sharepoint2016-de](/dotnetwork/de/tags#sharepoint2016-de) - [visual-studio](/dotnetwork/de/tags#visual-studio)
+
 
 Worum geht es überhaupt?
 

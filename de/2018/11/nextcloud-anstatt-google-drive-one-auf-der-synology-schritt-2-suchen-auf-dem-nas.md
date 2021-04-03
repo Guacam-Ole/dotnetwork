@@ -1,9 +1,15 @@
 ---
+createnav: "0.0.1"
 title: "Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS"
 date: "2018-11-07"
 categories: 
   - "allgemein"
 ---
+# Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS
+_Published:_ 07.11.2018 00:00:00
+
+_Categories_: [allgemein](/dotnetwork/de/categories#allgemein)
+
 
 Wenn das OCR erfolgreich gelaufen ist, kann man bereits auf dem Synology direkt nach den Inhalten suchen. Dafür muss dem NAS aber mitgeteilt werden, dass die entsprechenden Verzeichnisse indiziert werden müssen. Die Indizierung geht übrigens auch bei ein paar tausend PDFs sehr schnell.
 
