@@ -6,9 +6,13 @@ Welcome to the personal (nerdy) blog from Ole Albers
 
 In this blog i write down some coding solution I found and maybe some other stuff, too. 
 
-J
+## [Archive](/dotnetwork/en) | [Categories](/dotnetwork/en/categories) | [Tags](/dotnetwork/en/tags)
 
-_(Hinweis: Es gibt ein paar **alte** Beiträge auf Deutsch, ich habe mich aber entschieden nur noch einspraching zu bloggen. Hier findet sie im (Archiv/Deutsch))_
+
+
+
+_(Hinweis: Es gibt ein paar **alte** Beiträge auf Deutsch, ich habe mich aber entschieden nur noch einspraching zu bloggen._
+[Deutsche Artikel (veraltet)](/dotnetworK/de)
 
 
 ## About me
@@ -18,16 +22,17 @@ I am a "quiddje" (try to google **that** :) ) from Hamburg, Germany. I write .NE
 
 
 ### Contact me
-- Don't
+- Don't!
+ 
 Just kidding. If I wrote something completely wrong simply create an issue or use one of the following URLs to find out
  
-### More about me (external)
+### More about me (external links)
 
-- [x] Resume, current employer and all the employers before that were brave enough to work with me: ()LinkedId
-- [ ] My StackOverflow-Page: ()SO
-- [ ] My Google+ - Page: (Just kidding. It has been a while but I still miss it)
-- [ ] The Blog "Blathering" (german)  - A weekly podcast about nerdy stuff and Hamburg and everything inbetween
-- [ ] FaceBook () seriuos
+- [x] Resume, current employer and all the employers before that were brave enough to work with me on [LinkedId](https://www.linkedin.com/in/derbysieger/)
+- [x] My [StackOverflow](https://stackoverflow.com/users/680026) - site
+- [x] My Google+ - Page: (Just kidding. It has been a while but I still miss it)
+- [x] The Podcast [Blathering](https://blathering.de) (german)  - A weekly podcast about nerdy stuff and Hamburg and everything inbetween
+- [x] [FaceBook](/pix/serious.gif)
 
 
 ### Things you don't find there
