@@ -15,7 +15,7 @@ tags:
   - "sharepoint2016"
 ---
 
-\[bs\_lead\]What the fuzz is this about?\[/bs\_lead\]
+What the fuzz is this about?
 
 I am not absolutely sure if I am the first one who did this, but it seems at least noone else wrote it down until now. :) We hat a customer who liked our Office365 Provider-Hosted App "Mydea", but wanted us to install that on his SharePoint 2013 - Installation. In Germany a lot of companies do not trust the cloud. So we had three options:
 
@@ -98,7 +98,7 @@ You can now diff your csproj - files before and after. Or simply believe my word
 The more interesting detail is the Reference to _"Microsoft.Online.SharePoint.Client.Tenant"_. The Office365 - Version uses Version 16.x and the OnPrem - Version uses 15.x. This is absolutely something we have to care about.
 
 Luckily, the csProj allows some conditions. So create the following new lines:
-
+```
 <ItemGroup Condition="'$(Configuration)'=='Debug.OnPrem' Or '$(Configuration)'=='Release.OnPrem'">
 <Reference Include="Microsoft.Online.SharePoint.Client.Tenant, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
 <HintPath>..\\packages\\SharePointPnPCore2013.2.9.1611.0\\lib\\net45\\Microsoft.Online.SharePoint.Client.Tenant.dll</HintPath>
@@ -121,6 +121,7 @@ Luckily, the csProj allows some conditions. So create the following new lines:
 <Private>True</Private>
 </Reference>
 </ItemGroup>
+```
 
 **Do not just copy/paste the content from here!** Use the lines from within **your** csProj-File instead! Versions will change over time. And when you read these lines, my version used might already be outdated.
 
@@ -128,14 +129,14 @@ As a last step, remove the original lines from within the main _ItemGroup_ conta
 
 Well done. You should now try to rebuild your solution on all your four Build configurations, where the OnPrem-Configurations should create a _Microsoft.Online.SharePoint.Client.Tenant.dll_ with Version 15 in your bin-directory and the Office365-Version should create a V16-dll. If you encounter a problem try to unload and reload the projects.
 
-\[bs\_label type="info"\]Please be advised: I am not sure what happens if you update one of those two Nuget-Packages. You might have to modify your csproj-file again\[/bs\_label\]
+Please be advised: I am not sure what happens if you update one of those two Nuget-Packages. You might have to modify your csproj-file again
 
 ##### Web.Config
 
 Now its time to modify your Web.Configs.
 
 Add the following lines just before the closing _"</configuration>"_ section into your \*.OnPrem.config - files:
-
+```
 <runtime>
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
 <dependentAssembly xdt:Transform="Replace" xdt:Locator="Condition(./\_defaultNamespace:assemblyIdentity/@name='Microsoft.Online.SharePoint.Client.Tenant')">
@@ -144,11 +145,12 @@ Add the following lines just before the closing _"</configuration>"_ section int
 </dependentAssembly>
 </assemblyBinding>
 </runtime>
+```
 
 As before: If at time of reading, the most current version is not 15.0, but 15.1 or higher replace the version numbers instead.
 
 Now it is time to modify your "normal" Configs for Debug and Release
-
+```
 <runtime>
 <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
 <dependentAssembly xdt:Transform="Replace" xdt:Locator="Condition(./\_defaultNamespace:assemblyIdentity/@name='Microsoft.Online.SharePoint.Client.Tenant')">
@@ -157,22 +159,24 @@ Now it is time to modify your "normal" Configs for Debug and Release
 </dependentAssembly>
 </assemblyBinding>
 </runtime>
+```
 
 This is not 100% necessary at this time as these values should already be in the main Web.Config, but this makes sure it still works if that changes. Again: Check the version number.
 
 ### Authentication
 
 Your O365 - Config Files should still contain something like this:
-
+```
 <appSettings>
 <add key="ClientValidationEnabled" value="true" />
 <add key="UnobtrusiveJavaScriptEnabled" value="true" />
 <add key="ClientId" value="aaaaaaaa-beef-face-bbbb-cchcchcchcch" />
 <add key="ClientSecret" value="lsdschnabbeldiwuppsfkjashriuae=" />
 </appSettings>
+```
 
 now your OnPrem-configs looks a little bit different:
-
+```
 <appSettings>
 <add key="ClientValidationEnabled" value="true" />
 <add key="UnobtrusiveJavaScriptEnabled" value="true" />
@@ -181,6 +185,7 @@ now your OnPrem-configs looks a little bit different:
 <add key="ClientSigningCertificatePassword" value="p@ssw0rd" />
 <add key="IssuerId" value="bbbbbbbb-beef-face-bbbb-cchcchcchcch" />
 </appSettings>
+```
 
 The main difference here is that you don't just use a ClientId/ClientSecret - Combination for an OnPrem-Installation but have to use a Certificate. I will not describe here how to obtain it. It is just the "normal" OnPrem-procedure for provider hosted apps. Also be aware that the IssuerId is **not** the ClientId.
 
@@ -196,6 +201,7 @@ But if you have any console application (like Azure WebJobs) you have to modify 
 
 First: Create your Config Files manually. So select Add - New Item and select "_Application Config File_". Name it _App.OnPrem.config_. Now open the csProj-File with Notepad. Look for an _ItemGroup_ containing the App.Config. There already should be an _App.Debug.config_ and _App.Release.config_ with a "_DependentUpon_" - Attribute. Just copy that attribute to your newly created files. So that you end with something like this:
 
+```
 <ItemGroup>
 <None Include="App.config" />
 <None Include="App.Debug.config">
@@ -211,6 +217,7 @@ First: Create your Config Files manually. So select Add - New Item and select "_
 <DependentUpon>App.config</DependentUpon>
 </None>
 </ItemGroup>
+```
 
 After that all your OnPrem-Configs should be displayed as children from App.Config in Visual Studio (2015). Now transform should work. You can check your csproj - File. If there is something like _<UsingTask TaskName="TransformXml" ../>_ in it you are ready to go. If not, you are probably using an older Visual Studio version. I would not advise it, but you can go with it, but have to do some extra steps: [XDT Transforms for older VS Versions](http://harrewijnen.net/app-config-xdt-transforms/)
 
@@ -232,10 +239,12 @@ The (nearly) final step is to put the right SharePoint-URL to your AddIn-Project
 
 The URL is stored in the user-settings instead of the project settings. But you can use the same magic to make a conditional path there. Open the file YourApp.csproj.user and add the condition to the "SharePointSiteUrl" - entry:
 
+```
 <PropertyGroup>
 <SharePointSiteUrl Condition="'$(Configuration)'=='Debug.OnPrem' Or '$(Configuration)'=='Release.OnPrem'">http://myDevMachine:10000/sites/Dev\_Ole/</SharePointSiteUrl>
 <SharePointSiteUrl Condition="'$(Configuration)'=='Debug' Or '$(Configuration)'=='Release'">https://my365AppName.sharepoint.com/sites/dev-ole/</SharePointSiteUrl>
 </PropertyGroup>
+```
 
 IF you want you can also simply delete the user-file and put these values into your main .csproj. Sadly this cannot be loaded "on the fly" by switching your Build configuration . You have to unload and reload your project for this setting to be re-read. This is no issue when deploying your solution using an automated build (like tfs online), but while debugging locally.
 
@@ -243,8 +252,10 @@ IF you want you can also simply delete the user-file and put these values into y
 
 The csproj - file contains an entry called "_TargetOfficeVersion_" which should contain the value "16.1". Just like before we need to modify this using conditional values.
 
+```
 <TargetOfficeVersion Condition="'$(Configuration)'=='Debug' Or '$(Configuration)'=='Release'">16.1</TargetOfficeVersion>
 <TargetOfficeVersion Condition="'$(Configuration)'=='Debug.OnPrem' Or '$(Configuration)'=='Release.OnPrem'">15.0</TargetOfficeVersion>
+```
 
 You can validate this setting while selecting the properties of the project and display the "Sharepoint"-Tab. Under "Target Sharepoint version" it should say "SharePoint 2013" if 15.0 is used or "SharePoint Online" if 16.1 is used.
 
@@ -252,8 +263,10 @@ You can validate this setting while selecting the properties of the project and 
 
 Office365 uses OAuth for Authentication. For SharePoint 2013 you have to use Windows Authentication instead. As I wrote before: There are a few documents out there explaining the Certificate-Part. But you also have to tell your project to use Windows Authentication. Again we use the same conditions like before, but this time use it for the IISExpressAuth:
 
+```
 <IISExpressWindowsAuthentication Condition="'$(Configuration)'=='Debug.OnPrem' Or '$(Configuration)'=='Release.OnPrem'">enabled</IISExpressWindowsAuthentication>
 <IISExpressWindowsAuthentication Condition="'$(Configuration)'=='Debug' Or '$(Configuration)'=='Release'">disabled</IISExpressWindowsAuthentication>
+```
 
 ##### AppManifest
 
@@ -263,6 +276,7 @@ In that file change the "SharePointMinVersion" from _16.0.0.0_ to _15.0.0.0_ in 
 
 Now it is finally time again to modify the csproj - File. You should be used to it by now :)
 
+```
 <ItemGroup Condition="'$(Configuration)'=='Debug.OnPrem' Or '$(Configuration)'=='Release.OnPrem'">
 <AppManifestFile Include="AppManifest.OnPrem.xml">
 <SubType>Designer</SubType>
@@ -273,7 +287,7 @@ Now it is finally time again to modify the csproj - File. You should be used to 
 <SubType>Designer</SubType>
 </AppManifestFile>
 </ItemGroup>
-
+```
  
 
 ## Things to mention on V 15.0 (SharePoint 2013)
@@ -288,11 +302,13 @@ Because of the differences between V16 and V15 you might want to have custom cod
 
 Afterwards you can use the following code:
 
+```
 #if OnPrem
 var userMail=GetMailFromUser(fieldUserValue); 
 #else 
 var userMail=FieldUserValue.Email;
 #endif
+```
 
 ## Final thoughts
 
