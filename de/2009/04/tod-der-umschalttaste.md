@@ -6,13 +6,6 @@ categories:
 tags: 
   - "registry"
 ---
-# Tod der Umschalttaste!
-_Published:_ 15.04.2009 00:00:00
-
-_Categories_:[windows](/dotnetwork/de/categories#windows)
-
-_Tags_:[registry](/dotnetwork/de/tags#registry)
-
 
 Ich ärger mich immer wieder über die blöde Shift-Lock, bzw. Caps-Lock – Taste, auf deutsch auch “Feststelltaste” genannt, die ich eigentlich noch nie wirklich gebraucht habe. In Zeiten, an denen auf alten Schreibmaschinen fast schon ein Amboss nötig war, um Tasten herunterzudrücken, war diese Taste sicherlich noch sinnvoll, heute schleppt man dieses unnötige Überbleibsel mit wie die [Pferdearschbreite beim Bau der Space-Shuttles.](http://blog.b-o-f-h.net/index.php?/archives/37-Breit-wie-ein-Pferdearsch.html)
 
