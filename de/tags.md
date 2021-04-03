@@ -1,85 +1,148 @@
 # Tags
 
-## allgemein
+## 301
 - [Die Wayback Machine und 301 redirects](/dotnetwork/de/2016/11/die-wayback-machine-und-301-redirects)
-- [FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)](/dotnetwork/de/2015/01/firetv-mittels-kodi-xbmc-zum-vollwertigen-und-genuegsamen-mediaplayer-machen-kein-root-erforderlich)
+## adblocker
 - [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
-- [Mein subjektiver Crowdfunding-Rückblick (bisher)](/dotnetwork/de/2016/12/mein-subjektiver-crowdfunding-rueckblick-bisher)
-- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-1-ocr)
-- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-2-suchen-auf-dem-nas)
-- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)
-- [Proxy-Probleme mittels Fiddler umgehen](/dotnetwork/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
-- [Synology Surveillance Station mit einem einfachen Shell-Script automatisieren](/dotnetwork/de/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren)
+## amazon
 - [Usability und mieses Webdesign - Wenn selbst die Großen versagen](/dotnetwork/de/2016/06/usability-und-mieses-webdesign-wenn-selbst-die-grossen-versagen)
-## anwendungen
-- [Abfallprodukt](/dotnetwork/de/2008/10/abfallprodukt)
+## android
+- [FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)](/dotnetwork/de/2015/01/firetv-mittels-kodi-xbmc-zum-vollwertigen-und-genuegsamen-mediaplayer-machen-kein-root-erforderlich)
+## autresponder
+- [IMAP-HTML-Autoresponder mit PHP](/dotnetwork/de/2015/02/imap-html-autoresponder-mit-php)
+## bluetooth-de
+- [Smartphone-Erkennung unter Linux mittels Bluetooth (Raspberry Pi 2)](/dotnetwork/de/2016/02/smartphone-erkennung-unter-linux-mittels-bluetooth-raspberry-pi-2)
+## chrome-extensions
 - [Der Google+ - Optimizer 3.0 ist fertig!](/dotnetwork/de/2015/02/der-google-optimizer-3-0-ist-fertig)
-- [FlashairDownloader 2](/dotnetwork/de/2016/05/flashairdownloader-2-de)
-- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-1-ocr)
+- [Optimizer für Google+ - Anleitung](/dotnetwork/de/2014/02/optimizer-fuer-google-anleitung)
+## csom-de
+- [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/dotnetwork/de/2016/12/tanzen-auf-zwei-hochzeiten)
+## dos
+- [DosMount](/dotnetwork/de/2011/06/dosmount)
+## fhem-de
+- [HomeMatic - Thermostate auf einem WebInterface anzeigen](/dotnetwork/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
+## fiddler-de
+- [Proxy-Probleme mittels Fiddler umgehen](/dotnetwork/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
+## firetv
+- [FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)](/dotnetwork/de/2015/01/firetv-mittels-kodi-xbmc-zum-vollwertigen-und-genuegsamen-mediaplayer-machen-kein-root-erforderlich)
+## fitbit-de
+- [Fitbit-Erkennung unter Linux (Raspberry Pi 2)](/dotnetwork/de/2016/02/fitbit-erkennung-unter-linux-raspberry-pi-2)
+## git
+- [SCRUM und Git: Optimierter Workflow // Mit vielen tollen bunten Farben :)](/dotnetwork/de/2015/03/scrum-und-git-optimierter-workflow-mit-vielen-tollen-bunten-farben)
+## google-drive
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-3-sync-bilder)
+## google-keep
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-3-sync-bilder)
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)
-- [Optimizer für Google+ - Anleitung](/dotnetwork/de/2014/02/optimizer-fuer-google-anleitung)
-- [PS3 Mediathek V1.0.0.2](/dotnetwork/de/2009/09/ps3-mediathek-v1-0-0-2)
-- [PS3.Mediathek auf SourceForge](/dotnetwork/de/2009/04/ps3-mediathek-auf-sourceforge)
-- [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/dotnetwork/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
-- [ZDF Mediathek auch unter Windows 7 (seven)](/dotnetwork/de/2009/10/zdf-mediathek-auch-unter-windows-7-seven)
-- [ZDF Mediathek für den PS3 Media Server](/dotnetwork/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
-## c
-- [Abfallprodukt](/dotnetwork/de/2008/10/abfallprodukt)
-- [Der steinige Weg zum Vista Media Center PlugIn: MCML](/dotnetwork/de/2008/03/der-steinige-weg-zum-vista-media-center-plugin-mcml)
-- [Fehlerabhängige Logdetails mit Log4net](/dotnetwork/de/2012/02/fehlerabhaengige-loglevel-mit-log4net)
-- [FlashairDownloader 2](/dotnetwork/de/2016/05/flashairdownloader-2-de)
-- [PS3 Mediathek V1.0.0.2](/dotnetwork/de/2009/09/ps3-mediathek-v1-0-0-2)
-- [PS3.Mediathek auf SourceForge](/dotnetwork/de/2009/04/ps3-mediathek-auf-sourceforge)
-- [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/dotnetwork/de/2016/12/tanzen-auf-zwei-hochzeiten)
-- [Truncate für Sharepoint-Listen](/dotnetwork/de/2011/11/truncate-fuer-sharepoint-listen)
-- [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/dotnetwork/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
-- [ZDF Mediathek auch unter Windows 7 (seven)](/dotnetwork/de/2009/10/zdf-mediathek-auch-unter-windows-7-seven)
-- [ZDF Mediathek für den PS3 Media Server](/dotnetwork/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
-## javascript-programmierung
-- [Der Google+ - Optimizer 3.0 ist fertig!](/dotnetwork/de/2015/02/der-google-optimizer-3-0-ist-fertig)
+## google-one
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-3-sync-bilder)
+## google-photos
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-3-sync-bilder)
+## hangouts
+- [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
+## home-automation-de
 - [HomeMatic - Thermostate auf einem WebInterface anzeigen](/dotnetwork/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
+- [Logitech Harmony Hub mit dem Raspberry / Linux steuern](/dotnetwork/de/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern)
+- [Synology Surveillance Station mit einem einfachen Shell-Script automatisieren](/dotnetwork/de/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren)
+## homematic-de
+- [HomeMatic - Thermostate auf einem WebInterface anzeigen](/dotnetwork/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
+## imap-de
+- [IMAP-HTML-Autoresponder mit PHP](/dotnetwork/de/2015/02/imap-html-autoresponder-mit-php)
+## javascript
 - [Optimizer für Google+ - Anleitung](/dotnetwork/de/2014/02/optimizer-fuer-google-anleitung)
-## jquery-programmierung
-- [Der Google+ - Optimizer 3.0 ist fertig!](/dotnetwork/de/2015/02/der-google-optimizer-3-0-ist-fertig)
+## jquery
 - [Optimizer für Google+ - Anleitung](/dotnetwork/de/2014/02/optimizer-fuer-google-anleitung)
+## kodi
+- [FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)](/dotnetwork/de/2015/01/firetv-mittels-kodi-xbmc-zum-vollwertigen-und-genuegsamen-mediaplayer-machen-kein-root-erforderlich)
 ## linux
-- [Datensicherung mit Rapidshare](/dotnetwork/de/2008/09/datensicherung-mit-rapidshare)
+- [Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs](/dotnetwork/de/2011/06/installation-einer-softwareumgebung-fuer-ps3-homebrew-fuer-linux-n00bs)
+- [Synology Surveillance Station mit einem einfachen Shell-Script automatisieren](/dotnetwork/de/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren)
+## log4net
+- [Fehlerabhängige Logdetails mit Log4net](/dotnetwork/de/2012/02/fehlerabhaengige-loglevel-mit-log4net)
+## logitech
+- [Logitech Harmony Hub mit dem Raspberry / Linux steuern](/dotnetwork/de/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern)
+## mcml
+- [Der steinige Weg zum Vista Media Center PlugIn: MCML](/dotnetwork/de/2008/03/der-steinige-weg-zum-vista-media-center-plugin-mcml)
+## mediathek
+- [PS3 Media Server](/dotnetwork/de/2009/03/ps3-media-server)
+- [PS3 Mediathek V1.0.0.2](/dotnetwork/de/2009/09/ps3-mediathek-v1-0-0-2)
+- [PS3.Mediathek auf SourceForge](/dotnetwork/de/2009/04/ps3-mediathek-auf-sourceforge)
+- [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/dotnetwork/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
+- [ZDF Mediathek auch unter Windows 7 (seven)](/dotnetwork/de/2009/10/zdf-mediathek-auch-unter-windows-7-seven)
+- [ZDF Mediathek für den PS3 Media Server](/dotnetwork/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
+## nextcloud
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-3-sync-bilder)
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)
+## notes
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)
+## notizen
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)
+## office365-de
+- [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/dotnetwork/de/2016/12/tanzen-auf-zwei-hochzeiten)
+## optimizer
+- [Der Google+ - Optimizer 3.0 ist fertig!](/dotnetwork/de/2015/02/der-google-optimizer-3-0-ist-fertig)
+## owncloud
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-3-sync-bilder)
+- [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)
+## panasonic
+- [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
+## php-de
+- [IMAP-HTML-Autoresponder mit PHP](/dotnetwork/de/2015/02/imap-html-autoresponder-mit-php)
+## proxy-de
+- [Proxy-Probleme mittels Fiddler umgehen](/dotnetwork/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
+## ps3
 - [DosMount](/dotnetwork/de/2011/06/dosmount)
+- [Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs](/dotnetwork/de/2011/06/installation-einer-softwareumgebung-fuer-ps3-homebrew-fuer-linux-n00bs)
+- [PS3 Media Server](/dotnetwork/de/2009/03/ps3-media-server)
+- [PS3 Mediathek V1.0.0.2](/dotnetwork/de/2009/09/ps3-mediathek-v1-0-0-2)
+- [PS3.Mediathek auf SourceForge](/dotnetwork/de/2009/04/ps3-mediathek-auf-sourceforge)
+- [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/dotnetwork/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
+- [ZDF Mediathek für den PS3 Media Server](/dotnetwork/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
+## rapidshare
+- [Datensicherung mit Rapidshare](/dotnetwork/de/2008/09/datensicherung-mit-rapidshare)
+## raspberry-pi-de
 - [Fitbit-Erkennung unter Linux (Raspberry Pi 2)](/dotnetwork/de/2016/02/fitbit-erkennung-unter-linux-raspberry-pi-2)
 - [HomeMatic - Thermostate auf einem WebInterface anzeigen](/dotnetwork/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
-- [Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs](/dotnetwork/de/2011/06/installation-einer-softwareumgebung-fuer-ps3-homebrew-fuer-linux-n00bs)
 - [LEDs einer Überwachungskamera per Linux ein- und ausschalten](/dotnetwork/de/2016/01/leds-einer-ueberwachungskamera-per-linux-ein-und-ausschalten)
 - [Logitech Harmony Hub mit dem Raspberry / Linux steuern](/dotnetwork/de/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern)
 - [Smartphone-Erkennung unter Linux mittels Bluetooth (Raspberry Pi 2)](/dotnetwork/de/2016/02/smartphone-erkennung-unter-linux-mittels-bluetooth-raspberry-pi-2)
 - [Synology Surveillance Station mit einem einfachen Shell-Script automatisieren](/dotnetwork/de/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren)
-## os
-- [HomeMatic - Thermostate auf einem WebInterface anzeigen](/dotnetwork/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
-- [LEDs einer Überwachungskamera per Linux ein- und ausschalten](/dotnetwork/de/2016/01/leds-einer-ueberwachungskamera-per-linux-ein-und-ausschalten)
-- [Logitech Harmony Hub mit dem Raspberry / Linux steuern](/dotnetwork/de/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern)
-- [Proxy-Probleme mittels Fiddler umgehen](/dotnetwork/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
-## php
-- [HomeMatic - Thermostate auf einem WebInterface anzeigen](/dotnetwork/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
-- [IMAP-HTML-Autoresponder mit PHP](/dotnetwork/de/2015/02/imap-html-autoresponder-mit-php)
-## programmierung
-- [Fehlerabhängige Logdetails mit Log4net](/dotnetwork/de/2012/02/fehlerabhaengige-loglevel-mit-log4net)
-- [HomeMatic - Thermostate auf einem WebInterface anzeigen](/dotnetwork/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
-- [IMAP-HTML-Autoresponder mit PHP](/dotnetwork/de/2015/02/imap-html-autoresponder-mit-php)
-- [Proxy-Probleme mittels Fiddler umgehen](/dotnetwork/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
+## redirect-de
+- [Die Wayback Machine und 301 redirects](/dotnetwork/de/2016/11/die-wayback-machine-und-301-redirects)
+## registry
+- [Tod der Umschalttaste!](/dotnetwork/de/2009/04/tod-der-umschalttaste)
+## samsung
+- [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
+## scrum
 - [SCRUM und Git: Optimierter Workflow // Mit vielen tollen bunten Farben :)](/dotnetwork/de/2015/03/scrum-und-git-optimierter-workflow-mit-vielen-tollen-bunten-farben)
-- [Truncate für Sharepoint-Listen](/dotnetwork/de/2011/11/truncate-fuer-sharepoint-listen)
 ## sharepoint
 - [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/dotnetwork/de/2016/12/tanzen-auf-zwei-hochzeiten)
 - [Truncate für Sharepoint-Listen](/dotnetwork/de/2011/11/truncate-fuer-sharepoint-listen)
-## windows
+## sharepoint2013-de
+- [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/dotnetwork/de/2016/12/tanzen-auf-zwei-hochzeiten)
+## sharepoint2016-de
+- [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/dotnetwork/de/2016/12/tanzen-auf-zwei-hochzeiten)
+## skype
+- [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
+## smart-tv
+- [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
+## splist
+- [Truncate für Sharepoint-Listen](/dotnetwork/de/2011/11/truncate-fuer-sharepoint-listen)
+## swiftmailer-de
+- [IMAP-HTML-Autoresponder mit PHP](/dotnetwork/de/2015/02/imap-html-autoresponder-mit-php)
+## synology-de
+- [LEDs einer Überwachungskamera per Linux ein- und ausschalten](/dotnetwork/de/2016/01/leds-einer-ueberwachungskamera-per-linux-ein-und-ausschalten)
+## tor
 - [Abfallprodukt](/dotnetwork/de/2008/10/abfallprodukt)
-- [Der steinige Weg zum Vista Media Center PlugIn: MCML](/dotnetwork/de/2008/03/der-steinige-weg-zum-vista-media-center-plugin-mcml)
-- [FlashairDownloader 2](/dotnetwork/de/2016/05/flashairdownloader-2-de)
-- [Proxy-Probleme mittels Fiddler umgehen](/dotnetwork/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
-- [PS3 Media Server](/dotnetwork/de/2009/03/ps3-media-server)
-- [PS3 Mediathek V1.0.0.2](/dotnetwork/de/2009/09/ps3-mediathek-v1-0-0-2)
-- [PS3.Mediathek auf SourceForge](/dotnetwork/de/2009/04/ps3-mediathek-auf-sourceforge)
-- [Tod der Umschalttaste!](/dotnetwork/de/2009/04/tod-der-umschalttaste)
-- [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/dotnetwork/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
-- [ZDF Mediathek auch unter Windows 7 (seven)](/dotnetwork/de/2009/10/zdf-mediathek-auch-unter-windows-7-seven)
-- [ZDF Mediathek für den PS3 Media Server](/dotnetwork/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
+## torsignal
+- [Abfallprodukt](/dotnetwork/de/2008/10/abfallprodukt)
+## usability
+- [Usability und mieses Webdesign - Wenn selbst die Großen versagen](/dotnetwork/de/2016/06/usability-und-mieses-webdesign-wenn-selbst-die-grossen-versagen)
+## visual-studio
+- [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/dotnetwork/de/2016/12/tanzen-auf-zwei-hochzeiten)
+## wayback-machine
+- [Die Wayback Machine und 301 redirects](/dotnetwork/de/2016/11/die-wayback-machine-und-301-redirects)
+## werbung
+- [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
+## xbmc
+- [FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)](/dotnetwork/de/2015/01/firetv-mittels-kodi-xbmc-zum-vollwertigen-und-genuegsamen-mediaplayer-machen-kein-root-erforderlich)

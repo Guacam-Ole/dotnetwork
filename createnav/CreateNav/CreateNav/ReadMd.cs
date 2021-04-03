@@ -132,7 +132,7 @@ namespace CreateNav
         }
         private void WriteTagMarkdownFile()
         {
-            WriteMarkDownFileForGroupedArticles("Tags", "tags.md", _categories);
+            WriteMarkDownFileForGroupedArticles("Tags", "tags.md", _tags);
         }
 
         private void WriteMarkDownFileForGroupedArticles(string title, string markdownFile, Dictionary<string,List<Article>> groupedArticles)
