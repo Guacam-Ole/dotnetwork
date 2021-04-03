@@ -6,13 +6,13 @@ Welcome to the personal (nerdy) blog from Ole Albers
 
 In this blog i write down some coding solution I found and maybe some other stuff, too. 
 
-## [Archive](/dotnetwork/en) | [Categories](/dotnetwork/en/categories) | [Tags](/dotnetwork/en/tags)
+## [Archive](/en) | [Categories](/en/categories) | [Tags](/en/tags)
 
 
 
 
 _(Hinweis: Es gibt ein paar **alte** Beiträge auf Deutsch, ich habe mich aber entschieden nur noch einspraching zu bloggen._
-[Deutsche Artikel (veraltet)](/dotnetwork/de)
+[Deutsche Artikel (veraltet)](/de)
 
 
 ## About me
