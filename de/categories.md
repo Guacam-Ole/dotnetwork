@@ -4,7 +4,6 @@
 - [Die Wayback Machine und 301 redirects](/dotnetwork/de/2016/11/die-wayback-machine-und-301-redirects)
 - [FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)](/dotnetwork/de/2015/01/firetv-mittels-kodi-xbmc-zum-vollwertigen-und-genuegsamen-mediaplayer-machen-kein-root-erforderlich)
 - [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/dotnetwork/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
-- [Mein subjektiver Crowdfunding-Rückblick (bisher)](/dotnetwork/de/2016/12/mein-subjektiver-crowdfunding-rueckblick-bisher)
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-1-ocr)
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-2-suchen-auf-dem-nas)
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/dotnetwork/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)

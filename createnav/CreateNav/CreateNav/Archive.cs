@@ -50,16 +50,16 @@ namespace CreateNav
 
         public string CreateArchiveMarkDown(string title)
         {
-            string markdown = title+"\n";
+            string markdown = $"# {title} \n";
             foreach (var year in GetYears())
             {
-                markdown += $"  - {year}\n";
+                markdown += $"## {year}\n";
                 foreach (var month in GetMonthsFromYear(year))
                 {
-                    markdown += $"    - {month}\n";
+                    markdown += $"### {month}\n";
                     foreach (var article in GetArticlesInMonth(year, month))
                     {
-                        markdown += $"      [{article.Title}]({article.Path})\n";
+                        markdown += $"- [{article.Title}]({article.Path})\n";
                     }
                 }
             }
