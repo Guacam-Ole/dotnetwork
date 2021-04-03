@@ -32,12 +32,14 @@ http://192.168.0.88/admin/system.cgi?led=2
 worked like a charm in my case.
 
 The only thing that's left is the authentifivcation. If you receive a classic login-screen like from a .htaccess password-protection it can be easily added to the url. So
-
+```
 wget http://username:password@192.168.0.88/admin/system.cgi?led=2
+```
 
 turns on the LEDs
-
+```
 wget http://username:password@192.168.0.88/admin/system.cgi?led=0
+```
 
 turns them off
 
