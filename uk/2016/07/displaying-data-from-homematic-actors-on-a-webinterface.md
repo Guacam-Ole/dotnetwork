@@ -9,7 +9,7 @@ tags:
   - "raspberry-pi"
 ---
 
-\[bs\_notification type="info"\]This tutorial assumes that you already installed and configured FHEM and know how to use AngularJS.\[/bs\_notification\]
+This tutorial assumes that you already installed and configured FHEM and know how to use AngularJS.
 
  
 
@@ -36,7 +36,7 @@ Before we begin make sure you have already installed FHEM and the hardware for i
 I wrote a "general" PHP script to send commands and receive commands from FHEM. This can also be done without PHP and pure JavaScript-Code. I chose this solution because my configuration website is accessable through the internet, but my FHEM isn't. So JS-Could (running on the client) would not work, but PHP (running on the server) does.
 
 The PHP-Script:
-
+```
 <?php
  $host="http://192.168.178.36:8083/fhem?";
 
@@ -62,7 +62,7 @@ The PHP-Script:
  echo $return;
 
 ?>
-
+```
 The only thing you need to modify here is the IP-Adress (or hostname) and maybe the port from the $host - variable. As you can see, this is a simple GET-Request which could easily used through JavaScript (or even just inside a href) also.
 
 You can test this script by simply calling it with some parameters:
@@ -74,7 +74,7 @@ Replace "Sensorname" by the name of your sensor. You should receive the current 
 Now it is time to display this data in a fancy way in html. Create any HTML - Page using AngularJS. To use these nice Gauges you need [ng-Google-Chart](https://github.com/angular-google-chart/angular-google-chart)
 
 Now lets see the HTML-Part containing the AngularJS-Directives to display and set the thermostate values:
-
+```
 <html><body ng-app="piApp">
   <div class="container" ng-Controller="heatController" ng-init="getStats()">
         <div class="row">
@@ -101,13 +101,14 @@ Now lets see the HTML-Part containing the AngularJS-Directives to display and se
         </div>
     </div>
 </div></body></html>
+```
 
 Some explanation:
 
 piApp is the AngularJS - App for the website, getStats() loads the current Sensors using FHEM.php mentioned above directly from the start. This html uses Bootstrap (for repsonsive design) and Font Awesome to display the Battery indicator. Both use CSS to achieve this. (The Gauge-Display works without these libraries)
 
 The Angular-Controller looks like this:
-
+```
 angular.module('piApp', \['googlechart'\])
     .controller('heatController', function($scope, $http) {
         $scope.url='fhem.php?';
@@ -228,6 +229,7 @@ angular.module('piApp', \['googlechart'\])
         };
 
     })
+```
 
 Explanation:
 
