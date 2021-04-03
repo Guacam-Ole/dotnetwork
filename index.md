@@ -24,7 +24,7 @@ I am a "quiddje" (try to google **that** :) ) from Hamburg, Germany. I write .NE
 ### Contact me
 - Don't!
  
-Just kidding. If I wrote something completely wrong simply create an issue or use one of the following URLs to find out
+Just kidding. If I wrote something completely wrong simply open a [discusssion](https://github.com/OleAlbers/dotnetwork/discussions), create an issue or use one of the following URLs to find out
  
 ### More about me (external links)
 
