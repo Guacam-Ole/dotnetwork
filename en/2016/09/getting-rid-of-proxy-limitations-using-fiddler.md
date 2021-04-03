@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Getting rid of Proxy limitations using Fiddler"
 date: "2016-09-16"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "fiddler"
   - "proxy"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 9 » Getting rid of Proxy limitations using Fiddler
+
 # Getting rid of Proxy limitations using Fiddler
 _Published:_ 16.09.2016 00:00:00
 

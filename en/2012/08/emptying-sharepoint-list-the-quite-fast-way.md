@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Emptying SharePoint-List the (quite) fast way"
 date: "2012-08-10"
 categories: 
@@ -9,6 +9,8 @@ tags:
   - "sharepoint-en"
   - "splist-en"
 ---
+■ [.net.work](/) » [en](/en) » [2012](/en#2012)  » 8 » Emptying SharePoint-List the (quite) fast way
+
 # Emptying SharePoint-List the (quite) fast way
 _Published:_ 10.08.2012 00:00:00
 

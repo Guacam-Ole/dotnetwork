@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise"
 date: "2016-12-13"
 categories: 
@@ -15,6 +15,8 @@ tags:
   - "sharepoint2013"
   - "sharepoint2016"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 12 » Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise
+
 # Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise
 _Published:_ 13.12.2016 00:00:00
 

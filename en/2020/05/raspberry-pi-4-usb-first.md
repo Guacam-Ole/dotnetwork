@@ -1,10 +1,12 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Raspberry Pi 4: usB first!"
 date: "2020-05-27"
 categories: 
   - "others"
 ---
+■ [.net.work](/) » [en](/en) » [2020](/en#2020)  » 5 » Raspberry Pi 4: usB first!
+
 # Raspberry Pi 4: usB first!
 _Published:_ 27.05.2020 00:00:00
 

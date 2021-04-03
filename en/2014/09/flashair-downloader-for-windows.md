@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "FlashAir Downloader for Windows"
 date: "2014-09-25"
 categories: 
@@ -10,6 +10,8 @@ tags:
   - "flashair-en"
   - "flashairdownloader-en"
 ---
+■ [.net.work](/) » [en](/en) » [2014](/en#2014)  » 9 » FlashAir Downloader for Windows
+
 # FlashAir Downloader for Windows
 _Published:_ 25.09.2014 00:00:00
 

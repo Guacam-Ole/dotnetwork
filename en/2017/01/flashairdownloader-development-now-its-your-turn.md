@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "FlashAirDownloader - development: Now it's your turn"
 date: "2017-01-03"
 categories: 
@@ -9,6 +9,8 @@ tags:
   - "flashair-en"
   - "flashairdownloader-en"
 ---
+■ [.net.work](/) » [en](/en) » [2017](/en#2017)  » 1 » FlashAirDownloader - development: Now it's your turn
+
 # FlashAirDownloader - development: Now it's your turn
 _Published:_ 03.01.2017 00:00:00
 
