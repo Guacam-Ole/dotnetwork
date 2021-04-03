@@ -26,19 +26,25 @@ First step: Download swiftmailer. Just put the contents of the "lib" - directory
 
 Simple include the following line to access swiftmailer:
 
+
+```
 require\_once './swift/lib/swift\_required.php';
+```
 
 To access your mail you need to enter the IMAP-Settings. POP would work, too, but IMAP would be much more useful because we do not want to download the email-body of the messages processed:
 
+```
 // IMAP-Settings:
  $hostname = "{imap.hostname.com:993/imap/ssl}INBOX";
  $username = "username";
  $password = "password";
+```
 
 Now enter your email-addresses. $targetMail is your real ("hidden") email-address where valid emails should be forwarded to. $thisMail is the public address that receives the spam.
-
+```
 $targetMail="private@mydomain.com"; 
 $thisMail="webmaster@mydomain.com";
+```
 
 Next you need to create an image with your favourite picture editing tool (GiMP, Paint.NET, PaintShopPro, etc.) This image should only contain your private email. Take a font you like. You might also use a "Captcha"-font. I - personally - hate that... :)
 
@@ -52,17 +58,20 @@ $templateForward defines the mail content YOU will see if a mail is forwarded to
 
 So it is time to be creative :)
 
+```
 $templateHtml="<html><body>Thanks for your mail. Please note that this mail is no more. It has ceased to be! It is expired and gone to meet its maker! This is an Ex-Mail!<br/>But don't be afraid, there is a replacement for that. Just send your mail to: <br/><img src=\\"\_\_EMBED\_\_\\"/><br/><br/>If you cannot see that image: Click onto the following link to see my: <a href=\\"\_\_URL\_\_\\">new mail-address</a><br/>And no: This mail will not be forwarded. No one will see this until you forward it to my new mail-address. Thanks!</body></html>";
 
 $templatePlain="Thanks for your mail. Please note that this mail is no more. It has ceased to be! It is expired and gone to meet its maker! This is an Ex-Mail!\\r\\nBut don't be afraid, there is a replacement for that. Just click onto the following link to see my: new mail-address: \_\_URL\_\_";
 
 $templateForward="new message redirected";
+```
 
 As you can see there are two special tags in those templates. "\_\_EMBED\_\_" will be replaced with the embedded image (html-template only) and "\_\_URL\_\_" will contain a link to that image.
 
 The last variable you can define is the white-list. Everything entered there is interpreted as a valid sender. Enter multiple values seperated by commas.
-
+```
 $whitelist = "uberspace,denic.de,domainbox.net,romrobot.com,inwx.de,millerntor.hamburg,dotnet.work";
+```
 
 that's all for configuration. Now just some explanation what the script does:
 
@@ -73,18 +82,19 @@ If the sender is not in the white-list, an automatic reply is generated using yo
 In a perfect world...
 
 Everything works now. But you can (and will) get problems sending the mail to the sender if the sender's address does not comply with RFC 2822. While most spammers DO comply, mom DOESN'T... :) That's because there is a mail client from a tiny little software company in Redmond, where they do not know much about standards. But this is no big problem at all. Just open _lib\\classes\\swift\\Mime\\Headers\\MailboxHeader.php_ from swiftmailer and put _/\* \*/_ around the throw-part of the last function:
-
+```
 private function \_assertValidAddress($address)
 {
    if (!preg\_match('/^'.$this->getGrammar()->getDefinition('addr-spec').'$/D', $address)) {
      /\* throw new Swift\_RfcComplianceException('Address in mailbox given \['.$address.'\] does not comply with RFC 2822, 3.6.2.');\*/
    }
 }
-
+```
  
 
 So finally here is the complete script.
 
+```
 <?php
    require\_once './swift/lib/swift\_required.php';// IMAP-Settings:
    $hostname = "{imap.example.com:993/imap/ssl}INBOX";
@@ -173,13 +183,13 @@ So finally here is the complete script.
   echo "done redirecting ".$count." mails\\r\\n";
   echo "</pre>";
 ?>
-
+```
  
 
 Just save this program as "reply.php", send test-mails and open "reply.php" in your browser to test the settings. When everything works fine you can simply add a cronjob so this script is run automaticly. The following example runs the script every 5 minutes:
-
+```
 \*/5 \* \* \* \* php /var/www/reply.php
-
+```
  
 
 Just use the comments if you need any help
