@@ -59,7 +59,7 @@ namespace CreateNav
                     markdown += $"### {month}\n\n";
                     foreach (var article in GetArticlesInMonth(year, month))
                     {
-                        markdown += $"- [{article.Title}]({article.Path})\n";
+                        markdown += $"- [{article.Title}]({article.Path})\n\n";
                     }
                 }
             }
