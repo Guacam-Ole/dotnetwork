@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CreateNav": {
+      "commandName": "Project",
+      "commandLineArgs": "de Archiv"
+    }
+  }
+}
