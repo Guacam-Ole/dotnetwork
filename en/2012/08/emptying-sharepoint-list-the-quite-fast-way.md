@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Emptying SharePoint-List the (quite) fast way"
 date: "2012-08-10"
 categories: 
@@ -8,6 +9,13 @@ tags:
   - "sharepoint-en"
   - "splist-en"
 ---
+# Emptying SharePoint-List the (quite) fast way
+_Published:_ 10.08.2012 00:00:00
+
+_Categories_: [development](/dotnetwork/en/categories#development) - [sharepoint-en](/dotnetwork/en/categories#sharepoint-en)
+
+_Tags_: [sharepoint-en](/dotnetwork/en/tags#sharepoint-en) - [splist-en](/dotnetwork/en/tags#splist-en)
+
 
 I already offered a solution to [empty a SharePoint list at light speed](http://www.stammtischphilosoph.com/2012/08/emptying-sharepoint-lists-the-ultra-fast-way/ "Emptying SharePoint lists the ultra fast way")
 

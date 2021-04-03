@@ -1,9 +1,15 @@
 ---
+createnav: "0.0.1"
 title: "Wayback Machine and 301 redirects"
 date: "2016-11-15"
 categories: 
   - "others"
 ---
+# Wayback Machine and 301 redirects
+_Published:_ 15.11.2016 00:00:00
+
+_Categories_: [others](/dotnetwork/en/categories#others)
+
 
 As you might know: the wayback machine from archive.org saves snapshots of websites. It does this automatically or can be forced to do so. However. If you ever had a 301 redirect on your site you are very much doomed.
 

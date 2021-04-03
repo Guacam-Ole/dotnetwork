@@ -1,9 +1,15 @@
 ---
+createnav: "0.0.1"
 title: "Raspberry Pi 4: usB first!"
 date: "2020-05-27"
 categories: 
   - "others"
 ---
+# Raspberry Pi 4: usB first!
+_Published:_ 27.05.2020 00:00:00
+
+_Categories_: [others](/dotnetwork/en/categories#others)
+
 
 At the time of this writing the boot-from-usb has just been made available as a Beta feature for the Raspberry Pi 4.
 

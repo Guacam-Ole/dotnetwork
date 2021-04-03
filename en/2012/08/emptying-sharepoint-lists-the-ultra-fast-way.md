@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Emptying SharePoint lists the ultra fast way"
 date: "2012-08-09"
 categories: 
@@ -8,6 +9,13 @@ tags:
   - "sharepoint-en"
   - "splist-en"
 ---
+# Emptying SharePoint lists the ultra fast way
+_Published:_ 09.08.2012 00:00:00
+
+_Categories_: [development](/dotnetwork/en/categories#development) - [sharepoint-en](/dotnetwork/en/categories#sharepoint-en)
+
+_Tags_: [sharepoint-en](/dotnetwork/en/tags#sharepoint-en) - [splist-en](/dotnetwork/en/tags#splist-en)
+
 
 SharePoint is damn slow when deleting lines from lists. Each entry can take up to some seconds which isn’t nice when you have to delete thousands of lines.
 

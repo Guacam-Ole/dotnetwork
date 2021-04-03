@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Tracking fitbit presence under Linux (Raspberry Pi 2)"
 date: "2016-02-27"
 categories: 
@@ -8,6 +9,13 @@ tags:
   - "home-automation"
   - "raspberry-pi"
 ---
+# Tracking fitbit presence under Linux (Raspberry Pi 2)
+_Published:_ 27.02.2016 00:00:00
+
+_Categories_: [linux-en](/dotnetwork/en/categories#linux-en)
+
+_Tags_: [fitbit](/dotnetwork/en/tags#fitbit) - [home-automation](/dotnetwork/en/tags#home-automation) - [raspberry-pi](/dotnetwork/en/tags#raspberry-pi)
+
 
 [As I wrote before](http://dotnet.work/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands/) I track the presence of my smartphone using WiFi. Since Android Marshmellow this doesn't work anymore, because when switching to idle mode, the WiFi is disconnected. The easiest way to get around this issue would be to use Bluetooth instead. And in fact: I already decided to go that way. But then my company gave me a nice present: A "Fitbit Charge HR". While my company assured, that the HR is not for Human Resource and does not try to track if I am programming enough I decided to give this a try.
 

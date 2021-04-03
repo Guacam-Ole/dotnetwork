@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Control your Harmony Hub with a Raspberry Pi (Linux)"
 date: "2016-01-15"
 categories: 
@@ -8,6 +9,13 @@ tags:
   - "home-automation"
   - "raspberry-pi"
 ---
+# Control your Harmony Hub with a Raspberry Pi (Linux)
+_Published:_ 15.01.2016 00:00:00
+
+_Categories_: [linux-en](/dotnetwork/en/categories#linux-en) - [operating-systems](/dotnetwork/en/categories#operating-systems)
+
+_Tags_: [home-automation](/dotnetwork/en/tags#home-automation) - [raspberry-pi](/dotnetwork/en/tags#raspberry-pi)
+
 
 [So my surveillance cam now only records when I am not at home](http://dotnet.work/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands/). But what if I forget to turn off the TV? That should happen automaticly, too! But fear not: There is a solution - at least if you own a harmony hub. With the help of the "HarmonyHubControl" - tool (written in c++) this is done quite easily.
 
