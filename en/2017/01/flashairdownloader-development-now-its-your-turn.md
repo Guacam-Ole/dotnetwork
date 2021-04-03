@@ -12,9 +12,9 @@ tags:
 # FlashAirDownloader - development: Now it's your turn
 _Published:_ 03.01.2017 00:00:00
 
-_Categories_: [csharp](//en/categories#csharp) - [windows-en](//en/categories#windows-en)
+_Categories_: [csharp](/en/categories#csharp) - [windows-en](/en/categories#windows-en)
 
-_Tags_: [flashair-en](//en/tags#flashair-en) - [flashairdownloader-en](//en/tags#flashairdownloader-en)
+_Tags_: [flashair-en](/en/tags#flashair-en) - [flashairdownloader-en](/en/tags#flashairdownloader-en)
 
 
 Hi,. folks,

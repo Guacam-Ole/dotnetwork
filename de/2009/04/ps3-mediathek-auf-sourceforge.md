@@ -13,9 +13,9 @@ tags:
 # PS3.Mediathek auf SourceForge
 _Published:_ 07.04.2009 00:00:00
 
-_Categories_: [anwendungen](//de/categories#anwendungen) - [c](//de/categories#c) - [windows](//de/categories#windows)
+_Categories_: [anwendungen](/de/categories#anwendungen) - [c](/de/categories#c) - [windows](/de/categories#windows)
 
-_Tags_: [mediathek](//de/tags#mediathek) - [ps3](//de/tags#ps3)
+_Tags_: [mediathek](/de/tags#mediathek) - [ps3](/de/tags#ps3)
 
 
 Das Programm zum automatischen Downloaden der ZDF.Mediathek-Links ist nun unter der GNU-Lizenz auf [Sourceforge](http://sourceforge.net/projects/ps3mediathek/) zu finden. Probleme & Fragen bitte direkt im dortigen Forum stellen.

@@ -10,7 +10,7 @@ categories:
 # FlashAirDownloader 2
 _Published:_ 01.05.2016 00:00:00
 
-_Categories_: [applications](//en/categories#applications) - [csharp](//en/categories#csharp) - [windows-en](//en/categories#windows-en)
+_Categories_: [applications](/en/categories#applications) - [csharp](/en/categories#csharp) - [windows-en](/en/categories#windows-en)
 
 
 \[bs\_notification type="warning"\]**Development stopped!** [Please read this](http://dotnet.work/2017/01/flashairdownloader-development-now-its-your-turn/) before downloading FAD\[/bs\_notification\]

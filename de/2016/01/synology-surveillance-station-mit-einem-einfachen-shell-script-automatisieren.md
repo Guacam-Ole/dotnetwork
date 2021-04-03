@@ -13,9 +13,9 @@ tags:
 # Synology Surveillance Station mit einem einfachen Shell-Script automatisieren
 _Published:_ 07.01.2016 00:00:00
 
-_Categories_: [allgemein](//de/categories#allgemein) - [linux](//de/categories#linux)
+_Categories_: [allgemein](/de/categories#allgemein) - [linux](/de/categories#linux)
 
-_Tags_: [home-automation-de](//de/tags#home-automation-de) - [linux](//de/tags#linux) - [raspberry-pi-de](//de/tags#raspberry-pi-de)
+_Tags_: [home-automation-de](/de/tags#home-automation-de) - [linux](/de/tags#linux) - [raspberry-pi-de](/de/tags#raspberry-pi-de)
 
 
 Ich besitze eine Synology Diskstation, die unter anderem eine "Surveillance Station" anbietet, mit der lokale LAN- (oder WLAN-) Kameras zur Überwachung genutzt werden. Wird eine Bewegung erkannt, so erhalte ich eine E-Mail. Man kann verschiedene Zeitpläne einstellen zu welchen Zeiten die Alarmierung erfolgen soll.
