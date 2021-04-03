@@ -140,10 +140,10 @@ namespace CreateNav
             string markdownContent = $"# {title}\n\n";
             foreach (var group in groupedArticles.OrderBy(q => q.Key))
             {
-                markdownContent += $"- {group.Key}\n";
+                markdownContent += $"## {group.Key}\n";
                 foreach (var article in group.Value.OrderBy(q => q.Title))
                 {
-                    markdownContent += $"  - [{article.Title}]({article.Path})\n";
+                    markdownContent += $"- [{article.Title}]({article.Path})\n";
                 }
             }
 
