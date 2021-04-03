@@ -7,10 +7,6 @@ tags:
   - "mediathek"
   - "ps3"
 ---
-# PS3 Media Server
-_Published:_ 08.03.2009 00:00:00
-_Categories_:[windows](/dotnetwork/de/categories#windows)
-_Tags_:[mediathek](/dotnetwork/de/tags#mediathek) - [ps3](/dotnetwork/de/tags#ps3)
 
 Ich habe heute mal wieder versucht MKV-Dateien auf meine PS3 zu streamen. Nach einer frischen Installation sollte es endlich klappen über TVersity die HD-Filme auf der Konsole zu schauen. Um es kurz zu machen: Es klappte nicht, obwohl ich mir wortwörtlich an die Anleitungen gehalten habe.
 
