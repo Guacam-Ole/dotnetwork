@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)"
 date: "2016-02-27"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "bluetooth"
   - "raspberry-pi"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 2 » Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)
+
 # Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)
 _Published:_ 27.02.2016 00:00:00
 

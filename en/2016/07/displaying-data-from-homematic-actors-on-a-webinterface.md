@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Displaying Data from HomeMatic Actors on a WebInterface"
 date: "2016-07-11"
 categories: 
@@ -9,6 +9,8 @@ tags:
   - "homematic"
   - "raspberry-pi"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 7 » Displaying Data from HomeMatic Actors on a WebInterface
+
 # Displaying Data from HomeMatic Actors on a WebInterface
 _Published:_ 11.07.2016 00:00:00
 

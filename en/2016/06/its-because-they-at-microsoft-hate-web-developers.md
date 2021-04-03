@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "It's because they at Microsoft hate web developers"
 date: "2016-06-14"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "office365"
   - "sharepoint-en"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 6 » It's because they at Microsoft hate web developers
+
 # It's because they at Microsoft hate web developers
 _Published:_ 14.06.2016 00:00:00
 

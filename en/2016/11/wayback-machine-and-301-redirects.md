@@ -1,10 +1,12 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Wayback Machine and 301 redirects"
 date: "2016-11-15"
 categories: 
   - "others"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 11 » Wayback Machine and 301 redirects
+
 # Wayback Machine and 301 redirects
 _Published:_ 15.11.2016 00:00:00
 

@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "IMAP-HTML-Autoresponder with PHP"
 date: "2015-02-13"
 categories: 
@@ -14,6 +14,8 @@ tags:
   - "spam"
   - "swiftmailer"
 ---
+■ [.net.work](/) » [en](/en) » [2015](/en#2015)  » 2 » IMAP-HTML-Autoresponder with PHP
+
 # IMAP-HTML-Autoresponder with PHP
 _Published:_ 13.02.2015 00:00:00
 

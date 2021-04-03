@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Automate your Synology Surveillancestation with some simple Linux - commands"
 date: "2016-01-07"
 categories: 
@@ -11,6 +11,8 @@ tags:
   - "surveillance-station"
   - "synology"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 1 » Automate your Synology Surveillancestation with some simple Linux - commands
+
 # Automate your Synology Surveillancestation with some simple Linux - commands
 _Published:_ 07.01.2016 00:00:00
 

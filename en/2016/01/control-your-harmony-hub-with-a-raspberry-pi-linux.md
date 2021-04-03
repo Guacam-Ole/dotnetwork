@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Control your Harmony Hub with a Raspberry Pi (Linux)"
 date: "2016-01-15"
 categories: 
@@ -9,6 +9,8 @@ tags:
   - "home-automation"
   - "raspberry-pi"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 1 » Control your Harmony Hub with a Raspberry Pi (Linux)
+
 # Control your Harmony Hub with a Raspberry Pi (Linux)
 _Published:_ 15.01.2016 00:00:00
 

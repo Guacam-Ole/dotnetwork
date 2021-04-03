@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "FlashAirDownloader 2"
 date: "2016-05-01"
 categories: 
@@ -7,6 +7,8 @@ categories:
   - "csharp"
   - "windows-en"
 ---
+■ [.net.work](/) » [en](/en) » [2016](/en#2016)  » 5 » FlashAirDownloader 2
+
 # FlashAirDownloader 2
 _Published:_ 01.05.2016 00:00:00
 
