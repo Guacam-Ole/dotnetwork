@@ -9,14 +9,12 @@ namespace CreateNav
 {
     public class Archive
     {
-        private readonly string _documentRoot;
         private readonly string _rootPath;
         private readonly string _relativePath;
-        private List<Article> _articles;
+        private readonly List<Article> _articles;
 
-        public Archive(string documentRoot, string rootPath, string relativePath, List<Article> articles)
+        public Archive( string rootPath, string relativePath, List<Article> articles)
         {
-            _documentRoot = documentRoot;
             _rootPath = rootPath;
             _relativePath = relativePath;
             _articles = articles;
@@ -61,7 +59,7 @@ namespace CreateNav
                     markdown += $"    - {month}\n";
                     foreach (var article in GetArticlesInMonth(year, month))
                     {
-                        markdown += $"      [{article.Title}]({_documentRoot}{article.Path})\n";
+                        markdown += $"      [{article.Title}]({article.Path})\n";
                     }
                 }
             }

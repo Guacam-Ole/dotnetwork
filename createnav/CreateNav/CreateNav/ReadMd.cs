@@ -13,8 +13,8 @@ namespace CreateNav
         private readonly Version _currentVersion;
 
 
-        private Dictionary<string, List<Article>> _categories = new Dictionary<string, List<Article>>();
-        private Dictionary<string, List<Article>> _tags = new Dictionary<string, List<Article>>();
+        private readonly Dictionary<string, List<Article>> _categories = new();
+        private readonly Dictionary<string, List<Article>> _tags = new();
 
         public ReadMd(string rootPath, string relativePath,  string documentRoot, Version currentVersion)
         {
@@ -143,15 +143,12 @@ namespace CreateNav
                 markdownContent += $"- {group.Key}\n";
                 foreach (var article in group.Value.OrderBy(q => q.Title))
                 {
-                    markdownContent += $"  - [{article.Title}]({_documentRoot}/{article.Path})\n";
+                    markdownContent += $"  - [{article.Title}]({article.Path})\n";
                 }
             }
 
             File.WriteAllText(Path.Combine(_rootPath, _relativePath,markdownFile), markdownContent);
         }
-
-
-
 
         private string GetTextInQuotes(string content)
         {
@@ -200,12 +197,13 @@ namespace CreateNav
 
                 if (!inHeader && line == "---") inHeader = true;
             }
+            article.Path = Path.Combine(_documentRoot, relativePath, new FileInfo(filename).Name).Replace("\\", "/").Replace(".md", "");
             if (article.Title == null)
             {
-                Console.WriteLine("No title found");
+                Console.WriteLine($"No title found:{article.Path}");
                 return null;
             }
-            article.Path = Path.Combine(_documentRoot, relativePath, new FileInfo(filename).Name).Replace("\\", "/").Replace(".md", "");
+            //article.Path = Path.Combine(_documentRoot, relativePath, new FileInfo(filename).Name).Replace("\\", "/").Replace(".md", "");
             return article;
         }
     }
