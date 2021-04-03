@@ -45,9 +45,9 @@ Diese Zeile nun in die Zwischenablage
 
 Im Fiddler dann mittels Ctrl-R die Konfigurationsdatei öffnen. Folgende Zeile suchen:
 
- ```
- static function OnBeforeRequest(oSession: Session) {
- ```
+```
+static function OnBeforeRequest(oSession: Session) {
+```
 
 Direkt darunter folgende Zeile einfügen:
 
