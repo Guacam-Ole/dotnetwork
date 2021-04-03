@@ -29,8 +29,9 @@ Start the Application and go to Settings:
 Adjust the Settings if needed. Especially for “local Path”.
 
 To use the Delete-Option you have to adjust the configuration of the SD-Card. Insert the SD-Card into your computer and open the file “CONFIG” file in the hidden “SD\_WLAN”-folder with a text editor. Add the line
-
+```
 UPLOAD=1
+```
 
 to the CONFIG-File.
 
