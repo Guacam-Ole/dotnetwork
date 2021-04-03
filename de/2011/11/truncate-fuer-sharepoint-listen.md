@@ -14,6 +14,7 @@ Wir alle wissen, dass einige elementare SQL-Tasks in SharePoint schlicht und ein
 
 Aus diesem Grund habe ich eine Methode geschrieben, die eine Liste komplett löscht und mit dem gleichen Schema unter gleichem Namen neu erstellt, also im Endeffect ein TRUNC durchführt:
 
+```
 ///
 /// Liste leeren
 /// Liste
@@ -46,3 +47,4 @@ newList.DefaultView.Update();
 // löschen alte Liste:
 list.Delete();
 }
+```
