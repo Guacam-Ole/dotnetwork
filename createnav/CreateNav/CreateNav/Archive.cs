@@ -69,7 +69,7 @@ namespace CreateNav
         public void WriteArchive(string title)
         {
             string archiveContent = CreateArchiveMarkDown(title);
-            File.WriteAllText(Path.Combine(_rootPath, _relativePath, "archive.md"), archiveContent);
+            File.WriteAllText(Path.Combine(_rootPath, _relativePath, "index.md"), archiveContent);
         }
     }
 }
