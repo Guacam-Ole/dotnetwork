@@ -1,4 +1,4 @@
-# Categories
+# Tags
 
 - allgemein
   - [Die Wayback Machine und 301 redirects](/dotnetwork/de/2016/11/die-wayback-machine-und-301-redirects)
