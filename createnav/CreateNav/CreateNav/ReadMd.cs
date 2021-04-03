@@ -192,6 +192,7 @@ namespace CreateNav
                 {
                     markdownContent += $"- [{article.Title}]({article.Path})\n";
                 }
+                markdownContent += "\n";
             }
 
             File.WriteAllText(Path.Combine(_config.RepoPath, _relativePath, markdownFile), markdownContent);
