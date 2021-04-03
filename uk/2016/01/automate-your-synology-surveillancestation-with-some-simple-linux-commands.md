@@ -26,7 +26,7 @@ But first things first. First of all, you should go to your routers admin interf
 Now all you need is a Linux machine. I took a fresh Raspberry for this goal. Any simple distribution should be fine. We won't need any special libraries.
 
 After you connected to your Raspberry (or other Linux) create the following shell script via vi (or any other tool you prefer):
-
+```
 user='pi'
 pass='circle'
 server='sauger:5000'
@@ -63,7 +63,7 @@ else
     echo \[${dt}\] 'still noone at home'
   fi
 fi
-
+```
 Change "user" and "pass" in the beginning of the script with your user credentials. You can create a new user for this or use the "admin" - user. The user has to have admin rights sadly so don't use this script on any machine that can be accessed by anyone but you.
 
 "server" is your server address enter the hostname (or ip) and port there
@@ -79,8 +79,9 @@ The same way it enables the camera if the phone cannot be contacted anymore.
 The script does only minimum outputs. If you run into problems, just remove the ">dev>null"  part on any line to get more information.
 
 Before you can start the script you should create an empty file where the state is saved by entereing
-
+```
 touch lgstate.txt
+```
 
 You can run that script by entering "./pingPhone.sh" on the command line. You can watch the changes live in the Surveillance Station -View of the Synology. Changes are displayed instantly. You do not need to refresh the page.
 
@@ -91,12 +92,14 @@ If you have more than one camera change the value of "cameraIds" to another valu
 Finally if you want to run this script automaticly you can create a simple cronjob for it
 
 open
-
+```
 crontab -e
+```
 
 and enter the following line:
-
+```
 \*/15 \* \* \* \* /home/pi/pingPhone.sh >>/home/pi/pingPhone.log
+```
 
 (of course the path may differ on your system)
 
