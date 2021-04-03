@@ -9,17 +9,6 @@ tags:
   - "chrome-extensions"
   - "optimizer"
 ---
-# Der Google+ - Optimizer 3.0 ist fertig!
-_22.02.2015 00:00:00_
-|Categories|
-|-|
-|[anwendungen](/dotnetwork/de/categories#anwendungen) :black_small_square: [javascript-programmierung](/dotnetwork/de/categories#javascript-programmierung) :black_small_square: [jquery-programmierung](/dotnetwork/de/categories#jquery-programmierung)|
-
-|Tags|
-|-|
-|[chrome-extensions](/dotnetwork/de/tags#chrome-extensions) :black_small_square: [optimizer](/dotnetwork/de/tags#optimizer)|
-
-
 
 Ja. Endlich ist es soweit. Version 3.0 wird auf die Menschheit (also Euch :) ) losgelassen. Die wesentlichen Änderungen zur 2er-Version im Überblick:
 

@@ -7,17 +7,6 @@ categories:
 tags: 
   - "mcml"
 ---
-# Der steinige Weg zum Vista Media Center PlugIn: MCML
-_18.03.2008 00:00:00_
-|Categories|
-|-|
-|[c](/dotnetwork/de/categories#c) :black_small_square: [windows](/dotnetwork/de/categories#windows)|
-
-|Tags|
-|-|
-|[mcml](/dotnetwork/de/tags#mcml)|
-
-
 
 Nachdem ich leidvoll erfahren musste, dass XAML/WPF/XBAP in zukünftigen Media Center Editionen nicht mehr unterstützt wird, müssen wir wohl in den sauren Apfel beißen und mit MCML vorlieb nehmen. Doch was ist MCML eigentlich?
 

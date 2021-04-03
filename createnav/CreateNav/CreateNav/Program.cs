@@ -22,7 +22,7 @@ namespace CreateNav
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .Build();
 
-            var repoPath=config.GetSection("LocalRepo").Value; 
+            var repoPath=config.GetSection("LocalRepo").Value;
             var docRoot = config.GetSection("DocumentRoot").Value;
             var version = new Version(config.GetSection("Version").Value);
 

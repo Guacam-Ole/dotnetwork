@@ -11,17 +11,6 @@ tags:
   - "notizen"
   - "owncloud"
 ---
-# Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen
-_12.11.2018 00:00:00_
-|Categories|
-|-|
-|[allgemein](/dotnetwork/de/categories#allgemein) :black_small_square: [anwendungen](/dotnetwork/de/categories#anwendungen)|
-
-|Tags|
-|-|
-|[google-keep](/dotnetwork/de/tags#google-keep) :black_small_square: [nextcloud](/dotnetwork/de/tags#nextcloud) :black_small_square: [notes](/dotnetwork/de/tags#notes) :black_small_square: [notizen](/dotnetwork/de/tags#notizen) :black_small_square: [owncloud](/dotnetwork/de/tags#owncloud)|
-
-
 
 Nachdem die Daten von Google Drive und Google Photos ihren Weg in die eigene Wolke gefunden haben, sind als (zunächst) letzter Schritt die Notizen aus Google Keep dran. Wie bereits bei den Photos lassen diese sich über die [Takeout](https://www.google.com/settings/takeout)\-Funktion exportieren. Hier wird als Option lediglich html angeboten.
 

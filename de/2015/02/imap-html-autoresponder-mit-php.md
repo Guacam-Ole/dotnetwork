@@ -10,17 +10,6 @@ tags:
   - "php-de"
   - "swiftmailer-de"
 ---
-# IMAP-HTML-Autoresponder mit PHP
-_13.02.2015 00:00:00_
-|Categories|
-|-|
-|[php](/dotnetwork/de/categories#php) :black_small_square: [programmierung](/dotnetwork/de/categories#programmierung)|
-
-|Tags|
-|-|
-|[autresponder](/dotnetwork/de/tags#autresponder) :black_small_square: [imap-de](/dotnetwork/de/tags#imap-de) :black_small_square: [php-de](/dotnetwork/de/tags#php-de) :black_small_square: [swiftmailer-de](/dotnetwork/de/tags#swiftmailer-de)|
-
-
 
 Jeder kennt spam. Jeder **hasst** spam. Und jeder, der seine E-Mail-Adresse im Internet veröffentlicht (z.B. weil er eine eigene Domain besitzt) bekommt **eine Menge** Spam.
 

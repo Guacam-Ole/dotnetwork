@@ -7,17 +7,6 @@ tags:
   - "amazon"
   - "usability"
 ---
-# Usability und mieses Webdesign - Wenn selbst die Großen versagen
-_29.06.2016 00:00:00_
-|Categories|
-|-|
-|[allgemein](/dotnetwork/de/categories#allgemein)|
-
-|Tags|
-|-|
-|[amazon](/dotnetwork/de/tags#amazon) :black_small_square: [usability](/dotnetwork/de/tags#usability)|
-
-
 
 Heute war es soweit: Der USB-Stick, der meinen Raspberry Pi mit der HomeMatic verbindet hat seinen Geist aufgegeben. Nach etwas Recherche kam ich zu der Erkenntnis, dass das wohl nicht so selten vorkommt. Aber kein Problem: Ist ja Amazon, da gabs eigentlich nie ein Problem mit der Garantie.
 

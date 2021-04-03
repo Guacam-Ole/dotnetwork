@@ -7,17 +7,6 @@ tags:
   - "fitbit-de"
   - "raspberry-pi-de"
 ---
-# Fitbit-Erkennung unter Linux (Raspberry Pi 2)
-_27.02.2016 00:00:00_
-|Categories|
-|-|
-|[linux](/dotnetwork/de/categories#linux)|
-
-|Tags|
-|-|
-|[fitbit-de](/dotnetwork/de/tags#fitbit-de) :black_small_square: [raspberry-pi-de](/dotnetwork/de/tags#raspberry-pi-de)|
-
-
 
 Wie ich bereits [vorher beschrieben habe](http://dotnet.work/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren/), nutze ich den Raspberry. um mein Smartphone mittels WiFi zu erkennen. Seit Android Marshmellow geht das leider nicht mehr, denn im Schlafmodus wird das Wlan jetzt deaktiviert. Die einfachste Möglichkeit, dieses Problem zu umgehen, wäre die Verwendung von Bluetooth. Und das hatte ich ursprünglich auch vor. Aber während ich noch auf den Dongle gewartet hatte, hat mein Arbeitgeber mir ein "[Fitbit Charge HR](http://amzn.to/1VKm1OJ)" geschenkt. Da mir glaubhaft versichert wurde, dass das "HR" nicht für Human Resources steht und das Ding nicht genutzt wird um zu prüfen, wie viele Zeilen Code ich pro Tag so schreibe, habe ich es mir mal umgebunden und ausprobiert.
 
