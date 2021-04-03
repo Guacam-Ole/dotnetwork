@@ -14,7 +14,7 @@ tags:
   - "raspberry-pi-de"
 ---
 
-\[bs\_notification type="info"\]Dieses Tutorial setzt voraus, dass FHEM bereits installiert und konfiguriert ist und der Umgang mit AngularJS bekannt ist\[/bs\_notification\]
+Dieses Tutorial setzt voraus, dass FHEM bereits installiert und konfiguriert ist und der Umgang mit AngularJS bekannt ist
 
 Ich habe in vorherigen Beiträgen bereits beschrieben, wie ich den RaspBerry PI zur Heimautomation verwende. Ich [erkenne bereits das SmartPhone](http://dotnet.work/2016/02/smartphone-erkennung-unter-linux-mittels-bluetooth-raspberry-pi-2/), das [FitBit](http://dotnet.work/2016/02/fitbit-erkennung-unter-linux-raspberry-pi-2/) und kontrolliere [Webcam](http://dotnet.work/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren/) sowie die [Harmony Fernbedienung](http://dotnet.work/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern/) mittels einiger Shell-Scripte und einem Webinterface.
 
@@ -39,7 +39,7 @@ Bevor wir anfangen, solltest du sicherstellen, dass FHEM bereits korrekt funktio
 Ich habe ein "universelle" PHP-Script zur Kommunikation mit FHEM geschrieben. Der PHP-Part ist nicht zwingend notwendig; Da ausschließlich GET-Requests verwendet werden ließe sich das auch komplett per JavaScript oder sogar per HTML-Links erledigen. Der Grund PHP zu verwenden war für mich, dass das Webinterface von "außen" - also über das Internet erreichbar ist, die eigentliche Steuerung aber nicht. Das ist ein gewolltes Verhalten, so dass ein Zugriff vom Client (JavaScript) nicht möglich ist. Innerhalb meines LANs über den Server (PHP) jedoch schon.
 
 Der langen Rede kurzer Sinn, das (simple) PHP-Script
-
+```
 <?php
  $host="http://192.168.178.36:8083/fhem?";
 
@@ -65,7 +65,7 @@ Der langen Rede kurzer Sinn, das (simple) PHP-Script
  echo $return;
 
 ?>
-
+```
 Um das Script anzupassen muss lediglich die IP-Adresse und evtl. der Port in der $host-Variable angepasst werden. Ob das Script funktioniert kann leicht getestet werden:
 
 http://yourserver/fhem.php?action=get&sensor={sensorname}\_Clima&param=measured-temp
@@ -75,7 +75,7 @@ Ersetze "Sensorname" durch den namen des Sensors, wie er in FHEM angezeigt wird.
 Zeigen wir nun die Daten auf der Website an. Damit es schick aussieht verwende ich die Gauges von [ng-Google-Chart](https://github.com/angular-google-chart/angular-google-chart)
 
 Die HTML-Datei ist wie folgt:
-
+```
 <html><body ng-app="piApp">
   <div class="container" ng-Controller="heatController" ng-init="getStats()">
         <div class="row">
@@ -102,13 +102,13 @@ Die HTML-Datei ist wie folgt:
         </div>
     </div>
 </div></body></html>
-
+```
 Ein klein bisschen Erklärung:
 
 getStats() lädt zu Beginn die Sensoren über FHEM.php. Die HTML-Seite verwendet Bootstrap (für das Responsive Design) und Font Awesome um das Batteriesymbol anzuzeigen. Beide verwenden CSS und die Seite sollte zunächst auch ohne diese Bibliotheken funktionieren.
 
 Nun zum Angular-Controller:
-
+```
 angular.module('piApp', \['googlechart'\])
     .controller('heatController', function($scope, $http) {
         $scope.url='fhem.php?';
@@ -229,7 +229,7 @@ angular.module('piApp', \['googlechart'\])
         };
 
     })
-
+```
 In $scope.heaterSettings.allHeaters Müssen die Namen sämtlicher anzuzeigender Sensoren eingetragen werden.
 
  
