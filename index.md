@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## .Net.Work
 
-You can use the [editor on GitHub](https://github.com/OleAlbers/dotnetwork/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+Welcome to the personal (nerdy) blog from Ole Albers
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+In this blog i write down some coding solution I found and maybe some other stuff, too. 
 
-```markdown
-Syntax highlighted code block
+J
 
-# Header 1
-## Header 2
-### Header 3
+_(Hinweis: Es gibt ein paar **alte** Beiträge auf Deutsch, ich habe mich aber entschieden nur noch einspraching zu bloggen. Hier findet sie im (Archiv/Deutsch))_
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+## About me
+I am a "quiddje" (try to google **that** :) ) from Hamburg, Germany. I write .NET-Code for a living and as a hobby. If you really are interested in boring resumes, or other stuff I do. Go on. Pick one:
 
-**Bold** and _Italic_ and `Code` text
+(choose wisely)
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Contact me
+- Don't
+Just kidding. If I wrote something completely wrong simply create an issue or use one of the following URLs to find out
+ 
+### More about me (external)
 
-### Jekyll Themes
+- [x] Resume, current employer and all the employers before that were brave enough to work with me: ()LinkedId
+- [ ] My StackOverflow-Page: ()SO
+- [ ] My Google+ - Page: (Just kidding. It has been a while but I still miss it)
+- [ ] The Blog "Blathering" (german)  - A weekly podcast about nerdy stuff and Hamburg and everything inbetween
+- [ ] FaceBook () seriuos
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/OleAlbers/dotnetwork/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-### Support or Contact
+### Things you don't find there
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+I was born in a *very* small village in western Germany. That kind of village that does not even have traffic lights. But a church. And a pub, of course. I learned all that "computer-stuff" that makes other people think I can repair their TV (spoiler: I can't) with about six years. My father showed me the Video Genie, The Osborne and a lot of other devices that have been awesome then and are old now. Started the classic Basic-Route, then Pascal, C++ and ended up using C# since university. I sometimes do some HTML/CSS/Angular and even PHP stuff but I strictly try to avoid that. So no real expertise there.
+
+Non-Nerdy stuff includes cycling. I especially love to cycle through norway. Just me, my bike, my tent. And a ton of repair tools, of course. I also atended the "CyClassics" (bicylce-race in Hamburg) three times and then retired at the peak (reaching the target somehow) of my sporting career.
+
+I also wrote a book that is NOT about programming, but is about a geek living in Hamburg (currently available in german, french and spanish) called "Alstervergnügen". Most of the time I am in a good mood EXCEPT when the FC St. Pauli loses. 
+
+If you have any questions or something is terribly wrong about the stuff I wrote. There are a few ways to contact me
+
+
