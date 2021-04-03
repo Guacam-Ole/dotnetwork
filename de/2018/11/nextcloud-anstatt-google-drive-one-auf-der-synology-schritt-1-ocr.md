@@ -5,6 +5,9 @@ categories:
   - "allgemein"
   - "anwendungen"
 ---
+# Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR
+_Published:_ 03.11.2018 00:00:00
+_Categories_:[allgemein](/dotnetwork/de/categories#allgemein) - [anwendungen](/dotnetwork/de/categories#anwendungen)
 
 Mein Entschluss stand fest: Anstatt Google (oder ein anderer Anbieter) wollte ich meine Daten selbst in der Cloud hosten. Die Lösung sollte da nicht (NUR) auf dem NAS selbst laufen, sondern ich wollte auch weiterhin direkt im Internet eine Kopie besitzen die einerseits Datenredundanz bietet und selbst dann verfügbar sein, wenn mein NAS explodiert und auch schnelleren und unkomplizierteren Zugriff von unterwegs erlauben als über den lokalen Internetprovider auf meine Synology.
 

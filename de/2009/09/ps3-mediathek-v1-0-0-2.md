@@ -9,6 +9,10 @@ tags:
   - "mediathek"
   - "ps3"
 ---
+# PS3 Mediathek V1.0.0.2
+_Published:_ 03.09.2009 00:00:00
+_Categories_:[anwendungen](/dotnetwork/de/categories#anwendungen) - [c](/dotnetwork/de/categories#c) - [windows](/dotnetwork/de/categories#windows)
+_Tags_:[mediathek](/dotnetwork/de/tags#mediathek) - [ps3](/dotnetwork/de/tags#ps3)
 
 Nach dem ganzen “Gemecker ” hab ich mal ne neue Version online gestellt, die jetzt auch Fehler loggt.
 
