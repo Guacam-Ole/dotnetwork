@@ -7,6 +7,17 @@ categories:
 tags: 
   - "log4net"
 ---
+# Fehlerabhängige Logdetails mit Log4net
+_27.02.2012 00:00:00_
+|Categories|
+|-|
+|[c](/dotnetwork/de/categories#c) :black_small_square: [programmierung](/dotnetwork/de/categories#programmierung)|
+
+|Tags|
+|-|
+|[log4net](/dotnetwork/de/tags#log4net)|
+
+
 
 Als Entwickler kennt man das Problem: In der Startphase will man wirklich jede Variable loggen, um zu sehen,wie das System arbeitet. Nach einer Weile läuft das System stabil und man reduziert die Logausgaben auf Info oder sogar auf Warn.
 

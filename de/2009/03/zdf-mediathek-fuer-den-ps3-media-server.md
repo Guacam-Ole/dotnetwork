@@ -9,6 +9,17 @@ tags:
   - "mediathek"
   - "ps3"
 ---
+# ZDF Mediathek für den PS3 Media Server
+_08.03.2009 00:00:00_
+|Categories|
+|-|
+|[anwendungen](/dotnetwork/de/categories#anwendungen) :black_small_square: [c](/dotnetwork/de/categories#c) :black_small_square: [windows](/dotnetwork/de/categories#windows)|
+
+|Tags|
+|-|
+|[mediathek](/dotnetwork/de/tags#mediathek) :black_small_square: [ps3](/dotnetwork/de/tags#ps3)|
+
+
 
 Weil der PS3 media Server von Haus aus die ZDF Mediathek nicht unterstützt habe ich einen kleinen “Spider” Programmiert, der sämtliche Links aus der Mediathek ausliest.
 
