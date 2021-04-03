@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,11 +10,15 @@ namespace CreateNav
     public class Archive
     {
         private readonly string _documentRoot;
+        private readonly string _rootPath;
+        private readonly string _relativePath;
         private List<Article> _articles;
 
-        public Archive(string documentRoot, List<Article> articles)
+        public Archive(string documentRoot, string rootPath, string relativePath, List<Article> articles)
         {
             _documentRoot = documentRoot;
+            _rootPath = rootPath;
+            _relativePath = relativePath;
             _articles = articles;
         }
 
@@ -61,6 +66,12 @@ namespace CreateNav
                 }
             }
             return markdown;
+        }
+
+        public void WriteArchive(string title)
+        {
+            string archiveContent = CreateArchiveMarkDown(title);
+            File.WriteAllText(Path.Combine(_rootPath, _relativePath, "archive.md"), archiveContent);
         }
     }
 }

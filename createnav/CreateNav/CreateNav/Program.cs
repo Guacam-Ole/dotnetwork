@@ -32,7 +32,7 @@ namespace CreateNav
             var markdownReader = new ReadMd(repoPath, relativePath, docRoot, version);
             var articles=markdownReader.ReadArticlesFromFolderRecursive(relativePath);
 
-            var archiveFunctions = new Archive(relativePath, articles);
+            var archiveFunctions = new Archive(docRoot, repoPath, relativePath, articles);
             string archiveMd = archiveFunctions.CreateArchiveMarkDown(archiveTitle);
             
 
