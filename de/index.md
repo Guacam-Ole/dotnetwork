@@ -5,12 +5,10 @@
 ### 11
 
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen](/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-4-notizen)
-
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder](/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-3-sync-bilder)
-
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS](/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-2-suchen-auf-dem-nas)
-
 - [Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR](/de/2018/11/nextcloud-anstatt-google-drive-one-auf-der-synology-schritt-1-ocr)
+
 
 ## 2016
 
@@ -25,7 +23,6 @@
 ### 9
 
 - [Proxy-Probleme mittels Fiddler umgehen](/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
-
 - [Gestern war der Tag, an dem sie die Smart TVs getötet haben](/de/2016/09/gestern-war-der-tag-an-dem-sie-die-smart-tvs-getoetet-haben)
 
 ### 7
@@ -43,16 +40,14 @@
 ### 2
 
 - [Fitbit-Erkennung unter Linux (Raspberry Pi 2)](/de/2016/02/fitbit-erkennung-unter-linux-raspberry-pi-2)
-
 - [Smartphone-Erkennung unter Linux mittels Bluetooth (Raspberry Pi 2)](/de/2016/02/smartphone-erkennung-unter-linux-mittels-bluetooth-raspberry-pi-2)
 
 ### 1
 
 - [LEDs einer Überwachungskamera per Linux ein- und ausschalten](/de/2016/01/leds-einer-ueberwachungskamera-per-linux-ein-und-ausschalten)
-
 - [Logitech Harmony Hub mit dem Raspberry / Linux steuern](/de/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern)
-
 - [Synology Surveillance Station mit einem einfachen Shell-Script automatisieren](/de/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren)
+
 
 ## 2015
 
@@ -63,12 +58,12 @@
 ### 2
 
 - [Der Google+ - Optimizer 3.0 ist fertig!](/de/2015/02/der-google-optimizer-3-0-ist-fertig)
-
 - [IMAP-HTML-Autoresponder mit PHP](/de/2015/02/imap-html-autoresponder-mit-php)
 
 ### 1
 
 - [FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)](/de/2015/01/firetv-mittels-kodi-xbmc-zum-vollwertigen-und-genuegsamen-mediaplayer-machen-kein-root-erforderlich)
+
 
 ## 2014
 
@@ -76,11 +71,13 @@
 
 - [Optimizer für Google+ - Anleitung](/de/2014/02/optimizer-fuer-google-anleitung)
 
+
 ## 2012
 
 ### 2
 
 - [Fehlerabhängige Logdetails mit Log4net](/de/2012/02/fehlerabhaengige-loglevel-mit-log4net)
+
 
 ## 2011
 
@@ -91,8 +88,8 @@
 ### 6
 
 - [Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs](/de/2011/06/installation-einer-softwareumgebung-fuer-ps3-homebrew-fuer-linux-n00bs)
-
 - [DosMount](/de/2011/06/dosmount)
+
 
 ## 2009
 
@@ -107,16 +104,14 @@
 ### 4
 
 - [Tod der Umschalttaste!](/de/2009/04/tod-der-umschalttaste)
-
 - [PS3.Mediathek auf SourceForge](/de/2009/04/ps3-mediathek-auf-sourceforge)
 
 ### 3
 
 - [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
-
 - [PS3 Media Server](/de/2009/03/ps3-media-server)
-
 - [ZDF Mediathek für den PS3 Media Server](/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
+
 
 ## 2008
 
@@ -131,4 +126,5 @@
 ### 3
 
 - [Der steinige Weg zum Vista Media Center PlugIn: MCML](/de/2008/03/der-steinige-weg-zum-vista-media-center-plugin-mcml)
+
 
