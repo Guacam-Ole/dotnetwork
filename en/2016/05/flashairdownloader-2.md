@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "FlashAirDownloader 2"
 date: "2016-05-01"
 categories: 
@@ -6,6 +7,11 @@ categories:
   - "csharp"
   - "windows-en"
 ---
+# FlashAirDownloader 2
+_Published:_ 01.05.2016 00:00:00
+
+_Categories_: [applications](/dotnetwork/en/categories#applications) - [csharp](/dotnetwork/en/categories#csharp) - [windows-en](/dotnetwork/en/categories#windows-en)
+
 
 \[bs\_notification type="warning"\]**Development stopped!** [Please read this](http://dotnet.work/2017/01/flashairdownloader-development-now-its-your-turn/) before downloading FAD\[/bs\_notification\]
 

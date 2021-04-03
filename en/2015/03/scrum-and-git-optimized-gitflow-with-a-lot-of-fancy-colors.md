@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "SCRUM and Git: Optimized Gitflow // with a lot of fancy colors :)"
 date: "2015-03-04"
 categories: 
@@ -7,6 +8,13 @@ tags:
   - "git-en"
   - "scrum-en"
 ---
+# SCRUM and Git: Optimized Gitflow // with a lot of fancy colors :)
+_Published:_ 04.03.2015 00:00:00
+
+_Categories_: [development](/dotnetwork/en/categories#development)
+
+_Tags_: [git-en](/dotnetwork/en/tags#git-en) - [scrum-en](/dotnetwork/en/tags#scrum-en)
+
 
 For a lot of teams, GIT is the first choice for maintaining the code. So it is for mine. But this post isn't limited to GIT and should work with SVN or TFS with little modifications, too.
 

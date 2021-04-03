@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise"
 date: "2016-12-13"
 categories: 
@@ -14,6 +15,13 @@ tags:
   - "sharepoint2013"
   - "sharepoint2016"
 ---
+# Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise
+_Published:_ 13.12.2016 00:00:00
+
+_Categories_: [csharp](/dotnetwork/en/categories#csharp) - [sharepoint-en](/dotnetwork/en/categories#sharepoint-en)
+
+_Tags_: [apps](/dotnetwork/en/tags#apps) - [csom](/dotnetwork/en/tags#csom) - [office365](/dotnetwork/en/tags#office365) - [onpremise](/dotnetwork/en/tags#onpremise) - [provider-hosted-add-in](/dotnetwork/en/tags#provider-hosted-add-in) - [sharepoint-en](/dotnetwork/en/tags#sharepoint-en) - [sharepoint2013](/dotnetwork/en/tags#sharepoint2013) - [sharepoint2016](/dotnetwork/en/tags#sharepoint2016)
+
 
 What the fuzz is this about?
 

@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)"
 date: "2016-02-27"
 categories: 
@@ -7,6 +8,13 @@ tags:
   - "bluetooth"
   - "raspberry-pi"
 ---
+# Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)
+_Published:_ 27.02.2016 00:00:00
+
+_Categories_: [others](/dotnetwork/en/categories#others)
+
+_Tags_: [bluetooth](/dotnetwork/en/tags#bluetooth) - [raspberry-pi](/dotnetwork/en/tags#raspberry-pi)
+
 
 After [detecting my phone using WiFi](http://dotnet.work/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands/) (which does only work under Marshmallow while the phone is loading or the display is enabled) and [detecting the fitbit device](http://dotnet.work/2016/02/tracking-fitbit-presence-under-linux-raspberry-pi-2/) I came back to my original task to detect my phone using Bluetooth.
 

@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Getting rid of Proxy limitations using Fiddler"
 date: "2016-09-16"
 categories: 
@@ -7,6 +8,13 @@ tags:
   - "fiddler"
   - "proxy"
 ---
+# Getting rid of Proxy limitations using Fiddler
+_Published:_ 16.09.2016 00:00:00
+
+_Categories_: [others](/dotnetwork/en/categories#others)
+
+_Tags_: [fiddler](/dotnetwork/en/tags#fiddler) - [proxy](/dotnetwork/en/tags#proxy)
+
 
 If you work in a company that uses Proxy authentication (aka forces you to enter a password to access websites) and are a developer you know my pain: Some Most applications just don't really like proxies. Visual Studio itself for example does not like proxy authentication at all and responses with a wide variety of error codes (407 for example).
 

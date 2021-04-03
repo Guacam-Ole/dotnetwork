@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "Displaying Data from HomeMatic Actors on a WebInterface"
 date: "2016-07-11"
 categories: 
@@ -8,6 +9,13 @@ tags:
   - "homematic"
   - "raspberry-pi"
 ---
+# Displaying Data from HomeMatic Actors on a WebInterface
+_Published:_ 11.07.2016 00:00:00
+
+_Categories_: [others](/dotnetwork/en/categories#others)
+
+_Tags_: [fhem](/dotnetwork/en/tags#fhem) - [homematic](/dotnetwork/en/tags#homematic) - [raspberry-pi](/dotnetwork/en/tags#raspberry-pi)
+
 
 This tutorial assumes that you already installed and configured FHEM and know how to use AngularJS.
 

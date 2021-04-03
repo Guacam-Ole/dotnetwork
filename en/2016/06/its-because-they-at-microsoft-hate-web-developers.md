@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.1"
 title: "It's because they at Microsoft hate web developers"
 date: "2016-06-14"
 categories: 
@@ -7,6 +8,13 @@ tags:
   - "office365"
   - "sharepoint-en"
 ---
+# It's because they at Microsoft hate web developers
+_Published:_ 14.06.2016 00:00:00
+
+_Categories_: [others](/dotnetwork/en/categories#others)
+
+_Tags_: [office365](/dotnetwork/en/tags#office365) - [sharepoint-en](/dotnetwork/en/tags#sharepoint-en)
+
 
 That remark isn't mine, it is from StackOverflow. :)
 
