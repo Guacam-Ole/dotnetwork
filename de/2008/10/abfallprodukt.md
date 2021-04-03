@@ -10,16 +10,9 @@ tags:
   - "torsignal"
 ---
 # Abfallprodukt
-_28.10.2008 00:00:00_
-|Categories|
-|-|
-|[anwendungen](/dotnetwork/de/categories#anwendungen) :black_small_square: [c](/dotnetwork/de/categories#c) :black_small_square: [windows](/dotnetwork/de/categories#windows)|
-
-|Tags|
-|-|
-|[tor](/dotnetwork/de/tags#tor) :black_small_square: [torsignal](/dotnetwork/de/tags#torsignal)|
-
-
+_Published:_ 28.10.2008 00:00:00
+_Categories_:[anwendungen](/dotnetwork/de/categories#anwendungen) - [c](/dotnetwork/de/categories#c) - [windows](/dotnetwork/de/categories#windows)
+_Tags_:[tor](/dotnetwork/de/tags#tor) - [torsignal](/dotnetwork/de/tags#torsignal)
 
 Auf der Suche nach einer Möglichkeit, TOR per Software anzusprechen bin ich mehrmals über das sog. “TorSignal4Windows” gestolpert. Leider scheinen alle Links darauf tot zu sein. Also habe ich – quasi als Abfallprodukt eines anderen Projekts – selber ein TorSignalForWindows entwickelt.
 

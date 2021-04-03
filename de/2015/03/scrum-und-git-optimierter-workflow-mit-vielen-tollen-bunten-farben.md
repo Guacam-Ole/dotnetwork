@@ -8,16 +8,9 @@ tags:
   - "scrum"
 ---
 # SCRUM und Git: Optimierter Workflow // Mit vielen tollen bunten Farben :)
-_04.03.2015 00:00:00_
-|Categories|
-|-|
-|[programmierung](/dotnetwork/de/categories#programmierung)|
-
-|Tags|
-|-|
-|[git](/dotnetwork/de/tags#git) :black_small_square: [scrum](/dotnetwork/de/tags#scrum)|
-
-
+_Published:_ 04.03.2015 00:00:00
+_Categories_:[programmierung](/dotnetwork/de/categories#programmierung)
+_Tags_:[git](/dotnetwork/de/tags#git) - [scrum](/dotnetwork/de/tags#scrum)
 
 Viele Teams entscheiden sich für GIT, um den Code zu verwalten. Meines macht hier keine Ausnahme. Dieser Post ist aber nicht auf GIT limitiert, sondern funktioniert (mit kleinen Modifikationen) auch mit TFS oder SVN.
 

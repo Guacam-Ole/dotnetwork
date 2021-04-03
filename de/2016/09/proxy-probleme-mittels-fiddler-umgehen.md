@@ -11,16 +11,9 @@ tags:
   - "proxy-de"
 ---
 # Proxy-Probleme mittels Fiddler umgehen
-_16.09.2016 00:00:00_
-|Categories|
-|-|
-|[allgemein](/dotnetwork/de/categories#allgemein) :black_small_square: [os](/dotnetwork/de/categories#os) :black_small_square: [programmierung](/dotnetwork/de/categories#programmierung) :black_small_square: [windows](/dotnetwork/de/categories#windows)|
-
-|Tags|
-|-|
-|[fiddler-de](/dotnetwork/de/tags#fiddler-de) :black_small_square: [proxy-de](/dotnetwork/de/tags#proxy-de)|
-
-
+_Published:_ 16.09.2016 00:00:00
+_Categories_:[allgemein](/dotnetwork/de/categories#allgemein) - [os](/dotnetwork/de/categories#os) - [programmierung](/dotnetwork/de/categories#programmierung) - [windows](/dotnetwork/de/categories#windows)
+_Tags_:[fiddler-de](/dotnetwork/de/tags#fiddler-de) - [proxy-de](/dotnetwork/de/tags#proxy-de)
 
 Wer in einem Unternehmen arbeitet, dass eine Proxy-Authentifizierung verwendet (also die Eingabe eines Passworts zum Surfen erfordert) kennt das Problem: Einige Die meisten Anwendungen mögen keine Proxies mit Passwortabfrage. Eine dieser Anwendungen ist Visual Studio, dass an vielen verschiedenen Stellen Fehler schmeißt.
 

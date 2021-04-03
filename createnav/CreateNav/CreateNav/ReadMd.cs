@@ -57,6 +57,23 @@ namespace CreateNav
             return new DateTime(int.Parse(dateContents[0]), int.Parse(dateContents[1]), int.Parse(dateContents[2]));
         }
 
+        private string CreateArticleTagLine(Article article, string prefix, string path, List<string> elements, Dictionary<string, List<Article>> globalElementList)
+        {
+            if (elements == null || elements.Count == 0) return null;
+            string line =$"_{prefix}_:";
+            bool isFirstElement = true;
+            foreach (var element in elements)
+            {
+                if (!isFirstElement) line += " - ";
+                isFirstElement = false;
+                string elementLower = element.ToLower();
+                line += $"[{elementLower}]({_documentRoot}/{_relativePath}/{path}#{elementLower})";
+                if (!globalElementList.ContainsKey(elementLower)) globalElementList.Add(elementLower, new List<Article>());
+                globalElementList[elementLower].Add(article);
+            }
+            return line;
+
+        }
 
         private void UpdateArticle(string path, Article article)
         {
@@ -89,59 +106,17 @@ namespace CreateNav
                     if (!afterHeader || finished) continue;
 
                     newFile.Add($"# {article.Title}");
-                    newFile.Add($"_{article.Published}_");
-                    int maxLength = article.Categories.Count;
-                    if (article.Tags.Count > maxLength) maxLength = article.Tags.Count;
+                    newFile.Add($"_Published:_ {article.Published}");
+                    string categoryLine = CreateArticleTagLine(article, "Categories", "categories", article.Categories, _categories);
+                    string tagLine = CreateArticleTagLine(article, "Tags", "tags", article.Tags, _tags);
 
-                    if (maxLength > 0)
-                    {
-                        //newFile.Add($"Categories|Tags");
-                        //newFile.Add("-|-");
-                        if (article.Categories.Count > 0)
-                        {
-                            newFile.Add("|Categories|");
-                            newFile.Add("|-|");
+                    if (categoryLine != null) newFile.Add(categoryLine);
+                    if (tagLine != null) newFile.Add(tagLine);
 
-                            string catLine = "|";
-                            bool isFirst = true;
-                            foreach (var category in article.Categories)
-                            {
-                                if (!isFirst) catLine += " :black_small_square: ";
-                                isFirst = false;
-                                string categoryName = category.ToLower();
-                                catLine += $"[{categoryName}]({_documentRoot}/{_relativePath}/categories#{categoryName})";
-                                if (!_categories.ContainsKey(categoryName)) _categories.Add(categoryName, new List<Article>());
-                                _categories[categoryName].Add(article);
-                            }
-                            catLine += "|";
-                            newFile.Add(catLine);
-                        }
-                        newFile.Add(string.Empty);
-                        if (article.Tags.Count > 0)
-                        {
-                            newFile.Add("|Tags|");
-                            newFile.Add("|-|");
-
-                            string tagLine = "|";
-                            bool isFirst = true;
-                            foreach (var tag in article.Tags)
-                            {
-                                if (!isFirst) tagLine += " :black_small_square: ";
-                                isFirst = false;
-                                string tagName = tag.ToLower();
-                                tagLine += $"[{tagName}]({_documentRoot}/{_relativePath}/tags#{tagName})";
-                                if (!_categories.ContainsKey(tagName)) _categories.Add(tagName, new List<Article>());
-                                _categories[tagName].Add(article);
-                            }
-                            tagLine += "|";
-                            newFile.Add(tagLine);
-                        }
-                        newFile.Add("\n");
-                    }
                     finished = true;
                 }
 
-                File.WriteAllLines(path, newFile);
+                   File.WriteAllLines(path, newFile);
             }
         }
 

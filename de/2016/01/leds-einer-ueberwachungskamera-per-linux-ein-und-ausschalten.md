@@ -9,16 +9,9 @@ tags:
   - "synology-de"
 ---
 # LEDs einer Überwachungskamera per Linux ein- und ausschalten
-_15.01.2016 00:00:00_
-|Categories|
-|-|
-|[linux](/dotnetwork/de/categories#linux) :black_small_square: [os](/dotnetwork/de/categories#os)|
-
-|Tags|
-|-|
-|[raspberry-pi-de](/dotnetwork/de/tags#raspberry-pi-de) :black_small_square: [synology-de](/dotnetwork/de/tags#synology-de)|
-
-
+_Published:_ 15.01.2016 00:00:00
+_Categories_:[linux](/dotnetwork/de/categories#linux) - [os](/dotnetwork/de/categories#os)
+_Tags_:[raspberry-pi-de](/dotnetwork/de/tags#raspberry-pi-de) - [synology-de](/dotnetwork/de/tags#synology-de)
 
 Da ich bereits per Shell-Script auf dem Raspberry automatisch die Kamera [ja nach Anwesenheit aktiviere](http://dotnet.work/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren/), wollte ich noch einen Schritt weiter gehen. Da es mir nicht um heimliche Aufnahmen geht, sondern um eine Sicherheitsüberwachung wollte ich deutlich sehen können, ob die Kamera aktiv ist oder nicht. Das Webinterface erlaubt es zwar generell, die LEDs zu deaktivieren oder zu aktivieren, dies ist aber immer unabhängig von der Aufnahme.
 

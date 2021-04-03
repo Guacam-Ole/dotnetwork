@@ -13,16 +13,9 @@ tags:
   - "werbung"
 ---
 # Gestern war der Tag, an dem sie die Smart TVs getötet haben
-_07.09.2016 00:00:00_
-|Categories|
-|-|
-|[allgemein](/dotnetwork/de/categories#allgemein)|
-
-|Tags|
-|-|
-|[adblocker](/dotnetwork/de/tags#adblocker) :black_small_square: [hangouts](/dotnetwork/de/tags#hangouts) :black_small_square: [panasonic](/dotnetwork/de/tags#panasonic) :black_small_square: [samsung](/dotnetwork/de/tags#samsung) :black_small_square: [skype](/dotnetwork/de/tags#skype) :black_small_square: [smart-tv](/dotnetwork/de/tags#smart-tv) :black_small_square: [werbung](/dotnetwork/de/tags#werbung)|
-
-
+_Published:_ 07.09.2016 00:00:00
+_Categories_:[allgemein](/dotnetwork/de/categories#allgemein)
+_Tags_:[adblocker](/dotnetwork/de/tags#adblocker) - [hangouts](/dotnetwork/de/tags#hangouts) - [panasonic](/dotnetwork/de/tags#panasonic) - [samsung](/dotnetwork/de/tags#samsung) - [skype](/dotnetwork/de/tags#skype) - [smart-tv](/dotnetwork/de/tags#smart-tv) - [werbung](/dotnetwork/de/tags#werbung)
 
 **Es war ein schleichender Tod. Und die Werbeindustrie hat ihn auf dem Gewissen.**
 

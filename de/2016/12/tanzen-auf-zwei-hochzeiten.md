@@ -13,16 +13,9 @@ tags:
   - "visual-studio"
 ---
 # Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren
-_14.12.2016 00:00:00_
-|Categories|
-|-|
-|[c](/dotnetwork/de/categories#c) :black_small_square: [sharepoint](/dotnetwork/de/categories#sharepoint)|
-
-|Tags|
-|-|
-|[csom-de](/dotnetwork/de/tags#csom-de) :black_small_square: [office365-de](/dotnetwork/de/tags#office365-de) :black_small_square: [sharepoint](/dotnetwork/de/tags#sharepoint) :black_small_square: [sharepoint2013-de](/dotnetwork/de/tags#sharepoint2013-de) :black_small_square: [sharepoint2016-de](/dotnetwork/de/tags#sharepoint2016-de) :black_small_square: [visual-studio](/dotnetwork/de/tags#visual-studio)|
-
-
+_Published:_ 14.12.2016 00:00:00
+_Categories_:[c](/dotnetwork/de/categories#c) - [sharepoint](/dotnetwork/de/categories#sharepoint)
+_Tags_:[csom-de](/dotnetwork/de/tags#csom-de) - [office365-de](/dotnetwork/de/tags#office365-de) - [sharepoint](/dotnetwork/de/tags#sharepoint) - [sharepoint2013-de](/dotnetwork/de/tags#sharepoint2013-de) - [sharepoint2016-de](/dotnetwork/de/tags#sharepoint2016-de) - [visual-studio](/dotnetwork/de/tags#visual-studio)
 
 Worum geht es überhaupt?
 

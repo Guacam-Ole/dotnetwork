@@ -10,16 +10,9 @@ tags:
   - "xbmc"
 ---
 # FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)
-_24.01.2015 00:00:00_
-|Categories|
-|-|
-|[allgemein](/dotnetwork/de/categories#allgemein)|
-
-|Tags|
-|-|
-|[android](/dotnetwork/de/tags#android) :black_small_square: [firetv](/dotnetwork/de/tags#firetv) :black_small_square: [kodi](/dotnetwork/de/tags#kodi) :black_small_square: [xbmc](/dotnetwork/de/tags#xbmc)|
-
-
+_Published:_ 24.01.2015 00:00:00
+_Categories_:[allgemein](/dotnetwork/de/categories#allgemein)
+_Tags_:[android](/dotnetwork/de/tags#android) - [firetv](/dotnetwork/de/tags#firetv) - [kodi](/dotnetwork/de/tags#kodi) - [xbmc](/dotnetwork/de/tags#xbmc)
 
 **Update (24.07.2015):**
 

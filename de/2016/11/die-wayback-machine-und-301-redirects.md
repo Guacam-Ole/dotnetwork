@@ -9,16 +9,9 @@ tags:
   - "wayback-machine"
 ---
 # Die Wayback Machine und 301 redirects
-_15.11.2016 00:00:00_
-|Categories|
-|-|
-|[allgemein](/dotnetwork/de/categories#allgemein)|
-
-|Tags|
-|-|
-|[301](/dotnetwork/de/tags#301) :black_small_square: [redirect-de](/dotnetwork/de/tags#redirect-de) :black_small_square: [wayback-machine](/dotnetwork/de/tags#wayback-machine)|
-
-
+_Published:_ 15.11.2016 00:00:00
+_Categories_:[allgemein](/dotnetwork/de/categories#allgemein)
+_Tags_:[301](/dotnetwork/de/tags#301) - [redirect-de](/dotnetwork/de/tags#redirect-de) - [wayback-machine](/dotnetwork/de/tags#wayback-machine)
 
 Die Wayback machine von archive.org sammelt Shapshots von Websites überall auf der Welt. Sowohl automatisch, aber optional auch durch manuellen Aufruf. Wenn jedoch zu irgendeinem Zeitpunkt eine permanente Weiterleitung (301 redirect) eingerichtet war, die später entfernt oder geändert wurde, ist man relativ "gearscht".
 
