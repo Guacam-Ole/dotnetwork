@@ -60,7 +60,7 @@ namespace CreateNav
         private string CreateArticleTagLine(Article article, string prefix, string path, List<string> elements, Dictionary<string, List<Article>> globalElementList)
         {
             if (elements == null || elements.Count == 0) return null;
-            string line =$"_{prefix}_:";
+            string line = $"_{prefix}_:";
             bool isFirstElement = true;
             foreach (var element in elements)
             {
@@ -83,7 +83,7 @@ namespace CreateNav
             var newFile = new List<string>();
 
 
-            // Check old version if new versions arrive...
+            
             {
 
                 var content = File.ReadAllLines(path);
@@ -107,16 +107,25 @@ namespace CreateNav
 
                     newFile.Add($"# {article.Title}");
                     newFile.Add($"_Published:_ {article.Published}");
+                    newFile.Add(string.Empty);
                     string categoryLine = CreateArticleTagLine(article, "Categories", "categories", article.Categories, _categories);
                     string tagLine = CreateArticleTagLine(article, "Tags", "tags", article.Tags, _tags);
 
-                    if (categoryLine != null) newFile.Add(categoryLine);
-                    if (tagLine != null) newFile.Add(tagLine);
+                    if (categoryLine != null)
+                    {
+                        newFile.Add(categoryLine);
+                        newFile.Add(string.Empty);
+                    }
+                    if (tagLine != null)
+                    {
+                        newFile.Add(tagLine);
+                        newFile.Add(string.Empty);
+                    }
 
                     finished = true;
                 }
 
-                   File.WriteAllLines(path, newFile);
+                File.WriteAllLines(path, newFile);
             }
         }
 

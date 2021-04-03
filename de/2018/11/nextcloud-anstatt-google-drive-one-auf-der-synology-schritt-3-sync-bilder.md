@@ -13,8 +13,11 @@ tags:
 ---
 # Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder
 _Published:_ 11.11.2018 00:00:00
+
 _Categories_:[anwendungen](/dotnetwork/de/categories#anwendungen)
+
 _Tags_:[google-drive](/dotnetwork/de/tags#google-drive) - [google-keep](/dotnetwork/de/tags#google-keep) - [google-one](/dotnetwork/de/tags#google-one) - [google-photos](/dotnetwork/de/tags#google-photos) - [nextcloud](/dotnetwork/de/tags#nextcloud) - [owncloud](/dotnetwork/de/tags#owncloud)
+
 
 # Sync OwnCloud-NAS
 
