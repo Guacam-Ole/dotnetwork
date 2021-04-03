@@ -33,14 +33,14 @@ namespace CreateNav
 
         private IEnumerable<string> GetMonthsFromYear(string year)
         {
-            var months = new List<string>();
+            var months = new List<int>();
             foreach (var article in _articles)
             {
                 if (article.Published.Year.ToString() != year) continue;
-                string month = article.Published.Month.ToString();
+                var month = article.Published.Month;
                 if (!months.Contains(month)) months.Add(month);
             }
-            return months.OrderByDescending(q => q);
+            return months.OrderByDescending(q => q).Select(q => q.ToString());
         }
 
         private IEnumerable<Article> GetArticlesInMonth(string year, string month)
