@@ -13,7 +13,7 @@ Als Entwickler kennt man das Problem: In der Startphase will man wirklich jede V
 Kommt es nun zu einem Fehler, wäre es dann doch wieder ganz nett kurz vor dem Fehler zu sehen, welche Debug-Ausgaben es denn gegeben hätte. Log4Net schafft dies bereits mit Bordmitteln; Überraschenderweise scheint niemand dies bisher genutzt zu haben, oder dies niedergeschrieben zu haben. Also hole ich dies hiermit mal nach 
 
 Folgende Konfiguration sorgt dafür, dass im Normalfall nur Info-Meldungen in die Logfile geschrieben werden. Tritt ein Fehler auf, werden zusätzlich Debug-Ausgaben geloggt:
-
+```
  <appender name="RollingFile" type="log4net.Appender.RollingFileAppender"> 
    <file value="D:Logscodelog.log"></file> 
    <appendtofile value="true"></appendtofile> 
@@ -44,5 +44,5 @@ Folgende Konfiguration sorgt dafür, dass im Normalfall nur Info-Meldungen in di
    <appender-ref ref="BufferedFileInfo"> 
    <appender-ref ref="BufferedFileError"> 
 </root> 
-
+```
 Zur Erklärung: Der BufferFileInfo hat einen Puffer von “1”, speichert also nur eine Zeile und schreibt alles vom Status “INFO” in die Logfile. Der BufferedFileError reagiert nur bei Fehlern und speichert die letzten 20 Log-Ausgaben, unabhängig vom Level. Beide senden die Ausgaben an “RollingFile”, der für das eigentliche Schreiben in die Logfile sorgt.
