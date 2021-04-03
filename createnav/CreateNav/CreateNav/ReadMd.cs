@@ -75,16 +75,13 @@ namespace CreateNav
 
         private void UpdateArticle(string path, Article article)
         {
-            if (article.ModifyVersion == _currentVersion) return;
-
-
+            bool updateContents = article.ModifyVersion != _currentVersion;
             var newFile = new List<string>();
 
             var content = File.ReadAllLines(path);
             bool inHeader = false;
             bool afterHeader = false;
             bool finished = false;
-            bool hasVersion = false;
 
             foreach (var line in content)
             {
@@ -122,8 +119,7 @@ namespace CreateNav
                 finished = true;
             }
 
-            File.WriteAllLines(path, newFile);
-
+            if (updateContents) File.WriteAllLines(path, newFile);
         }
 
         private void WriteCategoryMarkdownFile()
