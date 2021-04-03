@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Synology Surveillance Station mit einem einfachen Shell-Script automatisieren"
 date: "2016-01-07"
 categories: 
@@ -10,6 +10,8 @@ tags:
   - "linux"
   - "raspberry-pi-de"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 1 » Synology Surveillance Station mit einem einfachen Shell-Script automatisieren
+
 # Synology Surveillance Station mit einem einfachen Shell-Script automatisieren
 _Published:_ 07.01.2016 00:00:00
 

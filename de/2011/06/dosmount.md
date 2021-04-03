@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "DosMount"
 date: "2011-06-18"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "dos"
   - "ps3"
 ---
+■ [.net.work](/) » [de](/de) » [2011](/de#2011)  » 6 » DosMount
+
 # DosMount
 _Published:_ 18.06.2011 00:00:00
 

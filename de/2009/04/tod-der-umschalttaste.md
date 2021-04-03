@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Tod der Umschalttaste!"
 date: "2009-04-15"
 categories: 
@@ -7,6 +7,8 @@ categories:
 tags: 
   - "registry"
 ---
+■ [.net.work](/) » [de](/de) » [2009](/de#2009)  » 4 » Tod der Umschalttaste!
+
 # Tod der Umschalttaste!
 _Published:_ 15.04.2009 00:00:00
 

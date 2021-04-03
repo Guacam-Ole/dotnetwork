@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Gestern war der Tag, an dem sie die Smart TVs getötet haben"
 date: "2016-09-07"
 categories: 
@@ -13,6 +13,8 @@ tags:
   - "smart-tv"
   - "werbung"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 9 » Gestern war der Tag, an dem sie die Smart TVs getötet haben
+
 # Gestern war der Tag, an dem sie die Smart TVs getötet haben
 _Published:_ 07.09.2016 00:00:00
 

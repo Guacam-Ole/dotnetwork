@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Fehlerabhängige Logdetails mit Log4net"
 date: "2012-02-27"
 categories: 
@@ -8,6 +8,8 @@ categories:
 tags: 
   - "log4net"
 ---
+■ [.net.work](/) » [de](/de) » [2012](/de#2012)  » 2 » Fehlerabhängige Logdetails mit Log4net
+
 # Fehlerabhängige Logdetails mit Log4net
 _Published:_ 27.02.2012 00:00:00
 

@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver"
 date: "2009-03-25"
 categories: 
@@ -10,6 +10,8 @@ tags:
   - "mediathek"
   - "ps3"
 ---
+■ [.net.work](/) » [de](/de) » [2009](/de#2009)  » 3 » ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver
+
 # ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver
 _Published:_ 25.03.2009 00:00:00
 

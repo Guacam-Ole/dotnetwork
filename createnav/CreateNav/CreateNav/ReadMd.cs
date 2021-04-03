@@ -7,26 +7,22 @@ namespace CreateNav
 {
     public class ReadMd
     {
-        private readonly string _rootPath;
+        private readonly Config _config;
         private readonly string _relativePath;
-        private readonly string _documentRoot;
-        private readonly Version _currentVersion;
 
 
         private readonly Dictionary<string, List<Article>> _categories = new();
         private readonly Dictionary<string, List<Article>> _tags = new();
 
-        public ReadMd(string rootPath, string relativePath, string documentRoot, Version currentVersion)
+        public ReadMd(Config config, string relativePath)
         {
-            _rootPath = rootPath;
+            _config = config;
             _relativePath = relativePath;
-            _documentRoot = documentRoot;
-            _currentVersion = currentVersion;
         }
 
         public List<Article> ReadArticlesFromFolderRecursive(string subPath, string pattern = "*.md")
         {
-            string absolutePath = Path.Combine(_rootPath, subPath);
+            string absolutePath = Path.Combine(_config.RepoPath, subPath);
             var articles = new List<Article>();
             var subFolders = new DirectoryInfo(absolutePath).GetDirectories();
             foreach (var subfolder in subFolders)
@@ -39,13 +35,34 @@ namespace CreateNav
             {
                 var article = GetArticleDataFromMarkdownFile(subPath, file);
                 if (article == null) continue;
-                UpdateArticle(Path.Combine(absolutePath, file), article);
+                string path = Path.Combine(absolutePath, file);
+                bool tagsAdded=UpdateArticle(path, article);
+                bool breadCrumbAdded=AddBreadCrumb(path, article);
+
+                if (tagsAdded || breadCrumbAdded) UpdateVersionTag(path);
                 articles.Add(article);
             }
 
             WriteCategoryMarkdownFile();
             WriteTagMarkdownFile();
             return articles;
+        }
+
+        private void UpdateVersionTag(string path)
+        {
+            var newFile = new List<string>();
+            var content = File.ReadAllLines(path);
+            bool headerFound= false;
+            foreach (var line in content)
+            {
+                if (!line.StartsWith("createnav:")) newFile.Add(line);
+                if (line == "---" && !headerFound)
+                {
+                    headerFound = true;
+                    newFile.Add($"createnav: \"{_config.Currentversion}\"");
+                }
+            }
+            File.WriteAllLines(path, newFile);
         }
 
         private DateTime GetDateFromText(string content)
@@ -66,16 +83,48 @@ namespace CreateNav
                 if (!isFirstElement) line += " - ";
                 isFirstElement = false;
                 string elementLower = element.ToLower();
-                line += $"[{elementLower}]({_documentRoot}/{_relativePath}/{path}#{elementLower})";
+                line += $"[{elementLower}]({_config.DocumentRoot}/{_relativePath}/{path}#{elementLower})";
                 if (!globalElementList.ContainsKey(elementLower)) globalElementList.Add(elementLower, new List<Article>());
                 globalElementList[elementLower].Add(article);
             }
             return line;
         }
 
-        private void UpdateArticle(string path, Article article)
+        private bool AddBreadCrumb(string path, Article article)
         {
-            bool updateContents = article.ModifyVersion != _currentVersion;
+            if (article.ModifyVersion >= new Version(0, 0, 2)) return false;
+            var newFile = new List<string>();
+            var content = File.ReadAllLines(path);
+
+            bool inHeader = false;
+            bool afterHeader = false;
+
+            string breadcrumb = $"■ [{_config.BlogName}]({_config.DocumentRoot}) » [{_relativePath}]({_config.DocumentRoot}{_relativePath}) » [{article.Published.Year}]({_config.DocumentRoot}{_relativePath}#{article.Published.Year})  » {article.Published.Month} » {article.Title}" ;
+
+            foreach (var line in content)
+            {
+                newFile.Add(line);
+                if (!inHeader && !afterHeader && line == "---")
+                {
+                    inHeader = true; 
+                    newFile.Add($"createnav: \"{_config.Currentversion}\"");
+                }
+                else if (inHeader && !afterHeader && line == "---")
+                {
+                    afterHeader = true;
+                    inHeader = false;
+                    newFile.Add(breadcrumb);
+                    newFile.Add(string.Empty);
+                }
+            }
+            File.WriteAllLines(path, newFile);
+            return true;
+        }
+       
+        private bool UpdateArticle(string path, Article article)
+        {
+            bool updateContents = article.ModifyVersion < new Version(0, 0, 1);
+                        
             var newFile = new List<string>();
 
             var content = File.ReadAllLines(path);
@@ -85,12 +134,9 @@ namespace CreateNav
 
             foreach (var line in content)
             {
-                if (!line.StartsWith("createnav:")) newFile.Add(line);
-
                 if (!inHeader && !afterHeader && line == "---")
                 {
                     inHeader = true;
-                    newFile.Add($"createnav: \"{_currentVersion}\"");
                 }
                 else if (inHeader && !afterHeader && line == "---")
                 {
@@ -119,7 +165,12 @@ namespace CreateNav
                 finished = true;
             }
 
-            if (updateContents) File.WriteAllLines(path, newFile);
+            if (updateContents)
+            {
+                File.WriteAllLines(path, newFile);
+                return true;
+            }
+            return false;
         }
 
         private void WriteCategoryMarkdownFile()
@@ -143,7 +194,7 @@ namespace CreateNav
                 }
             }
 
-            File.WriteAllText(Path.Combine(_rootPath, _relativePath, markdownFile), markdownContent);
+            File.WriteAllText(Path.Combine(_config.RepoPath, _relativePath, markdownFile), markdownContent);
         }
 
         private string GetTextInQuotes(string content)
@@ -193,7 +244,7 @@ namespace CreateNav
 
                 if (!inHeader && line == "---") inHeader = true;
             }
-            article.Path = Path.Combine(_documentRoot, relativePath, new FileInfo(filename).Name).Replace("\\", "/").Replace(".md", "");
+            article.Path = Path.Combine(_config.DocumentRoot, relativePath, new FileInfo(filename).Name).Replace("\\", "/").Replace(".md", "");
             if (article.Title == null)
             {
                 Console.WriteLine($"No title found:{article.Path}");

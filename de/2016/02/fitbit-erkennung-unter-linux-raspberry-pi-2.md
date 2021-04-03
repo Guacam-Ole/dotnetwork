@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Fitbit-Erkennung unter Linux (Raspberry Pi 2)"
 date: "2016-02-27"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "fitbit-de"
   - "raspberry-pi-de"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 2 » Fitbit-Erkennung unter Linux (Raspberry Pi 2)
+
 # Fitbit-Erkennung unter Linux (Raspberry Pi 2)
 _Published:_ 27.02.2016 00:00:00
 

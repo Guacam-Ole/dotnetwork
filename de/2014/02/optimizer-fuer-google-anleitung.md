@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Optimizer für Google+ - Anleitung"
 date: "2014-02-02"
 categories: 
@@ -11,6 +11,8 @@ tags:
   - "javascript"
   - "jquery"
 ---
+■ [.net.work](/) » [de](/de) » [2014](/de#2014)  » 2 » Optimizer für Google+ - Anleitung
+
 # Optimizer für Google+ - Anleitung
 _Published:_ 02.02.2014 00:00:00
 

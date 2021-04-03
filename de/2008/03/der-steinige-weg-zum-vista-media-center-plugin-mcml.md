@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Der steinige Weg zum Vista Media Center PlugIn: MCML"
 date: "2008-03-18"
 categories: 
@@ -8,6 +8,8 @@ categories:
 tags: 
   - "mcml"
 ---
+■ [.net.work](/) » [de](/de) » [2008](/de#2008)  » 3 » Der steinige Weg zum Vista Media Center PlugIn: MCML
+
 # Der steinige Weg zum Vista Media Center PlugIn: MCML
 _Published:_ 18.03.2008 00:00:00
 
