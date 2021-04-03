@@ -11,6 +11,8 @@ Ich ärger mich immer wieder über die blöde Shift-Lock, bzw. Caps-Lock – Tas
 
 Doch zum Glück gibt es Abhilfe. Folgenden Text als _wechdamit.reg_ speichern und per Doppelklick in die Registrierung übertragen. Schon arbeitet die Umschalttaste so, als wäre sie eine normale Shift-Taste:
 
+```
 Windows Registry Editor Version 5.00
 \[HKEYLOCALMACHINESYSTEMCurrentControlSetControlKeyboard Layout\] 
 “Scancode Map”=hex:00,00,00,00,00,00,00,00,02,00,00,00,2a,00,3a,00,00,00,00,00
+```
