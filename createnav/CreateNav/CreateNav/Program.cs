@@ -34,7 +34,7 @@ namespace CreateNav
 
             var archiveFunctions = new Archive( repoPath, relativePath, articles);
             archiveFunctions.WriteArchive(archiveTitle);
-            
+             
         }
     }
 }
