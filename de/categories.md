@@ -10,6 +10,7 @@
 - [Proxy-Probleme mittels Fiddler umgehen](/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
 - [Synology Surveillance Station mit einem einfachen Shell-Script automatisieren](/de/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren)
 - [Usability und mieses Webdesign - Wenn selbst die Großen versagen](/de/2016/06/usability-und-mieses-webdesign-wenn-selbst-die-grossen-versagen)
+
 ## anwendungen
 - [Abfallprodukt](/de/2008/10/abfallprodukt)
 - [Der Google+ - Optimizer 3.0 ist fertig!](/de/2015/02/der-google-optimizer-3-0-ist-fertig)
@@ -23,6 +24,7 @@
 - [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
 - [ZDF Mediathek auch unter Windows 7 (seven)](/de/2009/10/zdf-mediathek-auch-unter-windows-7-seven)
 - [ZDF Mediathek für den PS3 Media Server](/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
+
 ## c
 - [Abfallprodukt](/de/2008/10/abfallprodukt)
 - [Der steinige Weg zum Vista Media Center PlugIn: MCML](/de/2008/03/der-steinige-weg-zum-vista-media-center-plugin-mcml)
@@ -35,13 +37,16 @@
 - [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
 - [ZDF Mediathek auch unter Windows 7 (seven)](/de/2009/10/zdf-mediathek-auch-unter-windows-7-seven)
 - [ZDF Mediathek für den PS3 Media Server](/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
+
 ## javascript-programmierung
 - [Der Google+ - Optimizer 3.0 ist fertig!](/de/2015/02/der-google-optimizer-3-0-ist-fertig)
 - [HomeMatic - Thermostate auf einem WebInterface anzeigen](/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
 - [Optimizer für Google+ - Anleitung](/de/2014/02/optimizer-fuer-google-anleitung)
+
 ## jquery-programmierung
 - [Der Google+ - Optimizer 3.0 ist fertig!](/de/2015/02/der-google-optimizer-3-0-ist-fertig)
 - [Optimizer für Google+ - Anleitung](/de/2014/02/optimizer-fuer-google-anleitung)
+
 ## linux
 - [Datensicherung mit Rapidshare](/de/2008/09/datensicherung-mit-rapidshare)
 - [DosMount](/de/2011/06/dosmount)
@@ -52,14 +57,17 @@
 - [Logitech Harmony Hub mit dem Raspberry / Linux steuern](/de/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern)
 - [Smartphone-Erkennung unter Linux mittels Bluetooth (Raspberry Pi 2)](/de/2016/02/smartphone-erkennung-unter-linux-mittels-bluetooth-raspberry-pi-2)
 - [Synology Surveillance Station mit einem einfachen Shell-Script automatisieren](/de/2016/01/synology-surveillance-station-mit-einem-einfachen-shell-script-automatisieren)
+
 ## os
 - [HomeMatic - Thermostate auf einem WebInterface anzeigen](/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
 - [LEDs einer Überwachungskamera per Linux ein- und ausschalten](/de/2016/01/leds-einer-ueberwachungskamera-per-linux-ein-und-ausschalten)
 - [Logitech Harmony Hub mit dem Raspberry / Linux steuern](/de/2016/01/logitech-harmony-hub-mit-dem-raspberry-linux-steuern)
 - [Proxy-Probleme mittels Fiddler umgehen](/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
+
 ## php
 - [HomeMatic - Thermostate auf einem WebInterface anzeigen](/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
 - [IMAP-HTML-Autoresponder mit PHP](/de/2015/02/imap-html-autoresponder-mit-php)
+
 ## programmierung
 - [Fehlerabhängige Logdetails mit Log4net](/de/2012/02/fehlerabhaengige-loglevel-mit-log4net)
 - [HomeMatic - Thermostate auf einem WebInterface anzeigen](/de/2016/07/homematic-thermostate-auf-einem-webinterface-anzeigen)
@@ -67,9 +75,11 @@
 - [Proxy-Probleme mittels Fiddler umgehen](/de/2016/09/proxy-probleme-mittels-fiddler-umgehen)
 - [SCRUM und Git: Optimierter Workflow // Mit vielen tollen bunten Farben :)](/de/2015/03/scrum-und-git-optimierter-workflow-mit-vielen-tollen-bunten-farben)
 - [Truncate für Sharepoint-Listen](/de/2011/11/truncate-fuer-sharepoint-listen)
+
 ## sharepoint
 - [Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren](/de/2016/12/tanzen-auf-zwei-hochzeiten)
 - [Truncate für Sharepoint-Listen](/de/2011/11/truncate-fuer-sharepoint-listen)
+
 ## windows
 - [Abfallprodukt](/de/2008/10/abfallprodukt)
 - [Der steinige Weg zum Vista Media Center PlugIn: MCML](/de/2008/03/der-steinige-weg-zum-vista-media-center-plugin-mcml)
@@ -82,3 +92,4 @@
 - [ZDF Mediathek - Links automatisch Downloaden für den PS3 Mediaserver](/de/2009/03/zdf-mediathek-links-automatisch-downloaden-fuer-den-ps3-mediaserver)
 - [ZDF Mediathek auch unter Windows 7 (seven)](/de/2009/10/zdf-mediathek-auch-unter-windows-7-seven)
 - [ZDF Mediathek für den PS3 Media Server](/de/2009/03/zdf-mediathek-fuer-den-ps3-media-server)
+
