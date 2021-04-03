@@ -26,40 +26,42 @@ sudo apt-get install autoconf automake bison flex gcc make wget git libppl0.10-d
 
 (Das ist ein EINZEILER)
 
-Merkt Euch schonmamkdir -p ~/dev/ps3l, dass man hier ständig mit sudo arbeitet anstatt einmalig per su als root einzuloggen. Nach einer Weile mit Downloads und Installationen sollte dieser Schritt abgeschlossen sein. Wenn das geklappt hat freut Euch: Eure Ubuntu-Version scheint mit diesem Tutorial kompatibel zu sein ![:)](images/icon_smile.gif)
+Merkt Euch schonmal, dass man hier ständig mit sudo arbeitet anstatt einmalig per su als root einzuloggen. Nach einer Weile mit Downloads und Installationen sollte dieser Schritt abgeschlossen sein. Wenn das geklappt hat freut Euch: Eure Ubuntu-Version scheint mit diesem Tutorial kompatibel zu sein ![:)](images/icon_smile.gif)
 
-Als nächstes brauchen wir ein Verzeichnis für das ganze Playstation-Gelumpe. Einige Anleitungen empfehlen ~/dev/ps3 und so werde ich es auch tun:
+Als nächstes brauchen wir ein Verzeichnis für das ganze Playstation-Gelumpe. Einige Anleitungen empfehlen `~/dev/ps3` und so werde ich es auch tun:
 
-mkdir -p ~/dev/ps3
+`mkdir -p ~/dev/ps3`
 
 Die Tilde am Anfang ist wichtig! Somit landet dieses Verzeichnis automatisch unter \*/home/(deinanmeldename)/dev/ps3 \*(Ich musste übrigens immer die Tilde (~) zweimal drücken bei der Installation in der VM)
 
 Als nächstes werden ein paar Einstellungen in der Datei bash.rc fällig. Nehmt dazu Euren Lieblingseditor. Wer sich mit vi auskennt tippt folgendes ein:
 
-vi ~/.bashrc
+`vi ~/.bashrc`
 
 Wer sich **nicht** mit dem vi auskennt sollte dringendst die Finger davon lassen und entweder den DOS-ähnlichen Editor nano verwenden:
 
-nano ~/.bashrc
+`nano ~/.bashrc` 
 
 oder gleich auf den Grafischen Editor gedit ausweichen:
 
-gedit ~/.bashrc
+`gedit ~/.bashrc`
 
 Wieder sind hier Tilde und . wichtig. Sollte sich eine neue Datei öffnen habt ihr Euch vertippt.
 
 Fügt nun ganz am Ende folgende Zeilen ein:
 
+```
 export PS3DEV=$HOME/dev/ps3 
 export PSL1GHT=$PS3DEV/psl1ght 
 export PATH=$PATH:$PS3DEV/bin:$PS3DEV/ppu/bin:$PS3DEV/spu/bin:$PSL1GHT/bin 
 export PS3LOAD=tcp:192.168.0.10 
+```
 
 In der letzten Zeile steht die IP-Adresse Eurer Playstation 3. Wenn Ihr sie derzeit nicht wisst: Das brauchen wir erst ganz am Ende. Lasst die letzte Zeile dann erstmal weg.
 
 Damit diese ganzen schönen Einstellungen auch übernommen werden müssen sie aufgerufen werden:
 
-. .bashrc
+`. .bashrc`
 
 Ja. Da steht (Punkt)(Lehrzeichen)(Punkt)
 
@@ -69,13 +71,17 @@ eingebt. Dort sollte dann der Pfad _/home/(name)/dev/ps3/psl1ght_ auftauchen
 
 Bisher haben wir nur Standard-Linux-Pakete installiert und ein paar Einstellungen vorgenommen. Jetzt aber holen wir uns endlich die ps3toolchain.
 
+```
 cd $PS3DEV 
 git clone git://github.com/ooPo/ps3toolchain.git
+```
 
 Normalerweise würde man jetzt sicherstellen, dass genug Kaffee im Haus ist. In diesem Fall bleibt aber genug Zeit, neuen zu kaufen. Nach dem download wechselt Ihr ins neu erstellte ps3toolchain-Verzeichnis und führt das dortige Script aus:
 
+```
 cd ps3toolchain 
 ./toolchain.sh
+```
 
 Bei meiner alten Kiste dauerte dieser Schritt dann satte 12 Stunden. Bei schnelleren Rechnern wird es wohl eher um die 5-6 Stunden dauern. Hier darf eigentlich nix schieflaufen. Falls doch (bei mir lief z.B. die Festplatte voll) unbedingt das komplette ps3toolchain-Verzeichnis löschen, bevor Ihr das Script erneut startet.
 
