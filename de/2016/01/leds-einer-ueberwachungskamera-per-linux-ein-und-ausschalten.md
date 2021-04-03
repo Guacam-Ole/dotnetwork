@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "LEDs einer Überwachungskamera per Linux ein- und ausschalten"
 date: "2016-01-15"
 categories: 
@@ -9,6 +9,8 @@ tags:
   - "raspberry-pi-de"
   - "synology-de"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 1 » LEDs einer Überwachungskamera per Linux ein- und ausschalten
+
 # LEDs einer Überwachungskamera per Linux ein- und ausschalten
 _Published:_ 15.01.2016 00:00:00
 

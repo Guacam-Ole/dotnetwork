@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Der Google+ - Optimizer 3.0 ist fertig!"
 date: "2015-02-22"
 categories: 
@@ -10,6 +10,8 @@ tags:
   - "chrome-extensions"
   - "optimizer"
 ---
+■ [.net.work](/) » [de](/de) » [2015](/de#2015)  » 2 » Der Google+ - Optimizer 3.0 ist fertig!
+
 # Der Google+ - Optimizer 3.0 ist fertig!
 _Published:_ 22.02.2015 00:00:00
 

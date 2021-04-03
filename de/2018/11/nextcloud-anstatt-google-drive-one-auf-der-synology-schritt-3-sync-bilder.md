@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder"
 date: "2018-11-11"
 categories: 
@@ -12,6 +12,8 @@ tags:
   - "nextcloud"
   - "owncloud"
 ---
+■ [.net.work](/) » [de](/de) » [2018](/de#2018)  » 11 » Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder
+
 # Nextcloud anstatt Google Drive/One auf der Synology. Schritt 3: Sync & Bilder
 _Published:_ 11.11.2018 00:00:00
 

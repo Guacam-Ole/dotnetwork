@@ -1,10 +1,12 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS"
 date: "2018-11-07"
 categories: 
   - "allgemein"
 ---
+■ [.net.work](/) » [de](/de) » [2018](/de#2018)  » 11 » Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS
+
 # Nextcloud anstatt Google Drive/One auf der Synology. Schritt 2: Suchen auf dem NAS
 _Published:_ 07.11.2018 00:00:00
 

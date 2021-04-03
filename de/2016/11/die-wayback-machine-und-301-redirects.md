@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Die Wayback Machine und 301 redirects"
 date: "2016-11-15"
 categories: 
@@ -9,6 +9,8 @@ tags:
   - "redirect-de"
   - "wayback-machine"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 11 » Die Wayback Machine und 301 redirects
+
 # Die Wayback Machine und 301 redirects
 _Published:_ 15.11.2016 00:00:00
 

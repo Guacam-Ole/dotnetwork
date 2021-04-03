@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs"
 date: "2011-06-27"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "linux"
   - "ps3"
 ---
+■ [.net.work](/) » [de](/de) » [2011](/de#2011)  » 6 » Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs
+
 # Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs
 _Published:_ 27.06.2011 00:00:00
 

@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen"
 date: "2018-11-12"
 categories: 
@@ -12,6 +12,8 @@ tags:
   - "notizen"
   - "owncloud"
 ---
+■ [.net.work](/) » [de](/de) » [2018](/de#2018)  » 11 » Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen
+
 # Nextcloud anstatt Google Drive/One auf der Synology. Schritt 4: Notizen
 _Published:_ 12.11.2018 00:00:00
 

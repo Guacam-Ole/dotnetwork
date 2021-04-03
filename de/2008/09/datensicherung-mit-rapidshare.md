@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Datensicherung mit Rapidshare"
 date: "2008-09-19"
 categories: 
@@ -7,6 +7,8 @@ categories:
 tags: 
   - "rapidshare"
 ---
+■ [.net.work](/) » [de](/de) » [2008](/de#2008)  » 9 » Datensicherung mit Rapidshare
+
 # Datensicherung mit Rapidshare
 _Published:_ 19.09.2008 00:00:00
 

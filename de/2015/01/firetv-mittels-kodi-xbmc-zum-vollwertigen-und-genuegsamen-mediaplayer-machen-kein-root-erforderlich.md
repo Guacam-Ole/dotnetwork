@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)"
 date: "2015-01-24"
 categories: 
@@ -10,6 +10,8 @@ tags:
   - "kodi"
   - "xbmc"
 ---
+■ [.net.work](/) » [de](/de) » [2015](/de#2015)  » 1 » FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)
+
 # FireTV mittels Kodi (XBMC) zum vollwertigen und genügsamen Mediaplayer machen (kein root erforderlich)
 _Published:_ 24.01.2015 00:00:00
 

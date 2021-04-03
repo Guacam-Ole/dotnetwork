@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "SCRUM und Git: Optimierter Workflow // Mit vielen tollen bunten Farben :)"
 date: "2015-03-04"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "git"
   - "scrum"
 ---
+■ [.net.work](/) » [de](/de) » [2015](/de#2015)  » 3 » SCRUM und Git: Optimierter Workflow // Mit vielen tollen bunten Farben :)
+
 # SCRUM und Git: Optimierter Workflow // Mit vielen tollen bunten Farben :)
 _Published:_ 04.03.2015 00:00:00
 

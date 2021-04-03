@@ -17,22 +17,15 @@ namespace CreateNav
                 return;
             }
 
-            var config=new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
-
-            var repoPath=config.GetSection("LocalRepo").Value;
-            var docRoot = config.GetSection("DocumentRoot").Value;
-            var version = new Version(config.GetSection("Version").Value);
-
+            var config = new Config();
+           
 
             string relativePath = args[0];
             string archiveTitle = args[1];
-            var markdownReader = new ReadMd(repoPath, relativePath, docRoot, version);
+            var markdownReader = new ReadMd(config, relativePath);
             var articles=markdownReader.ReadArticlesFromFolderRecursive(relativePath);
 
-            var archiveFunctions = new Archive( repoPath, relativePath, articles);
+            var archiveFunctions = new Archive(config, relativePath, articles);
             archiveFunctions.WriteArchive(archiveTitle);
              
         }

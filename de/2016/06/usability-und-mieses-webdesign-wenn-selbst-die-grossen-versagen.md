@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Usability und mieses Webdesign - Wenn selbst die Großen versagen"
 date: "2016-06-29"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "amazon"
   - "usability"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 6 » Usability und mieses Webdesign - Wenn selbst die Großen versagen
+
 # Usability und mieses Webdesign - Wenn selbst die Großen versagen
 _Published:_ 29.06.2016 00:00:00
 

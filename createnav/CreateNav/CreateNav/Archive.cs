@@ -9,13 +9,13 @@ namespace CreateNav
 {
     public class Archive
     {
-        private readonly string _rootPath;
+        private readonly Config _config;
         private readonly string _relativePath;
         private readonly List<Article> _articles;
 
-        public Archive( string rootPath, string relativePath, List<Article> articles)
+        public Archive( Config config, string relativePath, List<Article> articles)
         {
-            _rootPath = rootPath;
+            _config = config;
             _relativePath = relativePath;
             _articles = articles;
         }
@@ -69,7 +69,7 @@ namespace CreateNav
         public void WriteArchive(string title)
         {
             string archiveContent = CreateArchiveMarkDown(title);
-            File.WriteAllText(Path.Combine(_rootPath, _relativePath, "index.md"), archiveContent);
+            File.WriteAllText(Path.Combine(_config.RepoPath, _relativePath, "index.md"), archiveContent);
         }
     }
 }

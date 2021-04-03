@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "HomeMatic - Thermostate auf einem WebInterface anzeigen"
 date: "2016-07-11"
 categories: 
@@ -14,6 +14,8 @@ tags:
   - "homematic-de"
   - "raspberry-pi-de"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 7 » HomeMatic - Thermostate auf einem WebInterface anzeigen
+
 # HomeMatic - Thermostate auf einem WebInterface anzeigen
 _Published:_ 11.07.2016 00:00:00
 

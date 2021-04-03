@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Abfallprodukt"
 date: "2008-10-28"
 categories: 
@@ -10,6 +10,8 @@ tags:
   - "tor"
   - "torsignal"
 ---
+■ [.net.work](/) » [de](/de) » [2008](/de#2008)  » 10 » Abfallprodukt
+
 # Abfallprodukt
 _Published:_ 28.10.2008 00:00:00
 

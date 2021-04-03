@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "PS3 Media Server"
 date: "2009-03-08"
 categories: 
@@ -8,6 +8,8 @@ tags:
   - "mediathek"
   - "ps3"
 ---
+■ [.net.work](/) » [de](/de) » [2009](/de#2009)  » 3 » PS3 Media Server
+
 # PS3 Media Server
 _Published:_ 08.03.2009 00:00:00
 

@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren"
 date: "2016-12-14"
 categories: 
@@ -13,6 +13,8 @@ tags:
   - "sharepoint2016-de"
   - "visual-studio"
 ---
+■ [.net.work](/) » [de](/de) » [2016](/de#2016)  » 12 » Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren
+
 # Tanzen auf zwei Hochzeiten: SharePoint Provider-Hosted Add-Ins in Office365 & On-Premise installieren
 _Published:_ 14.12.2016 00:00:00
 

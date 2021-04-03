@@ -1,5 +1,5 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Truncate für Sharepoint-Listen"
 date: "2011-11-14"
 categories: 
@@ -10,6 +10,8 @@ tags:
   - "sharepoint"
   - "splist"
 ---
+■ [.net.work](/) » [de](/de) » [2011](/de#2011)  » 11 » Truncate für Sharepoint-Listen
+
 # Truncate für Sharepoint-Listen
 _Published:_ 14.11.2011 00:00:00
 

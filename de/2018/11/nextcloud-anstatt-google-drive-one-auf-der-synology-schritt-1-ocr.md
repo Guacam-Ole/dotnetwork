@@ -1,11 +1,13 @@
 ---
-createnav: "0.0.1"
+createnav: "0.0.2"
 title: "Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR"
 date: "2018-11-03"
 categories: 
   - "allgemein"
   - "anwendungen"
 ---
+■ [.net.work](/) » [de](/de) » [2018](/de#2018)  » 11 » Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR
+
 # Nextcloud anstatt Google Drive/One auf der Synology. Schritt 1: OCR
 _Published:_ 03.11.2018 00:00:00
 
