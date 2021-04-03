@@ -23,25 +23,33 @@ Ganz ohne zusätzliche Tools kommt das Script leider nicht aus. Ein Ersatz für 
 
 Der Swiftmailer wird durch eine schlichte Zeile eingebunden:
 
+```
 require\_once './swift/lib/swift\_required.php';
+```
 
 Für den Zugriff auf das Postfach sind ein paar IMAP-Einstellungen notwendig. Theoretisch ginge auch ein POP-Zugriff, der IMAP-Zugriff hat aber klare Vorteile, da dort der E-Mail-Inhalt nicht heruntergeladen werden muss. Und der interessiert uns für den Autoresponder nicht.
 
+```
 // IMAP-Settings:
  $hostname = "{imap.hostname.com:993/imap/ssl}INBOX";
  $username = "username";
  $password = "password";
+ ```
 
 Nun noch schnell die E-Mail-Adressen konfigurieren. $targetMail ist die echte, private E-Mail-Adresse. $thisMail ist die öffentliche E-Mail-Adresse, die den Spam abfangen soll.
 
+```
 $targetMail="private@mydomain.com"; 
 $thisMail="webmaster@mydomain.com";
+```
 
 Als nächstes muss ein Bild erstellt werden, dass ausschließlich die private E-Mail-Adresse enthält. Sucht eine schöne Schriftart aus. Wer will kann auch eine Captcha-Schrift wählen. Aber Oma ist damit dann vermutlich auch raus...
 
 Lade das Bild nun auf den Webserver und trage die URL in das Script ein:
 
+```
 $image="http://www.example.com/images/mail.png";
+```
 
 Jetzt sind noch ein paar Texte zu hinterlegen. Und zwar die E-Mail-Inhalte, die der Sender sehen soll. $templateHtml ist für den HTML-Inhalt der mail, $templatePlain ist für diejenigen, die keine HTML-Email anzeigen können (oder wollen). Nur Besitzer von E-Mail-Clients mit HTML-Funktionen sind in der Lage, das Bild anzuzeigen. Die anderen müssen stattdessen auf einen Link klicken.
 
@@ -49,17 +57,21 @@ $templateForward ist zu guter Letzt der Text, den Du selbst siehst, wenn eine E-
 
 Also, sei kreativ :)
 
+```
 $templateHtml="<html><body>Thanks for your mail. Please note that this mail is no more. It has ceased to be! It is expired and gone to meet its maker! This is an Ex-Mail!<br/>But don't be afraid, there is a replacement for that. Just send your mail to: <br/><img src=\\"\_\_EMBED\_\_\\"/><br/><br/>If you cannot see that image: Click onto the following link to see my: <a href=\\"\_\_URL\_\_\\">new mail-address</a><br/>And no: This mail will not be forwarded. No one will see this until you forward it to my new mail-address. Thanks!</body></html>";
 
 $templatePlain="Thanks for your mail. Please note that this mail is no more. It has ceased to be! It is expired and gone to meet its maker! This is an Ex-Mail!\\r\\nBut don't be afraid, there is a replacement for that. Just click onto the following link to see my: new mail-address: \_\_URL\_\_";
 
 $templateForward="new message redirected";
+```
 
 Zwei spezielle Platzhalter sind erlaubt. "\_\_EMBED\_\_" wird automatisch durch das Bild ersetzt. (nur im HTML-Template möglich)"\_\_URL\_\_" enthält stattdessen einen direkten Link zu der Datei.
 
 Als allerletzte Option kann optional die Whitelist hinterlegt werden. Trenn die gültigen Absender durch Komma.
 
+```
 $whitelist = "uberspace,denic.de,domainbox.net,romrobot.com,inwx.de,millerntor.hamburg,dotnet.work";
+```
 
 Das war es auch schon mit der Konfiguration. Nun noch etwas Info, was das Script überhaupt macht:
 
@@ -75,17 +87,19 @@ In einer perfekten Welt...
 
 Das liegt daran, dass es einen E-Mail-Client von einer kleinen Firma in Redmond gibt, die sich mit Standards nicht so auskennt... Das ist zwar unschön, aber in unserem Fall kein wirklich großes Problem. Öffne einfach die Datei _lib\\classes\\swift\\Mime\\Headers\\MailboxHeader.php_ von swiftmailer kommentiere den "throw"-Part der letzten Funktion aus:
 
+```
 private function \_assertValidAddress($address)
 {
    if (!preg\_match('/^'.$this->getGrammar()->getDefinition('addr-spec').'$/D', $address)) {
      /\* throw new Swift\_RfcComplianceException('Address in mailbox given \['.$address.'\] does not comply with RFC 2822, 3.6.2.');\*/
    }
 }
-
+```
  
 
 Das wars dann auch schon. Hier nun das komplette Script:
 
+```
 <?php
    require\_once './swift/lib/swift\_required.php';// IMAP-Settings:
    $hostname = "{imap.example.com:993/imap/ssl}INBOX";
@@ -174,10 +188,13 @@ Das wars dann auch schon. Hier nun das komplette Script:
   echo "done redirecting ".$count." mails\\r\\n";
   echo "</pre>";
 ?>
+```
 
 Speichere es einfach als "reply.php" (oder einen beliebigen anderen Dateinamen) und schick ein paar Test-Emails. Öffne dann das Script in Deinem Browser. Wenn alles soweit in Ordnung ist, kannst Du einen Cronjob eintragen um das Script automatisch auszuführen. Das folgende Beispiel macht dies etwa alle 5 Minuten:
 
+```
 \*/5 \* \* \* \* php /var/www/reply.php
+```
 
  
 
