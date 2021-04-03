@@ -26,19 +26,19 @@ Interessant ist hier vor allem die "Request URL" und die "Form Data". Bevor man 
  
 
 Klappt es, kann es eigentlich schon los gehen. In diesem Fall war es sogar besonders einfach, weil nicht nur ein POST von der Kamera akzeptiert wird, sondern auch ein GET-Request
-
+```
 http://192.168.0.88/admin/system.cgi?led=2
-
+```
 problemlos funktionierte.
 
 Fehlt nur noch die Authentifizierung. Die erfolgt mit einem klassischen Login-Screen, wie man ihn etwa auch von einer .htaccess - Passwortabfrage kennt. Damit war der Befehl schnell gefunden.
-
+```
 wget http://username:password@192.168.0.88/admin/system.cgi?led=2
-
+```
 schaltet die LED an,
-
+```
 wget http://username:password@192.168.0.88/admin/system.cgi?led=0
-
+```
 schaltet sie aus.
 
 (0=aus, 1=an, 2=blinken)
