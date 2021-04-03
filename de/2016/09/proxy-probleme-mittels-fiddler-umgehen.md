@@ -45,11 +45,15 @@ Diese Zeile nun in die Zwischenablage
 
 Im Fiddler dann mittels Ctrl-R die Konfigurationsdatei öffnen. Folgende Zeile suchen:
 
- static function OnBeforeRequest(oSession: Session) {
+ ```
+ static function OnBeforeRequest(oSession: Session) {
+ ```
 
 Direkt darunter folgende Zeile einfügen:
 
+```
 oSession.oRequest\["Proxy-Authorization"\] = "Basic DBDDHKPadasdkahsdasd=";
+```
 
 Wobei der Wert hinter "Basic" ersetzt werden sollte durch den Wert aus der Zwischenablage.
 
