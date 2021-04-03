@@ -16,7 +16,7 @@ namespace CreateNav
         private readonly Dictionary<string, List<Article>> _categories = new();
         private readonly Dictionary<string, List<Article>> _tags = new();
 
-        public ReadMd(string rootPath, string relativePath,  string documentRoot, Version currentVersion)
+        public ReadMd(string rootPath, string relativePath, string documentRoot, Version currentVersion)
         {
             _rootPath = rootPath;
             _relativePath = relativePath;
@@ -57,16 +57,33 @@ namespace CreateNav
             return new DateTime(int.Parse(dateContents[0]), int.Parse(dateContents[1]), int.Parse(dateContents[2]));
         }
 
+        private string CreateArticleTagLine(Article article, string prefix, string path, List<string> elements, Dictionary<string, List<Article>> globalElementList)
+        {
+            if (elements == null || elements.Count == 0) return null;
+            string line = $"_{prefix}_:";
+            bool isFirstElement = true;
+            foreach (var element in elements)
+            {
+                if (!isFirstElement) line += " - ";
+                isFirstElement = false;
+                string elementLower = element.ToLower();
+                line += $"[{elementLower}]({_documentRoot}/{_relativePath}/{path}#{elementLower})";
+                if (!globalElementList.ContainsKey(elementLower)) globalElementList.Add(elementLower, new List<Article>());
+                globalElementList[elementLower].Add(article);
+            }
+            return line;
 
-        private void UpdateArticle( string path, Article article)
+        }
+
+        private void UpdateArticle(string path, Article article)
         {
             if (article.ModifyVersion == _currentVersion) return;
 
 
             var newFile = new List<string>();
-            
 
-            // Check old version if new versions arrive...
+
+            
             {
 
                 var content = File.ReadAllLines(path);
@@ -87,42 +104,28 @@ namespace CreateNav
                         inHeader = false;
                     }
                     if (!afterHeader || finished) continue;
-                    
-                    newFile.Add($"# {article.Title}");
-                    newFile.Add($"_{article.Published}_");
-                    int maxLength = article.Categories.Count;
-                    if (article.Tags.Count > maxLength) maxLength = article.Tags.Count;
 
-                    if (maxLength > 0)
+                    newFile.Add($"# {article.Title}");
+                    newFile.Add($"_Published:_ {article.Published}");
+                    newFile.Add(string.Empty);
+                    string categoryLine = CreateArticleTagLine(article, "Categories", "categories", article.Categories, _categories);
+                    string tagLine = CreateArticleTagLine(article, "Tags", "tags", article.Tags, _tags);
+
+                    if (categoryLine != null)
                     {
-                        newFile.Add($"Categories|Tags");
-                        newFile.Add("-|-");
-                        for (int i = 0; i < maxLength; i++)
-                        {
-                            string tagLine = string.Empty;
-                            if (article.Categories.Count > i)
-                            {
-                                string category = article.Categories[i].ToLower();
-                                tagLine += $"[{category}]({_documentRoot}/{_relativePath}/categories#{category})";
-                                if (!_categories.ContainsKey(category)) _categories.Add(category, new List<Article>());
-                                _categories[category].Add(article);
-                            }
-                            tagLine += "|";
-                            if (article.Tags.Count > i)
-                            {
-                                string tag = article.Tags[i].ToLower();
-                                tagLine += $"[{tag}]({_documentRoot}/{_relativePath}/tags#{tag})";
-                                if (!_tags.ContainsKey(tag)) _tags.Add(tag, new List<Article>());
-                                _tags[tag].Add(article);
-                            }
-                            newFile.Add(tagLine);
-                        }
-                        newFile.Add("\n");
+                        newFile.Add(categoryLine);
+                        newFile.Add(string.Empty);
                     }
+                    if (tagLine != null)
+                    {
+                        newFile.Add(tagLine);
+                        newFile.Add(string.Empty);
+                    }
+
                     finished = true;
                 }
 
-             //   File.WriteAllLines(path, newFile);
+                File.WriteAllLines(path, newFile);
             }
         }
 
@@ -135,7 +138,7 @@ namespace CreateNav
             WriteMarkDownFileForGroupedArticles("Tags", "tags.md", _tags);
         }
 
-        private void WriteMarkDownFileForGroupedArticles(string title, string markdownFile, Dictionary<string,List<Article>> groupedArticles)
+        private void WriteMarkDownFileForGroupedArticles(string title, string markdownFile, Dictionary<string, List<Article>> groupedArticles)
         {
             string markdownContent = $"# {title}\n\n";
             foreach (var group in groupedArticles.OrderBy(q => q.Key))
@@ -147,7 +150,7 @@ namespace CreateNav
                 }
             }
 
-            File.WriteAllText(Path.Combine(_rootPath, _relativePath,markdownFile), markdownContent);
+            File.WriteAllText(Path.Combine(_rootPath, _relativePath, markdownFile), markdownContent);
         }
 
         private string GetTextInQuotes(string content)

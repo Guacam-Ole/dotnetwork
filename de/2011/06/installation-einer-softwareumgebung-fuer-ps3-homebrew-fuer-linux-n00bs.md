@@ -7,6 +7,13 @@ tags:
   - "linux"
   - "ps3"
 ---
+# Installation einer Softwareumgebung für PS3 homebrew für Linux-N00bs
+_Published:_ 27.06.2011 00:00:00
+
+_Categories_:[linux](/dotnetwork/de/categories#linux)
+
+_Tags_:[linux](/dotnetwork/de/tags#linux) - [ps3](/dotnetwork/de/tags#ps3)
+
 
 Es gibt bereits einige Anleitungen im Internet, wie man eine eigene Linux-Distribution mit den nötigen Tools zum Entwickeln eigener Homebrew-Anwendungen erstellt. Leider hat bisher keine dieser Anleitungen bei mir wirklich funktioniert und auch die fertigen VMs wollten nicht so wirklich, wie sie sollten. Da ich selber eher ein Linux-Anfänger bin habe ich mal eine Anleitung geschrieben, die anderen Linux-Neulingen helfen soll nicht die gleichen Fehler wie ich zu machen.
 
