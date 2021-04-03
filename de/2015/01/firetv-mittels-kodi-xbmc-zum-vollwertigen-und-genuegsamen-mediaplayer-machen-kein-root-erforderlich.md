@@ -10,17 +10,17 @@ tags:
   - "xbmc"
 ---
 
-\[bs\_notification type="success"\]\[bs\_icon name="glyphicon glyphicon-circle-arrow-up"\]**Update (24.07.2015):**
+**Update (24.07.2015):**
 
 Um Kodi zu aktualisieren, ohne die Einstellungen zu verlieren, reicht es folgenden Befehl mit der neuen APK auszuführen:
 
-adb install -r D:\\downloads\\kodi-15.0-Isengard-armeabi-v7a.apk
+`adb install -r D:\\downloads\\kodi-15.0-Isengard-armeabi-v7a.apk`
 
 (Das -r steht dabei für "reinstall")
 
 Wenn beim ersten Start etwas schief geht (oder man versehentlich die Home-Taste gedrückt hat, während Kodi noch initialisiert) kann es vorkommen, dass Kodi nicht mehr startet. Dann in der SQL-Datenbank einfach die Datenbanken MyVideos93 und MyMusic52 löschen. Die Initialisierung startet dann beim nächsten Kodi-Aufruf erneut.
 
-\[/bs\_notification\]
+
 
 ### **Worum gehts?**
 
@@ -142,6 +142,7 @@ Um nun auch die Thumbnails zentral zu speichern muss zunächst eine Freigabe ers
 
 Jetzt muss Kodi natürlich noch mitgeteilt werden, dass die MySQL-Datenbank auch verwendet werden soll. Erstellt dazu eine Datei “advancedsettings.xml” mit folgendem Inhalt:
 
+```
 <advancedsettings> 
  <videodatabase> 
  <type>mysql</type>
@@ -168,7 +169,7 @@ Jetzt muss Kodi natürlich noch mitgeteilt werden, dass die MySQL-Datenbank auch
  </substitute> 
  </pathsubstitution> 
  </advancedsettings>
-
+```
 Ersetzt (jeweils zweimal) den Wert bei “host” durch die IP-Adresse Eures Netzwerkspeichers, und die Werte bei “user” und “pass” durch die Zugangsdaten des soeben erstellten Benutzers. Der letzte Block (“pathsubstitution”)  ist für die Thumbnails. Hier muss ebenfalls der Pfad angepasst werden. Er muss immer mit “smb://” beginnen. Hier sind sowohl hostname, als auch IP-Adresse erlaubt.
 
 Jetzt muss diese Datei noch auf die FireTV übertragen werden. Wechselt dazu wieder ins DOS und ruft erneut adb auf mit folgendem Befehl:
@@ -179,9 +180,11 @@ Da es sich um ein Linux-System handelt ist natürlich auf Groß/Kleinschreibung 
 
 Um sicher zu gehen, könnt Ihr direkt auf das Android-System wechseln und Euch den Verzeichnisinhalt mit
 
+```
 adb shell
  ls /sdcard/Android/data/org.xbmc.kodi/files/.kodi/userdata/
  exit
+```
 
 anzeigen lassen. Es sollte die eben erstellte advancedsettings.xml angezeigt werden.
 
