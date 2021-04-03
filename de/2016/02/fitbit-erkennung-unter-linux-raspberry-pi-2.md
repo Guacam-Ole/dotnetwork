@@ -14,34 +14,43 @@ Als Nerd passe ich nun nicht wirklich in die Fitness-Zielgruppe. Aber als kleine
 
 Da ich mich nun entschieden habe, das Ding eine Weile zu tragen, sollte es doch auch gut dazu geeignet zu sein zu erkennen, ob ich nun zu Hause oder unterwegs bin und es so in meine Überwachungs-Mechanismen einbauen. Zunächst habe ich es mit dem (mittlerweile eingetrudelten) USB-Dongle versucht. Da aber das Armband im sog. "Bluetooth Low Energy (BLE)"-Profil arbeitet, war es mit dem Dongle nicht zu ermitteln. Weder ein
 
+```
 hcitool scan
+```
 
 noch ein
 
+```
 hcitool lescan
+```
 
 listeten das Gerät auf.
 
 Glücklicherweise kommt das Armband mit einem USB-Dongle. Und zum Glück gibt es das "[Galileo](https://bitbucket.org/benallard/galileo)"-Package, dass eigentlich für die Synchronisation mittels Linux gedacht ist. Die Installation ist einfach:
 
+```
 sudo apt-get install python-usb python-requests
 sudo pip install galileo
+```
 
 Jetzt noch den USB-Dongle anstecken und das Raspberry neu starten. (Bestimmt gibt es auch die Möglichkeit, nur den USB-Stack neu zu starten, aber ein Neustart ist schlicht einfacher. Und schließlich ist das hier ein Raspberry und kein Hochverfügbarkeits-Server).
 
 Nach der Eingabe von
-
+```
 sudo galileo -v
+```
 
 sollte in etwa folgendes ausgegeben werden:
-
+```
 2016-02-27 16:28:21,875:INFO: 1 trackers discovered
+```
 
 Um das nun in ein Script einzubauen braucht es nur noch etwas übliche Bash-Magie:
 
- 
+``` 
 if galileo -v | grep -q '1 trackers'; then
   // Do whatever you like if you found it
 fi
+```
 
 Fertig. :)
