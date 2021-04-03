@@ -22,9 +22,9 @@ Bevor es nun endlich losgeht habe ich alle installierten Module auf den neuesten
 
 Nun gehts aber erst einmal los mit den notwendigen Paketen. Viele Anleitungen verlangen hier Pakete, die Ubunutu in der aktuellen Version nicht oder anders kennt. Ich habe die Pakete ab genannte Version angepasst. Wechselt aber erst einmal in die Bash über _Applications/Accessoires/Terminal_. (Ihr könnt auch ein Icon direkt per Drag/Drop auf den Desktop ziehen)
 
-sudo apt-get install autoconf automake bison flex gcc make wget git libppl0.10-dev libcloog-ppl-dev libelf-dev libncurses5-dev texinfo build-essential libgmp3-dev python zlib1g-dev pkg-config libtool python-dev
+`sudo apt-get install autoconf automake bison flex gcc make wget git libppl0.10-dev libcloog-ppl-dev libelf-dev libncurses5-dev texinfo build-essential libgmp3-dev python zlib1g-dev pkg-config libtool python-dev`
 
-(Das ist ein EINZEILER)
+
 
 Merkt Euch schonmal, dass man hier ständig mit sudo arbeitet anstatt einmalig per su als root einzuloggen. Nach einer Weile mit Downloads und Installationen sollte dieser Schritt abgeschlossen sein. Wenn das geklappt hat freut Euch: Eure Ubuntu-Version scheint mit diesem Tutorial kompatibel zu sein ![:)](images/icon_smile.gif)
 
