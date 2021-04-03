@@ -10,9 +10,9 @@ tags:
 # Datensicherung mit Rapidshare
 _Published:_ 19.09.2008 00:00:00
 
-_Categories_: [linux](/dotnetwork/de/categories#linux)
+_Categories_: [linux](//de/categories#linux)
 
-_Tags_: [rapidshare](/dotnetwork/de/tags#rapidshare)
+_Tags_: [rapidshare](//de/tags#rapidshare)
 
 
 Es ist deutlich einfacher RapidShare als Backup-Medium zu nutzen, als erwartet. Meine Variante will ich dem geneigten Linux-Admin hier mal kurz näher bringen. Ausgehend für dieses mini-Howto ist Debian Linux (Etch). In diesem Beispiel sichere ich meine MySQL-Datenbank nach Rapidshare.

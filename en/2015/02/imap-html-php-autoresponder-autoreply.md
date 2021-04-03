@@ -17,9 +17,9 @@ tags:
 # IMAP-HTML-Autoresponder with PHP
 _Published:_ 13.02.2015 00:00:00
 
-_Categories_: [development](/dotnetwork/en/categories#development) - [php-en](/dotnetwork/en/categories#php-en)
+_Categories_: [development](//en/categories#development) - [php-en](//en/categories#php-en)
 
-_Tags_: [autoresponder](/dotnetwork/en/tags#autoresponder) - [imap](/dotnetwork/en/tags#imap) - [php](/dotnetwork/en/tags#php) - [redirect](/dotnetwork/en/tags#redirect) - [reply](/dotnetwork/en/tags#reply) - [spam](/dotnetwork/en/tags#spam) - [swiftmailer](/dotnetwork/en/tags#swiftmailer)
+_Tags_: [autoresponder](//en/tags#autoresponder) - [imap](//en/tags#imap) - [php](//en/tags#php) - [redirect](//en/tags#redirect) - [reply](//en/tags#reply) - [spam](//en/tags#spam) - [swiftmailer](//en/tags#swiftmailer)
 
 
 Everyone knows spam. Everyone **hates** spam. And everyone who has his email-address written on the net (for example in the NIC-records for a domain) gets **a lot of** spam.
