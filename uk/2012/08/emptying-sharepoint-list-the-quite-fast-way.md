@@ -19,7 +19,7 @@ But this solution hast two big disadvantages:
 This solution has non of those drawbacks. It is much slower than that solution but also much faster than “normal” deletion of SPListItems or using a Caml-Query to do that.
 
 Just be asure that this is not thread-safe. So make sure noone is writing into that list in the same time or that lines might not be deleted.
-
+```
 private int rest;
 public static void TruncateList(Guid listId, int limit)
 {
@@ -77,3 +77,4 @@ item.Delete();
 \_rest–;
 
 }
+```
