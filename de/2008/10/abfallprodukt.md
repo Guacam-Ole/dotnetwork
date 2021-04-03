@@ -13,9 +13,9 @@ tags:
 # Abfallprodukt
 _Published:_ 28.10.2008 00:00:00
 
-_Categories_: [anwendungen](/dotnetwork/de/categories#anwendungen) - [c](/dotnetwork/de/categories#c) - [windows](/dotnetwork/de/categories#windows)
+_Categories_: [anwendungen](//de/categories#anwendungen) - [c](//de/categories#c) - [windows](//de/categories#windows)
 
-_Tags_: [tor](/dotnetwork/de/tags#tor) - [torsignal](/dotnetwork/de/tags#torsignal)
+_Tags_: [tor](//de/tags#tor) - [torsignal](//de/tags#torsignal)
 
 
 Auf der Suche nach einer Möglichkeit, TOR per Software anzusprechen bin ich mehrmals über das sog. “TorSignal4Windows” gestolpert. Leider scheinen alle Links darauf tot zu sein. Also habe ich – quasi als Abfallprodukt eines anderen Projekts – selber ein TorSignalForWindows entwickelt.

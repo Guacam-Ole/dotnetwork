@@ -13,9 +13,9 @@ tags:
 # FlashAir Downloader for Windows
 _Published:_ 25.09.2014 00:00:00
 
-_Categories_: [applications](/dotnetwork/en/categories#applications) - [csharp](/dotnetwork/en/categories#csharp)
+_Categories_: [applications](//en/categories#applications) - [csharp](//en/categories#csharp)
 
-_Tags_: [cs](/dotnetwork/en/tags#cs) - [flashair-en](/dotnetwork/en/tags#flashair-en) - [flashairdownloader-en](/dotnetwork/en/tags#flashairdownloader-en)
+_Tags_: [cs](//en/tags#cs) - [flashair-en](//en/tags#flashair-en) - [flashairdownloader-en](//en/tags#flashairdownloader-en)
 
 
 \[bs\_notification type="warning"\]**Development stopped!** [Please read this](http://dotnet.work/2017/01/flashairdownloader-development-now-its-your-turn/) before downloading FAD\[/bs\_notification\]

@@ -14,9 +14,9 @@ tags:
 # Optimizer für Google+ - Anleitung
 _Published:_ 02.02.2014 00:00:00
 
-_Categories_: [anwendungen](/dotnetwork/de/categories#anwendungen) - [javascript-programmierung](/dotnetwork/de/categories#javascript-programmierung) - [jquery-programmierung](/dotnetwork/de/categories#jquery-programmierung)
+_Categories_: [anwendungen](//de/categories#anwendungen) - [javascript-programmierung](//de/categories#javascript-programmierung) - [jquery-programmierung](//de/categories#jquery-programmierung)
 
-_Tags_: [chrome-extensions](/dotnetwork/de/tags#chrome-extensions) - [javascript](/dotnetwork/de/tags#javascript) - [jquery](/dotnetwork/de/tags#jquery)
+_Tags_: [chrome-extensions](//de/tags#chrome-extensions) - [javascript](//de/tags#javascript) - [jquery](//de/tags#jquery)
 
 
 Diese Anleitung wurde für die Version 2.2.0 (\*Widgetmania)\* geschrieben. Aktuellere Versionen können unter Umständen optisch etwas abweichen

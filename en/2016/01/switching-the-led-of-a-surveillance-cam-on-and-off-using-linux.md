@@ -12,9 +12,9 @@ tags:
 # Switching the LED of a surveillance cam on and off using Linux
 _Published:_ 15.01.2016 00:00:00
 
-_Categories_: [linux-en](/dotnetwork/en/categories#linux-en) - [operating-systems](/dotnetwork/en/categories#operating-systems)
+_Categories_: [linux-en](//en/categories#linux-en) - [operating-systems](//en/categories#operating-systems)
 
-_Tags_: [raspberry-pi](/dotnetwork/en/tags#raspberry-pi) - [synology](/dotnetwork/en/tags#synology)
+_Tags_: [raspberry-pi](//en/tags#raspberry-pi) - [synology](//en/tags#synology)
 
 
 I already wrote a script on my Raspberry [that starts and stops the surveillance mode](http://dotnet.work/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands/) of my camera using the "Surveillance Station" on the Synology DiskStation. Now I wanted to extend that tool and light the LEDs of the cam when it is recording and turning them off if it isn't.
