@@ -6,11 +6,13 @@
 
 - [Raspberry Pi 4: usB first!](/en/2020/05/raspberry-pi-4-usb-first)
 
+
 ## 2017
 
 ### 1
 
 - [FlashAirDownloader - development: Now it's your turn](/en/2017/01/flashairdownloader-development-now-its-your-turn)
+
 
 ## 2016
 
@@ -41,16 +43,14 @@
 ### 2
 
 - [Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)](/en/2016/02/detecting-smartphone-via-bluetooth-on-linux-raspberry-pi-2)
-
 - [Tracking fitbit presence under Linux (Raspberry Pi 2)](/en/2016/02/tracking-fitbit-presence-under-linux-raspberry-pi-2)
 
 ### 1
 
 - [Control your Harmony Hub with a Raspberry Pi (Linux)](/en/2016/01/control-your-harmony-hub-with-a-raspberry-pi-linux)
-
 - [Switching the LED of a surveillance cam on and off using Linux](/en/2016/01/switching-the-led-of-a-surveillance-cam-on-and-off-using-linux)
-
 - [Automate your Synology Surveillancestation with some simple Linux - commands](/en/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands)
+
 
 ## 2015
 
@@ -62,17 +62,19 @@
 
 - [IMAP-HTML-Autoresponder with PHP](/en/2015/02/imap-html-php-autoresponder-autoreply)
 
+
 ## 2014
 
 ### 9
 
 - [FlashAir Downloader for Windows](/en/2014/09/flashair-downloader-for-windows)
 
+
 ## 2012
 
 ### 8
 
 - [Emptying SharePoint-List the (quite) fast way](/en/2012/08/emptying-sharepoint-list-the-quite-fast-way)
-
 - [Emptying SharePoint lists the ultra fast way](/en/2012/08/emptying-sharepoint-lists-the-ultra-fast-way)
+
 
