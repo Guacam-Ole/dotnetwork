@@ -26,7 +26,7 @@ First a template of that list is being created. After that the list is deleted c
 Works damn fast (just a few seconds even on big lists). IF anything goes wrong you can use the template to create a list manually.
 
  
-
+```
 public void TruncateList(Guid listID)
 {
 SPSecurity.RunWithElevatedPrivileges(delegate()
@@ -74,3 +74,4 @@ throw;
 }
 );
 }
+```
