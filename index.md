@@ -12,7 +12,7 @@ In this blog i write down some coding solution I found and maybe some other stuf
 
 
 _(Hinweis: Es gibt ein paar **alte** Beiträge auf Deutsch, ich habe mich aber entschieden nur noch einspraching zu bloggen._
-[Deutsche Artikel (veraltet)](/dotnetworK/de)
+[Deutsche Artikel (veraltet)](/dotnetwork/de)
 
 
 ## About me
