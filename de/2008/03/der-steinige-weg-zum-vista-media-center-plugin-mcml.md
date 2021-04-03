@@ -14,7 +14,9 @@ Nachdem ich leidvoll erfahren musste, dass XAML/WPF/XBAP in zukünftigen Media C
 
 MCML (Media Center Markup Language) ist eine Beschreibungssprache, die – wie etwa auch XAML – auf XML aufbaut. Eine sehr einfache MCML sieht z.B. so aus:
 
+```
 <Mcml xmlns="[http://schemas.microsoft.com/2006/mcml](http://schemas.microsoft.com/2006/mcml)"xmlns:cor="assembly://MSCorLib/System"><UI Name="Default"><Properties><Color Name="MyColor" Color="White"/>Properties><Locals><cor:StringName="MyString" String="Machts gut und Danke für den Fisch"/>Locals><Rules><Default Target="\[MyText.Content\]" Value="\[MyString\]"/>Rules><Content><TextName="MyText" Color="\[MyColor\]" Font="Calibri, 24"/>Content>UI<Mcml>
+```
 
 Am Anfang steht der XML Namespace. (xmlns). Der erste ([http://schemas](http://schemas/)…) muss immer so lauten und identifiziert das Dokument als MCML-Dokument. Der zweite angegebene Namespace mit der (im Dokument) internen Bezeichnung “cor” verweist auf _MSCorLib/System_. Dies sind ist der Namespace für die grundlegenden Klassen, wie etwa _String, int_, etc. also – vereinfacht ausgedrückt – all das, was man in C# zur Verfügung hat, ohne weitere Namespaces einzubinden.Als nächstes folgt das UI Element: UI steht für “User Interface”. Im Prinzip besteht eine MCML-Datei immer aus einem User Interface. Es gibt auch noch ein paar wenige, andere mögliche Elemente, aber diese sind erst einmal uninteressant. Das User Interface wiederum ist nur ein Container für die eigentlich darzustellenden Elemente. Vergleichbar wäre dies etwa mit dem _BODY_\-Tag auf einer HTML-Seite oder _WINDOW_ in einer XAML-Datei.
 
@@ -28,6 +30,7 @@ Im Anschluss folgen die “Rules”, die Regeln. Im Prinzip ist dies der (verein
 
 Im C# – Code wäre die Entsprechnung für die bisherigen Markup-Elemente also folgende:
 
+```
 partialclass UI\_Default { 
   public Color MyColor=new System.Color.White;
   private string MyString="Machts gut und Danke für den Fisch"; 
@@ -35,6 +38,7 @@ partialclass UI\_Default {
     MyText.Content=MyString; 
   } 
 }
+```
 
 Man sollte sich nicht dadurch verwirren lassen, dass “MyText” an dieser Position eigentlich nicht deklariert ist. Wir befinden uns schließlich nicht wirklich in einer Klasse oder Methode, sondern in der MCML-Definition. Vergleichbar ist dies mit einer WinForms-Anwendung. Auch hier kann ich im Quellcode auf die GUI-Element zugreifen, weil die Elemente “versteckt” in der Datei klasse.Designer.cs vorhanden sind. (Um dies zu verdeutlichen habe ich auch als Beispiel die “**_partial_** _class UI\_Default_” verwendet.Natürlich kann man alles, was im “Rules”-Bereich steht stattdessen auch direkt im Code erledigen. Allerdings hat die Verwendung von “Rules” drei klare Vorteile:
 
