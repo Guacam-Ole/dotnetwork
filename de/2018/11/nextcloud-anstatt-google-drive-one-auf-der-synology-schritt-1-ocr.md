@@ -20,40 +20,15 @@ Und dafür ist ein kleines aber feines PHP-Script zuständig namens "[FileBasedM
 
 Die Konfiguration ist relativ simpel und erfolgt über die config.php. Folgende Werte sind dabei interessant:
 
-\[bs\_row class="row"\]  
-\[bs\_col class="col-md-6"\]$doRenameAfterOCR\[/bs\_col\]  
-\[bs\_col class="col-md-6"\]Sorgt dafür, dass die Dateien nach der Regel "datum name tags" umbenannt werden. \[/bs\_col\]  
-\[/bs\_row\]
-
-\[bs\_row class="row"\]  
-\[bs\_col class="col-md-6"\]$doTagging\[/bs\_col\]  
-\[bs\_col class="col-md-6"\]Sorgt \*\*zusätzlich\*\* zum OCR dafür, dass Dokumente nach Tags einsortiert werden. Dafür muss der Dateiname aber bereits Tags enthalten. Nur in Kombi mit $tagsfolder . \[/bs\_col\]  
-\[/bs\_row\]
-
-\[bs\_row class="row"\]  
-\[bs\_col class="col-md-6"\]$matchWithoutOCR\[/bs\_col\]  
-\[bs\_col class="col-md-6"\]Gibt den Filter an, welche Dateien überprüft werden sollen. "\*" für alle Dateien eintragen.\[/bs\_col\]  
-\[/bs\_row\]
-
-\[bs\_row class="row"\]  
-\[bs\_col class="col-md-6"\]$dockercontainer\[/bs\_col\]  
-\[bs\_col class="col-md-6"\]Muss genauso lauten wie das Image. I.d.R. nicht anzupassen\[/bs\_col\]  
-\[/bs\_row\]
-
-\[bs\_row class="row"\]  
-\[bs\_col class="col-md-6"\]$inboxfolder\[/bs\_col\]  
-\[bs\_col class="col-md-6"\]Verzeichnis, in dem sich die zu prüfenden PDF-Dateien befinden. Unterverzeichnisse werden rekursiv durchsucht\[/bs\_col\]  
-\[/bs\_row\]
-
-\[bs\_row class="row"\]  
-\[bs\_col class="col-md-6"\]$OCRPrefix\[/bs\_col\]  
-\[bs\_col class="col-md-6"\]Wird nach dem OCR vor den Dateinamen geschrieben\[/bs\_col\]  
-\[/bs\_row\]
-
-\[bs\_row class="row"\]  
-\[bs\_col class="col-md-6"\]$recyclebin\[/bs\_col\]  
-\[bs\_col class="col-md-6"\]Hier werden nach dem OCR die Original-PDF dateien hin verschoben (inkl. der Verzeichnisstruktur). Wichtig: Bloß nicht als Unterverzeichnis der zu scannenden Dokumente, sonst wird es von dort erneut versucht zu OCRen. \[/bs\_col\]  
-\[/bs\_row\]
+|config|beschreibung|
+|-|-|
+|$doRenameAfterOCR|Sorgt dafür, dass die Dateien nach der Regel "datum name tags" umbenannt werden. |
+|$doTagging|Sorgt \*\*zusätzlich\*\* zum OCR dafür, dass Dokumente nach Tags einsortiert werden. Dafür muss der Dateiname aber bereits Tags enthalten. Nur in Kombi mit $tagsfolder .|
+|$matchWithoutOCR|Gibt den Filter an, welche Dateien überprüft werden sollen. "\*" für alle Dateien eintragen.|
+|$dockercontainer|Muss genauso lauten wie das Image. I.d.R. nicht anzupassen|
+|$inboxfolder|Verzeichnis, in dem sich die zu prüfenden PDF-Dateien befinden. Unterverzeichnisse werden rekursiv durchsucht|
+|$OCRPrefix|Wird nach dem OCR vor den Dateinamen geschrieben|
+|$recyclebin|Hier werden nach dem OCR die Original-PDF dateien hin verschoben (inkl. der Verzeichnisstruktur). Wichtig: Bloß nicht als Unterverzeichnis der zu scannenden Dokumente, sonst wird es von dort erneut versucht zu OCRen.|
 
 Die Felder $renamerules und $tagrules sollte man anpassen, bzw. einfach leeren, dass dort nur noch "=array();" steht.
 
