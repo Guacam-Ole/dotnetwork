@@ -12,9 +12,9 @@ tags:
 # Displaying Data from HomeMatic Actors on a WebInterface
 _Published:_ 11.07.2016 00:00:00
 
-_Categories_: [others](//en/categories#others)
+_Categories_: [others](/en/categories#others)
 
-_Tags_: [fhem](//en/tags#fhem) - [homematic](//en/tags#homematic) - [raspberry-pi](//en/tags#raspberry-pi)
+_Tags_: [fhem](/en/tags#fhem) - [homematic](/en/tags#homematic) - [raspberry-pi](/en/tags#raspberry-pi)
 
 
 This tutorial assumes that you already installed and configured FHEM and know how to use AngularJS.

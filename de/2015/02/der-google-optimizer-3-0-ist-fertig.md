@@ -13,9 +13,9 @@ tags:
 # Der Google+ - Optimizer 3.0 ist fertig!
 _Published:_ 22.02.2015 00:00:00
 
-_Categories_: [anwendungen](//de/categories#anwendungen) - [javascript-programmierung](//de/categories#javascript-programmierung) - [jquery-programmierung](//de/categories#jquery-programmierung)
+_Categories_: [anwendungen](/de/categories#anwendungen) - [javascript-programmierung](/de/categories#javascript-programmierung) - [jquery-programmierung](/de/categories#jquery-programmierung)
 
-_Tags_: [chrome-extensions](//de/tags#chrome-extensions) - [optimizer](//de/tags#optimizer)
+_Tags_: [chrome-extensions](/de/tags#chrome-extensions) - [optimizer](/de/tags#optimizer)
 
 
 Ja. Endlich ist es soweit. Version 3.0 wird auf die Menschheit (also Euch :) ) losgelassen. Die wesentlichen Änderungen zur 2er-Version im Überblick:

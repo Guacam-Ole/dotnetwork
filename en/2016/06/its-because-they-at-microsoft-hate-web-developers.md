@@ -11,9 +11,9 @@ tags:
 # It's because they at Microsoft hate web developers
 _Published:_ 14.06.2016 00:00:00
 
-_Categories_: [others](//en/categories#others)
+_Categories_: [others](/en/categories#others)
 
-_Tags_: [office365](//en/tags#office365) - [sharepoint-en](//en/tags#sharepoint-en)
+_Tags_: [office365](/en/tags#office365) - [sharepoint-en](/en/tags#sharepoint-en)
 
 
 That remark isn't mine, it is from StackOverflow. :)

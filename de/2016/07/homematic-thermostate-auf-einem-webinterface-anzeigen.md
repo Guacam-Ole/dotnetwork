@@ -17,9 +17,9 @@ tags:
 # HomeMatic - Thermostate auf einem WebInterface anzeigen
 _Published:_ 11.07.2016 00:00:00
 
-_Categories_: [javascript-programmierung](//de/categories#javascript-programmierung) - [linux](//de/categories#linux) - [os](//de/categories#os) - [php](//de/categories#php) - [programmierung](//de/categories#programmierung)
+_Categories_: [javascript-programmierung](/de/categories#javascript-programmierung) - [linux](/de/categories#linux) - [os](/de/categories#os) - [php](/de/categories#php) - [programmierung](/de/categories#programmierung)
 
-_Tags_: [fhem-de](//de/tags#fhem-de) - [home-automation-de](//de/tags#home-automation-de) - [homematic-de](//de/tags#homematic-de) - [raspberry-pi-de](//de/tags#raspberry-pi-de)
+_Tags_: [fhem-de](/de/tags#fhem-de) - [home-automation-de](/de/tags#home-automation-de) - [homematic-de](/de/tags#homematic-de) - [raspberry-pi-de](/de/tags#raspberry-pi-de)
 
 
 Dieses Tutorial setzt voraus, dass FHEM bereits installiert und konfiguriert ist und der Umgang mit AngularJS bekannt ist

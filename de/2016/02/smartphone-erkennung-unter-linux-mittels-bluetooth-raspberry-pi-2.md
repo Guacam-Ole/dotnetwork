@@ -11,9 +11,9 @@ tags:
 # Smartphone-Erkennung unter Linux mittels Bluetooth (Raspberry Pi 2)
 _Published:_ 27.02.2016 00:00:00
 
-_Categories_: [linux](//de/categories#linux)
+_Categories_: [linux](/de/categories#linux)
 
-_Tags_: [bluetooth-de](//de/tags#bluetooth-de) - [raspberry-pi-de](//de/tags#raspberry-pi-de)
+_Tags_: [bluetooth-de](/de/tags#bluetooth-de) - [raspberry-pi-de](/de/tags#raspberry-pi-de)
 
 
 Nachdem ich mein Smartphone mittels WiFi erkenne (was seit Android Marshmallow nicht mehr wie gewünscht funktioniert) und auch das Fitness-Armband Fitbit erkenne, bin ich jetzt zurück zum ursprünglichen Plan gekehrt, das Smartphone über Bluetooth zu erkennen.

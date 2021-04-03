@@ -14,9 +14,9 @@ tags:
 # IMAP-HTML-Autoresponder mit PHP
 _Published:_ 13.02.2015 00:00:00
 
-_Categories_: [php](//de/categories#php) - [programmierung](//de/categories#programmierung)
+_Categories_: [php](/de/categories#php) - [programmierung](/de/categories#programmierung)
 
-_Tags_: [autresponder](//de/tags#autresponder) - [imap-de](//de/tags#imap-de) - [php-de](//de/tags#php-de) - [swiftmailer-de](//de/tags#swiftmailer-de)
+_Tags_: [autresponder](/de/tags#autresponder) - [imap-de](/de/tags#imap-de) - [php-de](/de/tags#php-de) - [swiftmailer-de](/de/tags#swiftmailer-de)
 
 
 Jeder kennt spam. Jeder **hasst** spam. Und jeder, der seine E-Mail-Adresse im Internet veröffentlicht (z.B. weil er eine eigene Domain besitzt) bekommt **eine Menge** Spam.

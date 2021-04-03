@@ -18,9 +18,9 @@ tags:
 # Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise
 _Published:_ 13.12.2016 00:00:00
 
-_Categories_: [csharp](//en/categories#csharp) - [sharepoint-en](//en/categories#sharepoint-en)
+_Categories_: [csharp](/en/categories#csharp) - [sharepoint-en](/en/categories#sharepoint-en)
 
-_Tags_: [apps](//en/tags#apps) - [csom](//en/tags#csom) - [office365](//en/tags#office365) - [onpremise](//en/tags#onpremise) - [provider-hosted-add-in](//en/tags#provider-hosted-add-in) - [sharepoint-en](//en/tags#sharepoint-en) - [sharepoint2013](//en/tags#sharepoint2013) - [sharepoint2016](//en/tags#sharepoint2016)
+_Tags_: [apps](/en/tags#apps) - [csom](/en/tags#csom) - [office365](/en/tags#office365) - [onpremise](/en/tags#onpremise) - [provider-hosted-add-in](/en/tags#provider-hosted-add-in) - [sharepoint-en](/en/tags#sharepoint-en) - [sharepoint2013](/en/tags#sharepoint2013) - [sharepoint2016](/en/tags#sharepoint2016)
 
 
 What the fuzz is this about?

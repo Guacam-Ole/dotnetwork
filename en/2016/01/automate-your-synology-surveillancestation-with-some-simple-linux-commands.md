@@ -14,9 +14,9 @@ tags:
 # Automate your Synology Surveillancestation with some simple Linux - commands
 _Published:_ 07.01.2016 00:00:00
 
-_Categories_: [linux-en](//en/categories#linux-en) - [others](//en/categories#others)
+_Categories_: [linux-en](/en/categories#linux-en) - [others](/en/categories#others)
 
-_Tags_: [home-automation](//en/tags#home-automation) - [raspberry-pi](//en/tags#raspberry-pi) - [surveillance-station](//en/tags#surveillance-station) - [synology](//en/tags#synology)
+_Tags_: [home-automation](/en/tags#home-automation) - [raspberry-pi](/en/tags#raspberry-pi) - [surveillance-station](/en/tags#surveillance-station) - [synology](/en/tags#synology)
 
 
 I own a Synology diskstation which has the "surveillance station" on board which records content from any LAN (or WiFi)-enabled webcam and sends an alarm when someone is moving at my home. It is possible to enter time schedules when the camera should be enabled and when it shouldn't. But that does not really work the way I wanted. When I come home earlier or even have a day off I have to disable the camera manually.
