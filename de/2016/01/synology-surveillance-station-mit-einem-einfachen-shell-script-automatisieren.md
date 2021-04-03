@@ -29,7 +29,7 @@ Als erstes muss dafür gesorgt werden, dass das Smartphone im häuslichen WLAN i
 Zusätzlich sollte ein User auf der Synology angelegt werden. Theoretisch kann auch der vorhandene Admin-User verwendet werden, aber dessen Passwort im Klartext in ein Shell-Script zu schreiben ist eher nicht so prickelnd. Leider benötigt auch der User für das Script Adminrechte. Feinere Einstufungen zur Verwendung der Api habe ich leider noch nicht gefunden.
 
 Auf dem Raspberry (oder jeder beliebigen anderen Linux-Kiste) sollte dann das folgende Script erzeugt werden. Es beinhaltet nur Standardfunktionialitäten, sollte also auf jeder Linux-Distribution ohne weitere Pakete laufen:
-
+```
 user='pi'
 pass='circle'
 server='sauger:5000'
@@ -66,7 +66,7 @@ else
     echo \[${dt}\] 'Immer noch keine Sau da'
   fi
 fi
-
+```
 Die Paramater "user" und "pass" bestimmen natürlich die Zugangsdaten für die Synolgy.
 
 Unter "Server" wird die IP-Adresse oder der Hostname der Synology und die Portnummer eingetragen.
@@ -82,9 +82,9 @@ Nach dem gleichen Schema erfolgt die Aktivierung, wenn das Telefon nicht mehr ge
 Das Script erzeugt nur minimale Ausgaben. Sollte es zu Problemen kommen, sollten die "/dev/null" - Bereiche entfernt werden um die Ursache einzugrenzen.
 
 Bevor das Script nun gestartet werden kann, muss einmalig eine leere Datei erzeugt werden:
-
+```
 touch lgstate.txt
-
+```
 Jetzt kann das Script manuell durch "./pingPhone.sh" gestartet werden. Die Änderungen sind sofort in der Surveillance Station sichtbar, ohne dass die Website neu geladen werden muss.
 
 [![cam1](images/cam1.png)](http://dotnet.work/wp-content/uploads/2016/01/cam1.png)
@@ -92,13 +92,13 @@ Jetzt kann das Script manuell durch "./pingPhone.sh" gestartet werden. Die Ände
 Ist mehr als eine Kamera vorhanden, muss die Id in den Scripten bei "cameraIds" angepasst werden. Es sind auch mehrere Kameras gleichzeitig möglich, indem man die IDs durch Kommas trennt:  "&cameraIds=1,4,5"
 
 Wenn die Testläufe erfolgreich waren, kann der Cronjob dafür erstellt werden.
-
+```
 crontab -e
-
+```
 Öffnet den Editor und die folgende Zeile sorgt dafür, dass das Script automatisch alle 5 Minuten aufgerufen wird.
-
+```
 \*/15 \* \* \* \* /home/pi/pingPhone.sh >>/home/pi/pingPhone.log
-
+```
 (Der Pfad muss ggf. angepasst werden)
 
 Als letztes muss nur noch der Zeitplan auf der Surveillance Station angepasst werden, dass die Bewegungserkennung ständig aktiviert ist.
