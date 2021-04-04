@@ -6,7 +6,7 @@ Welcome to the personal (nerdy) blog from Ole Albers
 
 In this blog i write down some coding solution I found and maybe some other stuff, too. 
 
->> ## [Blog](/en) 
+##  >>> [Blog](/en) <<<
 ### [Categories](/en/categories) | [Tags](/en/tags)
 
 
