@@ -6,9 +6,8 @@ Welcome to the personal (nerdy) blog from Ole Albers
 
 In this blog i write down some coding solution I found and maybe some other stuff, too. 
 
-## [Archive](/en) | [Categories](/en/categories) | [Tags](/en/tags)
-
-
+>> ## [Blog](/en) 
+### [Categories](/en/categories) | [Tags](/en/tags)
 
 
 _(Hinweis: Es gibt ein paar **alte** Beiträge auf Deutsch, ich habe mich aber entschieden nur noch einspraching zu bloggen._
@@ -28,11 +27,11 @@ Just kidding. If I wrote something completely wrong simply open a [discusssion](
  
 ### More about me (external links)
 
-- [x] Resume, current employer and all the employers before that were brave enough to work with me on [LinkedId](https://www.linkedin.com/in/derbysieger/)
-- [x] My [StackOverflow](https://stackoverflow.com/users/680026) - site
-- [x] My Google+ - Page: (Just kidding. It has been a while but I still miss it)
-- [x] The Podcast [Blathering](https://blathering.de) (german)  - A weekly podcast about nerdy stuff and Hamburg and everything inbetween
-- [x] [FaceBook](/pix/serious.gif)
+-  Resume, current employer and all the employers before that were brave enough to work with me on [LinkedId](https://www.linkedin.com/in/derbysieger/)
+-  My [StackOverflow](https://stackoverflow.com/users/680026) - site
+-  My Google+ - Page: (Just kidding. It has been a while but I still miss it)
+-  The Podcast [Blathering](https://blathering.de) (german)  - A weekly podcast about nerdy stuff and Hamburg and everything inbetween
+-  [FaceBook](/pix/serious.gif)
 
 
 ### Things you don't find there
