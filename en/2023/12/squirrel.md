@@ -138,6 +138,7 @@ This creates the following toot:
 ### Waiting for approval
 This toot has only been sent to me privately (mastodon has no encryption so always keep that in mind about the "privacy" - part). I can then decide that this is a valid Squirrel detection by setting the "fav" star of that toot.
 
+### Keeping the state
 To be able to understand which previewtoot belongs to what webhook call I need to store the state. I uses LitDB for this. LiteDB is a **very** simple document database which needs no installation at all. It completely only lives within the NuGet-Package and the data is stored in a Bson-Format (Json, but compressed).
 It is a bit like simply serializing my contents and store it into a Json file. Just performing much better.
 
@@ -315,18 +316,101 @@ app.MapPost("/squirrel", async context =>
 ```
 
 
+## Checking for Notifications
+As mentioned the "approval workflow" (a big word for this simple mechanism, I know) is to wait for a fav. If the fav is received it means I decided this is a valid Squirrel detection and the video can be published.
 
+Also do not wait longer than 7 days. If I did not approve in that time, it probably is not a good video.
 
+Again using MastoNet I can receive the Notifications for that user:
+```csharp
+public async Task<List<Notification>> GetFavs()
+{
+  var favourites= new List<Notification>();
+  var client=Login();
+  var notifications=await client.GetNotifications();
+  foreach (var notification in notifications)
+  {
+    switch (notification.Type)
+    {
+      case "mention":
+        await client.PublishStatus($"Sorry. I am just a bot and will not respond to this. Ask {_approver} if you want to know anything about what I do", replyStatusId: notification.Id);
+        await client.DismissNotification(notification.Id);
+        break;
+      case "favourite":
+        favourites.Add(notification);
+        break;
+      default:
+        Console.WriteLine($"discarding notification of type {notification.Type}");
+        await client.DismissNotification(notification.Id);
+        break;
+    }
+  }
+  return favourites;
+}
+```
+
+The nofication.Status.Id now is the id we already stored in the Database and can use to find all known WebHook-Data of that event and send a new Toot. This time just with the Video file instead of the preview image.
 
 #### Why no Mstodon Webhooks?
 The Mastodon API also offers Webhooks. So instead of periodially polling for new notifications this could be used to receive the favs. The main reason why I did not use this (apart from the fact that polling is simply fast enough) is the fact that my application is not accessible from the outside. To allow this I would need to make my NAS (where the application is hosted) accessible from the Internet. And I do not want that. I could add Firewall rules to only allow specific ports and so on, but no access is even a bit better than a limited access. Even if noone would get through, just bots *trying* the flood my machine with requests is a headache I do not need.
 
+### Uploading the Video 
+After trying to uplaad the Video directly to Mastodon the next problem came up: The file was too big. While it was way inside the limits the upload (to the mastodon.social instance) just responded with an error "something went wrong". I suspect the Library to be the main issue as the Upload is not done async and so a timeout might be the cause. 
 
-### Accessing the surveillance folder
+That is why I decided to upload the Video to YouTube instead. YouTube provides APIs to do that. The main issue is that this also requires an OAuth authentication. Luckily the documentation for this are quite straight-forward so a simple Test worked fine:
+```csharp
+public async Task UploadVideo(Stream fileStream)
+{
+  var youtubeService = new YouTubeService(new BaseClientService.Initializer()
+  {
+      ApiKey = _apiKey,
+      ApplicationName = this.GetType().ToString()
+  });
+  
+  UserCredential credential;
+  using (var stream = new FileStream("secrets.json", FileMode.Open, FileAccess.Read))
+  {
+    credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets,new[] { YouTubeService.Scope.YoutubeUpload },"user",CancellationToken.None);
+  }
 
-(finding the correct file, waiting)
+  youtubeService = new YouTubeService(new BaseClientService.Initializer()
+  {
+      HttpClientInitializer = credential,
+      ApplicationName = Assembly.GetExecutingAssembly().GetName().Name
+  });
 
-### Uploading the Video to Mastodon/yt/etc
+  var video = new Video();
+  video.Snippet = new VideoSnippet();
+  video.Snippet.Title = "Squirrel detected";
+  video.Snippet.Description = "You should have bought a squirrel";
+  video.Snippet.Tags = new string[] { "squirrel" };
+  video.Snippet.CategoryId = "22"; 
+  video.Status = new VideoStatus
+  {
+      MadeForKids = false,
+      SelfDeclaredMadeForKids = false
+  };
+  video.Status.PrivacyStatus = "private"; 
+  var videosInsertRequest = youtubeService.Videos.Insert(video, "snippet,status", fileStream, "video/*");
+  videosInsertRequest.ProgressChanged += videosInsertRequest_ProgressChanged;
+  videosInsertRequest.ResponseReceived += videosInsertRequest_ResponseReceived;
 
+  await videosInsertRequest.UploadAsync();
+}
+private void videosInsertRequest_ResponseReceived(Video obj)
+{
+  Console.WriteLine($"done");
+}
+
+private void videosInsertRequest_ProgressChanged(IUploadProgress obj)
+{
+  Console.WriteLine($"Bytes: {obj.BytesSent}| Status: {obj.Status}");
+}
+```
+(secrets.json contains a client_id and client_secret for oauth)
+While uploading the `ProgressChanged` event gets fired a few times. Obj.Status cycles from Starting, Uploading to Completed. Which is also the Status when `ResponseReceived` is fired.
+
+
+Because I switched to YouTube I also changed the workflow a bit. Now I already upload the video when posting the preview toot as private on YouTube. So I can verify the complete contents before an approval. And YouTube can process the video while it is waiting for approval. At the end I just switch from `private` to `unlisted` if it is approved or delete the Video if no approval has been made.
 
 
