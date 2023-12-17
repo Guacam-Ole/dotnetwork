@@ -30,6 +30,7 @@
 - [Automate your Synology Surveillancestation with some simple Linux - commands](/en/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands)
 - [Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)](/en/2016/02/detecting-smartphone-via-bluetooth-on-linux-raspberry-pi-2)
 - [Displaying Data from HomeMatic Actors on a WebInterface](/en/2016/07/displaying-data-from-homematic-actors-on-a-webinterface)
+- [doof Pi 4: usB first!](/en/2023/12/squirrel)
 - [Getting rid of Proxy limitations using Fiddler](/en/2016/09/getting-rid-of-proxy-limitations-using-fiddler)
 - [It's because they at Microsoft hate web developers](/en/2016/06/its-because-they-at-microsoft-hate-web-developers)
 - [Raspberry Pi 4: usB first!](/en/2020/05/raspberry-pi-4-usb-first)

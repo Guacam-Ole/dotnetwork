@@ -137,6 +137,7 @@ namespace CreateNav
 
             foreach (var line in content)
             {
+                newFile.Add(line);
                 if (!inHeader && !afterHeader && line == "---")
                 {
                     inHeader = true;
