@@ -1,4 +1,4 @@
-cd .\CreateNav\bin\Debug\net5.0
+cd .\CreateNav\bin\Debug\net7.0
 CreateNav de Archiv
 CreateNav en Archive
 cd ..\..\..\..
