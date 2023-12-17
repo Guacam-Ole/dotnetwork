@@ -33,5 +33,5 @@ jobs:
       working-directory: ./createnav/CreateNav/CreateNav
       run: dotnet run --project ./CreateNav.csproj -- de Archiv
     - name: Archive EN
-      working-directory: ./createnav/CreateNav
-      run: dotnet run -- en Archive
+      working-directory: ./createnav/CreateNav/CreateNav
+      run: dotnet run --project ./CreateNav.csproj -- en Archive
