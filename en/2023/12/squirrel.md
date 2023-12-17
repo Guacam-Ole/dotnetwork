@@ -11,7 +11,7 @@ tags:
   - "socialmedia"
 ---
 
-
+[Disclaimer: This is not meant as a tutorial, more as some chitchat. You can find the source on github nonetheless, but I assume this is a VERY specific use case noone else uses]
 
 Let's start by telling you that this whole project ist utter nonsense. Noone really *needs* this feature. I decided to create this nonetheless.
 
@@ -44,8 +44,8 @@ I do not want my camera feed in the cloud from anyone. This should never leave m
 
 #### Put the camera in squirrel-height
 That was easy as there are some flowerboxes directly before the feeder where I mounted the cam
+![Photo from garden. A squirrelfeeder in the back, the camera on front](images/feeder.png)
 
-[IMAGE HERE]
 
 #### Have a simple approval workflow
 Because I mostly am at Mastodon at time of this writing (these sentences sometimes age very bad. A few months ago that would have been the artist formerly known as Twitter, which itself was just a replacement for Google+ which, well, you know the sad story). Let's just hope that was the last Social Media switch for me.
@@ -56,11 +56,12 @@ One of the advantages of Mastodon is that it has a very nice, simple API that al
 Adding the Webcam is quite simple. It nearly is found automatically in Surveillance station. Finding out how to connect was a bit harder. Username is always "admin" and the required password is a PIN. Printed onto the Power Plug, not the device...
 After that the App of the camera does not like the Camera anymore, which is bonus for  me as I do not want images to be uploaded to dlink, anyways.
 
-The detection area can be set in the Camera options. Fiddling with the thresholds takes a while, especially as I do not have a trained squirrel to assist me on that. I then changed the time plan to always motion detection (so disabling the constant recording) and updated the minimum record time to five minutes. A good comprimise between getting everything and not creating videos that are too big for mastodon/youtube/wherever I wanted to upload this, which I had not decided at this point
+The detection area can be set in the Camera options. ![Screenshot from "Motion Detection Area" within Surveillance Station](images/motiondetection.png) Fiddling with the thresholds takes a while, especially as I do not have a trained squirrel to assist me on that. I then changed the time plan to always motion detection (so disabling the constant recording) and updated the minimum record time to five minutes. A good comprimise between getting everything and not creating videos that are too big for mastodon/youtube/wherever I wanted to upload this, which I had not decided at this point
 
 Synology has multiple ways to notify about movements: Email, SMS, Push notifications and Webhooks. Obviously the last one was the way to go as it does not spam me in any way and I have to program stuff anyways.
 
 ## Writing a Webhook
+![Alt text](images/synowebhook.png)
 A webhook is just an HTTP-call essentially. Synology allows POST and PUT in Surveillance Station. So I created a simple Web Api in Visual Studio and was ready to debug the incoming data. 
 
 ### Firewalls, Firewalls everywhere!
@@ -72,12 +73,260 @@ So the next step was to connect to my synology via SSH and try to access my API 
 `wget https://192.168.178.23:6789/ping`
 
 This simple call already did not work. So must have been a firewall issue. I checked everything in my Synology configuration FOR A VERY LONG TIME and did find nothing. Finally I put my attention to Windows, disabled the Defender Firewall and it went through. Because I do not want to have the firewall open I added an exception through the "allow an app through windows firewall" and finally it did work with the firewall still enabled.
+![Windows Firewall Rules](images/firewall.png)
 
 ### Receiving data from the webhook
 
-The Webhook arrived as expected, has some informations in it and can even provide an url to a preview image. That image URL is a generated "public" (within my LAN) Address I am able to receive and download.
+The Webhook arrived as expected, has some informations in it and can even provide an url to a preview image. That image URL is a generated "public" (within my LAN) Address I am able to receive and download:
+
+```csharp
+app.MapPost("/squirrel", async context =>
+{
+    var requestBody = await context.Request.ReadFromJsonAsync<SynologyBody>();
+    if (requestBody != null)
+    {
+        if (!string.IsNullOrWhiteSpace(requestBody.Capture))
+        {
+            var previewImage = await downloader.DownloadFile(requestBody.Capture);                                    
+        }
+        else
+        {
+            Console.WriteLine("received event without image. Will ignore it");
+        }
+    }
+    await context.Response.WriteAsync("event received");
+});
+
+public class SynologyBody {
+  public string Subject { get; set; } 
+  public string Desc { get; set; } 
+  public string Capture { get; set; } 
+}
+```
+(Synology does not really care about the response but I found it useful when testing locally through Postman)
+
+At this point I do not have a video yet which is to be expected, as "normal" users would expect to receive the warning *immediately* and not five minutes *after* someone stole their nuts.
+
+### Send private notification to Mastodon
+After an event have been received the Image is downloaded and a message is sent to Mastodon using MastoNet:
+
+```csharp
+private MastodonClient Login()
+{
+    return new MastodonClient(_instance, _accessToken);
+}
+
+public async Task<Status?> SendPreview(Stream previewFile, DateTime notificationDate)
+{
+    var client = Login();
+    var text = $"{_approver} ALARM! Possible Squirrel detection! ALARM! #preview DATE:\n{notificationDate}\n";
+    var media=await client.UploadMedia(previewFile, "squirrel.png", "possibly a squirrel");
+    var status=await client.PublishStatus(text, Visibility.Direct, mediaIds: new[] {media.Id }); 
+    if (string.IsNullOrWhiteSpace(status.Id))
+    {
+        Console.WriteLine("Could not send preview");
+        return null;
+    }
+    Console.WriteLine($"Published to Mastodon with id {status.Id}");
+    return status;
+}
+```
+
+This creates the following toot:
+![Private Notification in Mastodon with previewimage](images/notasquirrel.png)
+
+### Waiting for approval
+This toot has only been sent to me privately (mastodon has no encryption so always keep that in mind about the "privacy" - part). I can then decide that this is a valid Squirrel detection by setting the "fav" star of that toot.
+
+To be able to understand which previewtoot belongs to what webhook call I need to store the state. I uses LitDB for this. LiteDB is a **very** simple document database which needs no installation at all. It completely only lives within the NuGet-Package and the data is stored in a Bson-Format (Json, but compressed).
+It is a bit like simply serializing my contents and store it into a Json file. Just performing much better.
+
+That is why the complete "database"-class is as simple as this:
+
+```csharp
+ public class DataBase
+    {
+        private const string _databaseName = @"Filename=squirrel.db;connection=shared";
+
+        public T GetContents<T>(string id)
+        {
+            using var db = new LiteDatabase(_databaseName);
+            return db.GetCollection<T>().FindById(new BsonValue(id));
+        }
+
+        public void RemoveContents<T>(string id)
+        {
+            using var db = new LiteDatabase(_databaseName);
+            db.GetCollection<T>().Delete(new BsonValue(id));
+        }
+
+        public void UpsertContents<T>(T contents)
+        {
+            using var db = new LiteDatabase(_databaseName);
+            db.GetCollection<T>().Upsert(contents);
+        }
+
+        public SquirrelData? FindByFilename(string filename)
+        {
+            using var db = new LiteDatabase(_databaseName);
+            return db.GetCollection<SquirrelData>().FindOne(q => q.ExpectedMovieFile == filename);
+        }
+    }
+```
+Now the data inside the Database contains the following stuff:
+```csharp
+public class SquirrelData
+    {
+        [BsonId]
+        public string Id { get; set; }  // First MastodonID
+        public string? PublicId { get; set; }
+
+        public DateTime EventReceived { get; set; }
+        public DateTime SentForApproval { get; set; }
+        public DateTime? SentPublic { get; set; }
+        public DateTime? Faved { get; set; }
+        public string? ExpectedMovieFile { get; set; }
+    }
+```
+The Id simply is the Id from the message just posted to mastodon. This object mostly contains Mastodon-Information and Information about the WebHook event. 
+
+As mentioned above the WebHook has no information about the Video that is created (or most likely: Is still being created when the WebHook is sent). So we simply have to find it. 
+The rules are quite simple: Within the directory with surveillance videos it is simply the newest file we can find.
+
+One problem remains: The preview image was within the WebHook and did not need authentication do be downloaded. The surveillance directory does need authentication. So I created a user for that specific purpouse allowed it to access the folder and needed to do some SMB-Stuff for authentication.
+
+I used the SMBLibrary for that. It isn't as straight forward as navigating through a filesystem, but it does work fine. First I have to connect using my credentials:
+
+```csharp
+ public void Connect()
+{
+    var smbClient = new SMB1Client(); 
+    bool isConnected = smbClient.Connect(IPAddress.Parse(_server), SMBTransportType.DirectTCPTransport);
+    if (isConnected)
+    {
+        NTStatus status = smbClient.Login(string.Empty, _username, _password);
+        if (status == NTStatus.STATUS_SUCCESS)
+        {
+            _smbClient=smbClient;
+            return;
+        }
+    }
+    throw new Exception("Connecting failed. Check your credentials");
+}
+```
+
+After successfully connecting I can access the share and search for the most current mp4-file recursively:
+
+```csharp
+     
+public string FindMostCurrentVideo()
+{
+    var store = _smbClient.TreeConnect("surveillance", out var status);
+    if (status != NTStatus.STATUS_SUCCESS) throw new Exception("Connecting to Share failed");
+    var mostCurrentFile=GetMostCurrentFileRec((SMB1FileStore)store, _startPath);
+    return Path.Combine(mostCurrentFile.Path, mostCurrentFile.Filename);
+}
+
+
+private MostCurrentFile GetMostCurrentFileRec(SMB1FileStore store, string folder)
+{
+    folder += "\\";
+    var mostCurrentFile = new MostCurrentFile { Created = DateTime.MinValue };
+
+    var status=store.QueryDirectory(out var subdirectoryList, folder, SMBLibrary.SMB1.FindInformationLevel.SMB_FIND_FILE_DIRECTORY_INFO);
+    if (status== NTStatus.STATUS_SUCCESS)
+    {
+        object directoryHandle;
+        FileStatus fileStatus;
+        status = store.CreateFile(out directoryHandle, out fileStatus, folder, AccessMask.GENERIC_READ, SMBLibrary.FileAttributes.Directory | SMBLibrary.FileAttributes.Normal, ShareAccess.Read | ShareAccess.Write, CreateDisposition.FILE_OPEN, CreateOptions.FILE_DIRECTORY_FILE, null); ;
+        if (status == NTStatus.STATUS_SUCCESS)
+        {
+            List<FindInformation> fileList2;
+            status = store.QueryDirectory(out fileList2, folder+ "*", FindInformationLevel.SMB_FIND_FILE_DIRECTORY_INFO);
+            var dirInfo = fileList2.Where(q => q.GetType() == typeof(FindFileDirectoryInfo)).Cast<FindFileDirectoryInfo>();
+            var subdirectories=dirInfo.Where(q=>q.ExtFileAttributes.HasFlag(ExtendedFileAttributes.Directory));
+            var files=dirInfo.Where(q => !q.ExtFileAttributes.HasFlag(ExtendedFileAttributes.Directory));
+            // Look for subdirectories and drill down to them:
+            foreach (var directory in subdirectories)
+            {
+                if (directory.FileName.Contains(".")) continue;
+                var mostCurrentSubFile = GetMostCurrentFileRec(store, Path.Combine(folder, directory.FileName));
+                if (mostCurrentSubFile.Created > mostCurrentFile.Created) mostCurrentFile = mostCurrentSubFile;
+            }
+
+            // Look for .mp4 - Files in current directory and check if they are newer than the most current file known:
+            foreach (var file in files.Where(q=>q.FileName.EndsWith(".mp4")))
+            {
+                if (file.CreationTime > mostCurrentFile.Created)
+                {
+                    mostCurrentFile = new MostCurrentFile
+                    {
+                        Created = file.CreationTime.Value,
+                        Filename = file.FileName,
+                        Path = folder
+                    };
+                }
+            }
+            status = store.CloseFile(directoryHandle);
+        }
+    }
+    return mostCurrentFile;
+}
+```
+At this point I do not need the filecontents itself, but only the path so I can use it lateron.
+
+After that we have the whole WebHook complete:
+* Reveive the Contents (including preview image) from the webhook
+* Determine which Video File matches 
+* CHeck if we already had this file (if within a video multiple webhooks are fired) and avoid duplicates
+* Send a notification to Mastodon
+* Store all known information into our database.
+
+So our Webhook from the beginning now looks like this:
+```csharp
+app.MapPost("/squirrel", async context =>
+{
+  var received = DateTime.Now;
+  Console.WriteLine("Received squirrel Event");
+  var requestBody = await context.Request.ReadFromJsonAsync<SynologyBody>();
+  if (requestBody != null)
+  {
+    if (!string.IsNullOrWhiteSpace(requestBody.Capture))
+    {
+      var previewImage = await downloader.DownloadFile(requestBody.Capture);
+      downloader.Connect();
+      string videoFilename = downloader.FindMostCurrentVideo() ?? throw new Exception("No Video Found");
+      var existingItem = database.FindByFilename(videoFilename);
+      if (existingItem != null)
+      {
+        Console.WriteLine($"'{videoFilename}' already processed with MastodonId {existingItem.Id}");
+        await context.Response.WriteAsync("duplicate event");
+        return;
+      }
+      var mastodonStatus = await mastodon.SendPreview(previewImage, received);
+      if (mastodonStatus != null)
+      {
+        database.UpsertContents(new SquirrelData { EventReceived = received, ExpectedMovieFile = videoFilename, Id = mastodonStatus.Id, SentForApproval = mastodonStatus.CreatedAt });
+      }
+    }
+  }
+  await context.Response.WriteAsync("event received");
+});
+```
 
 
 
 
-Nur ein Test
+
+#### Why no Mstodon Webhooks?
+The Mastodon API also offers Webhooks. So instead of periodially polling for new notifications this could be used to receive the favs. The main reason why I did not use this (apart from the fact that polling is simply fast enough) is the fact that my application is not accessible from the outside. To allow this I would need to make my NAS (where the application is hosted) accessible from the Internet. And I do not want that. I could add Firewall rules to only allow specific ports and so on, but no access is even a bit better than a limited access. Even if noone would get through, just bots *trying* the flood my machine with requests is a headache I do not need.
+
+
+### Accessing the surveillance folder
+
+(finding the correct file, waiting)
+
+### Uploading the Video to Mastodon/yt/etc
+
+
+
