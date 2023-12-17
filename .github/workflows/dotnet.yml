@@ -29,3 +29,9 @@ jobs:
     - name: Test
       working-directory: ./createnav/CreateNav
       run: dotnet test --no-build --verbosity normal
+    - name: Archive DE
+      working-directory: ./createnav/CreateNav
+      run: dotnet run -- de Archiv
+    - name: Archive EN
+      working-directory: ./createnav/CreateNav
+      run: dotnet run -- en Archive
