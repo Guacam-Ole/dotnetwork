@@ -2,7 +2,7 @@
   "profiles": {
     "CreateNav": {
       "commandName": "Project",
-      "commandLineArgs": "en Archiv"
+      "commandLineArgs": "en Archive"
     }
   }
 }

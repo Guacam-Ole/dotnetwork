@@ -86,7 +86,7 @@ namespace CreateNav
                 if (!isFirstElement) line += " - ";
                 isFirstElement = false;
                 string elementLower = element.ToLower();
-                line += $"[{elementLower}]({_config.DocumentRoot}/{_relativePath}/{path}#{elementLower})";
+                line += $"[{elementLower}]({_config.DocumentRoot}{_relativePath}/{path}#{elementLower})";
                 if (!globalElementList.ContainsKey(elementLower)) globalElementList.Add(elementLower, new List<Article>());
                 globalElementList[elementLower].Add(article);
             }
@@ -126,7 +126,7 @@ namespace CreateNav
        
         private bool UpdateArticle(string path, Article article)
         {
-            bool updateContents = article.ModifyVersion < new Version(0, 0, 1);
+            bool updateContents = article.ModifyVersion < new Version(0, 0, 2);
                         
             var newFile = new List<string>();
 

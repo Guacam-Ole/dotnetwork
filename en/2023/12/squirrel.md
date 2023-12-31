@@ -11,14 +11,15 @@ tags:
   - "synology"
   - "socialmedia"
 ---
-■ [.net.works](/) » [en](/en) » [2023](/en#2023)  » 12 » How to track a squirrel
+■ [.net.work](/) » [en](/en) » [2023](/en#2023)  » 12 » How to track a squirrel
 
 # How to track a squirrel
 _Published:_ 17/12/2023 00:00:00
 
-_Categories_: [csharp](//en/categories#csharp) - [development](//en/categories#development)
+_Categories_: [csharp](/en/categories#csharp) - [development](/en/categories#development)
 
-_Tags_: [mastodon](//en/tags#mastodon) - [bot](//en/tags#bot) - [synology](//en/tags#synology) - [socialmedia](//en/tags#socialmedia)
+_Tags_: [mastodon](/en/tags#mastodon) - [bot](/en/tags#bot) - [synology](/en/tags#synology) - [socialmedia](/en/tags#socialmedia)
+
 
 
 [Disclaimer: This is not meant as a tutorial, more as some chitchat. You can find the source on github nonetheless, but I assume this is a VERY specific use case noone else uses]
