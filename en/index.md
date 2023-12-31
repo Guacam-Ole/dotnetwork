@@ -1,11 +1,17 @@
-# Archiv 
+# Archive 
+
+## 2023
+
+### 12
+
+- [How to track a squirrel](/en/2023/12/squirrel)
+
 
 ## 2020
 
 ### 5
 
 - [Raspberry Pi 4: usB first!](/en/2020/05/raspberry-pi-4-usb-first)
-- [doof Pi 4: usB first!](/en/2023/12/squirrel)
 
 
 ## 2017

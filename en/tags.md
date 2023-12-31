@@ -9,6 +9,9 @@
 ## bluetooth
 - [Detecting Smartphone via Bluetooth on Linux (Raspberry Pi 2)](/en/2016/02/detecting-smartphone-via-bluetooth-on-linux-raspberry-pi-2)
 
+## bot
+- [How to track a squirrel](/en/2023/12/squirrel)
+
 ## cs
 - [FlashAir Downloader for Windows](/en/2014/09/flashair-downloader-for-windows)
 
@@ -45,6 +48,9 @@
 
 ## imap
 - [IMAP-HTML-Autoresponder with PHP](/en/2015/02/imap-html-php-autoresponder-autoreply)
+
+## mastodon
+- [How to track a squirrel](/en/2023/12/squirrel)
 
 ## office365
 - [It's because they at Microsoft hate web developers](/en/2016/06/its-because-they-at-microsoft-hate-web-developers)
@@ -91,6 +97,9 @@
 ## sharepoint2016
 - [Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise](/en/2016/12/two-apps-at-the-same-time)
 
+## socialmedia
+- [How to track a squirrel](/en/2023/12/squirrel)
+
 ## spam
 - [IMAP-HTML-Autoresponder with PHP](/en/2015/02/imap-html-php-autoresponder-autoreply)
 
@@ -106,5 +115,6 @@
 
 ## synology
 - [Automate your Synology Surveillancestation with some simple Linux - commands](/en/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands)
+- [How to track a squirrel](/en/2023/12/squirrel)
 - [Switching the LED of a surveillance cam on and off using Linux](/en/2016/01/switching-the-led-of-a-surveillance-cam-on-and-off-using-linux)
 
