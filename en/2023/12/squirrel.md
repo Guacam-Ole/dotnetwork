@@ -459,7 +459,7 @@ A single Line in the DockerFile and everything was working smoothly
 ### Fixing the Api
 The reduced Filesize did not solve the problem that Mastodon did not want to upload my file. So I digged a bit deeper into the Mastodon API. The media upload used by MastoNet seemed to marked as depricated (v1) exactly for the reason why I did not work in my project: It was meant for small preview images, not for Video files.
 
-A V2-Version (is available)[https://docs.joinmastodon.org/methods/media/#v2] but not implemented by MastoNet. So I forked the packages from Github and added a V2-Version:
+A V2-Version [is available](https://docs.joinmastodon.org/methods/media/#v2) but not implemented by MastoNet. So I forked the packages from Github and added a V2-Version:
 
 ```csharp
 public async Task<Attachment> UploadMediaAsync(MediaDefinition media, string? description = null,
@@ -526,7 +526,7 @@ So that was the last Pitfall. Now everything works:
 
 ## But WHY?
 
-I am **very** aware that this was mostly a waste of time. A lot of time for a simple "Lets show when there is a squirrel". Simone Gierts once did a great TED - Talk (Why you should make useless things)[https://www.youtube.com/watch?v=c0bsKc4tiuY]. While she talks about robots, by fun thing to do was alway coding. No matter how useless the results are.
+I am **very** aware that this was mostly a waste of time. A lot of time for a simple "Lets show when there is a squirrel". Simone Gierts once did a great TED - Talk ([hy you should make useless things](https://www.youtube.com/watch?v=c0bsKc4tiuY). While she talks about robots, by fun thing to do was alway coding. No matter how useless the results are.
 So: Yes. I totally agree with her. Creating stupid things just because it is fun, with noone asking why this takes so long and even be able to quit if something becomes boring is a nice diversion to the normal coding reality I have for paying the rent.
 
 I hope you also had some fun reading this; I had writing it :)
