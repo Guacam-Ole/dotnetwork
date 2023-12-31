@@ -8,11 +8,13 @@
 - [FlashAir Downloader for Windows](/en/2014/09/flashair-downloader-for-windows)
 - [FlashAirDownloader - development: Now it's your turn](/en/2017/01/flashairdownloader-development-now-its-your-turn)
 - [FlashAirDownloader 2](/en/2016/05/flashairdownloader-2)
+- [How to track a squirrel](/en/2023/12/squirrel)
 - [Two Apps at the same time: Deploy SharePoint Add-In to Cloud AND On-Premise](/en/2016/12/two-apps-at-the-same-time)
 
 ## development
 - [Emptying SharePoint lists the ultra fast way](/en/2012/08/emptying-sharepoint-lists-the-ultra-fast-way)
 - [Emptying SharePoint-List the (quite) fast way](/en/2012/08/emptying-sharepoint-list-the-quite-fast-way)
+- [How to track a squirrel](/en/2023/12/squirrel)
 - [IMAP-HTML-Autoresponder with PHP](/en/2015/02/imap-html-php-autoresponder-autoreply)
 - [SCRUM and Git: Optimized Gitflow // with a lot of fancy colors :)](/en/2015/03/scrum-and-git-optimized-gitflow-with-a-lot-of-fancy-colors)
 

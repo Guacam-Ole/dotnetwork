@@ -1,5 +1,12 @@
 # Archive 
 
+## 2023
+
+### 12
+
+- [How to track a squirrel](/en/2023/12/squirrel)
+
+
 ## 2020
 
 ### 5

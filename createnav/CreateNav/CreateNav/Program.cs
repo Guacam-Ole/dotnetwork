@@ -24,6 +24,7 @@ namespace CreateNav
             string archiveTitle = args[1];
             var markdownReader = new ReadMd(config, relativePath);
             var articles=markdownReader.ReadArticlesFromFolderRecursive(relativePath);
+            Console.WriteLine($"writing {markdownReader.Categories.Count} Categories and {markdownReader.Tags.Count} tags from {markdownReader.FileCount} files");
 
             var archiveFunctions = new Archive(config, relativePath, articles);
             archiveFunctions.WriteArchive(archiveTitle);

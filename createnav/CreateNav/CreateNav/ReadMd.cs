@@ -11,8 +11,9 @@ namespace CreateNav
         private readonly string _relativePath;
 
 
-        private readonly Dictionary<string, List<Article>> _categories = new();
-        private readonly Dictionary<string, List<Article>> _tags = new();
+        public readonly Dictionary<string, List<Article>> Categories = new();
+        public readonly Dictionary<string, List<Article>> Tags = new();
+        public int FileCount = 0;
 
         public ReadMd(Config config, string relativePath)
         {
@@ -41,7 +42,9 @@ namespace CreateNav
 
                 if (tagsAdded || breadCrumbAdded) UpdateVersionTag(path);
                 articles.Add(article);
+                FileCount++;
             }
+		
 
             WriteCategoryMarkdownFile();
             WriteTagMarkdownFile();
@@ -134,6 +137,7 @@ namespace CreateNav
 
             foreach (var line in content)
             {
+                newFile.Add(line);
                 if (!inHeader && !afterHeader && line == "---")
                 {
                     inHeader = true;
@@ -148,8 +152,8 @@ namespace CreateNav
                 newFile.Add($"# {article.Title}");
                 newFile.Add($"_Published:_ {article.Published}");
                 newFile.Add(string.Empty);
-                string categoryLine = CreateArticleTagLine(article, "Categories", "categories", article.Categories, _categories);
-                string tagLine = CreateArticleTagLine(article, "Tags", "tags", article.Tags, _tags);
+                string categoryLine = CreateArticleTagLine(article, "Categories", "categories", article.Categories, Categories);
+                string tagLine = CreateArticleTagLine(article, "Tags", "tags", article.Tags, Tags);
 
                 if (categoryLine != null)
                 {
@@ -175,11 +179,13 @@ namespace CreateNav
 
         private void WriteCategoryMarkdownFile()
         {
-            WriteMarkDownFileForGroupedArticles("Categories", "categories.md", _categories);
+		
+            WriteMarkDownFileForGroupedArticles("Categories", "categories.md", Categories);
         }
         private void WriteTagMarkdownFile()
         {
-            WriteMarkDownFileForGroupedArticles("Tags", "tags.md", _tags);
+			
+            WriteMarkDownFileForGroupedArticles("Tags", "tags.md", Tags);
         }
 
         private void WriteMarkDownFileForGroupedArticles(string title, string markdownFile, Dictionary<string, List<Article>> groupedArticles)
