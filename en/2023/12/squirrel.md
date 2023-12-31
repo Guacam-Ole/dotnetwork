@@ -351,10 +351,10 @@ public async Task<List<Notification>> GetFavs()
 
 The nofication.Status.Id now is the id we already stored in the Database and can use to find all known WebHook-Data of that event and send a new Toot. This time just with the Video file instead of the preview image.
 
-#### Why no Mstodon Webhooks?
+#### Why no Mastodon Webhooks?
 The Mastodon API also offers Webhooks. So instead of periodially polling for new notifications this could be used to receive the favs. The main reason why I did not use this (apart from the fact that polling is simply fast enough) is the fact that my application is not accessible from the outside. To allow this I would need to make my NAS (where the application is hosted) accessible from the Internet. And I do not want that. I could add Firewall rules to only allow specific ports and so on, but no access is even a bit better than a limited access. Even if noone would get through, just bots *trying* the flood my machine with requests is a headache I do not need.
 
-### Uploading the Video 
+## Uploading the Video 
 After trying to uplaad the Video directly to Mastodon the next problem came up: The file was too big. While it was way inside the limits the upload (to the mastodon.social instance) just responded with an error "something went wrong". I suspect the Library to be the main issue as the Upload is not done async and so a timeout might be the cause. 
 
 That is why I decided to upload the Video to YouTube instead. YouTube provides APIs to do that. The main issue is that this also requires an OAuth authentication. Luckily the documentation for this are quite straight-forward so a simple Test worked fine:
@@ -411,6 +411,112 @@ private void videosInsertRequest_ProgressChanged(IUploadProgress obj)
 While uploading the `ProgressChanged` event gets fired a few times. Obj.Status cycles from Starting, Uploading to Completed. Which is also the Status when `ResponseReceived` is fired.
 
 
-Because I switched to YouTube I also changed the workflow a bit. Now I already upload the video when posting the preview toot as private on YouTube. So I can verify the complete contents before an approval. And YouTube can process the video while it is waiting for approval. At the end I just switch from `private` to `unlisted` if it is approved or delete the Video if no approval has been made.
+Because I had to switch to YouTube I also changed the workflow a bit. Now I already upload the video when posting the preview toot as private on YouTube. So I can verify the complete contents before an approval. And YouTube can process the video while it is waiting for approval. At the end I just switch from `private` to `unlisted` if it is approved or delete the Video if no approval has been made for a period of time.
 
+
+### Another Pitfall
+YouTube does **not** allow using service accounts when uploading Videos. This was crucial for my application because this should run on a server. While the code above works I hit a dead end here. So back to Mastodon:
+
+### FfMpeg
+To reduce the filesize I went to FFMpeg. I can compress Videos and - if required - even resize them. Because I do not want to call something on the console, I needed a wrapper. I found FfmpegCore which does exactly what I want:
+```csharp
+public async Task<bool> ResizeVideo(string source, string target)
+{
+	return await FFMpegArguments
+		.FromFileInput(source)
+		.OutputToFile(target, true,
+		options=>options
+			.WithVideoCodec(VideoCodec.LibX265)
+			.WithVideoFilters(filter=>filter
+			.Scale(videoSize: FFMpegCore.Enums.VideoSize.FullHd)
+			)
+		.WithFastStart())
+		.ProcessAsynchronously();
+}
+```
+
+This tiny little piece of code takes any videofile, compresses it as h265 (using default quality settings) and resized it to FullHD (1080 height) maintaining the correvt aspect ratio.
+
+That all works fine on my machine, but because I want to host this (like all my bots) on my Synology-NAS I had to dockerize the contents.  I was in luck this time, but this also turned out to be quite easy:
+
+```
+RUN apt-get -y update && apt-get -y upgrade && apt-get install -y --no-install-recommends ffmpeg
+```
+
+A single Line in the DockerFile and everything was working smoothly
+
+### Fixing the Api
+The reduced Filesize did not solve the problem that Mastodon did not want to upload my file. So I digged a bit deeper into the Mastodon API. The media upload used by MastoNet seemed to marked as depricated (v1) exactly for the reason why I did not work in my project: It was meant for small preview images, not for Video files.
+
+A V2-Version (is available)[https://docs.joinmastodon.org/methods/media/#v2] but not implemented by MastoNet. So I forked the packages from Github and added a V2-Version:
+
+```csharp
+public async Task<Attachment> UploadMediaAsync(MediaDefinition media, string? description = null,
+AttachmentFocusData? focus = null)
+{
+	media.ParamName = "file";
+	var list = new List<MediaDefinition>() { media };
+	var data = new Dictionary<string, string>();
+	if (description != null)
+	{
+		data.Add("description", description);
+	}
+
+	if (focus != null)
+	{
+		data.Add("focus", $"{focus.X},{focus.Y}");
+	}
+
+	return await this.Post<Attachment>("/api/v2/media", data, list);
+}
+```
+This was confusingly easy as I simpy just replaced "v1" by "v2". Still it worked. Problem was: The next step, usually taking the returned Id and add this to a toot failed, because Mastodon was not finished, yet. I could simply have waited a long enough time, but decided to add a poll to receive status updates. Every Media of a known I can be requested. There is no statusflag about it processing but some properties give a hint:
+First there is the `previewUrl` this is filled at the very start after uploading. Tbe `Url`-Property, however *isn't*. This will always be Null until everything is processed. So just requesting the Media every 10 seconds until the Url is filled did the trick;
+
+```csharp
+public async Task<Attachment> WaitUntilMediaIsUploaded(Attachment attachment, int waitSeconds = 10, int maxWaitSeconds = 300)
+{
+	int totalTimeWasted = 0;
+	while (attachment.Id != null && attachment.Url == null && attachment.PreviewUrl != null && totalTimeWasted < maxWaitSeconds)
+	{
+		Thread.Sleep(waitSeconds * 1000);
+		totalTimeWasted += waitSeconds;
+		attachment = await GetMedia(attachment.Id);
+	}
+	return attachment;
+}
+
+public async Task<Attachment> GetMedia(string mediaId)
+{
+	var attachment = await this.Get<Attachment>("/api/v1/media/" + mediaId);
+	var prev = attachment.PreviewUrl;
+	var url = attachment.Url;
+	return attachment;
+}
+```
+
+# Finally
+
+
+So that was the last Pitfall. Now everything works:
+
+1. If a motion is detected my WebHook gets called
+2. The Webhook posts a previewimage as a direct toot (only be seen by me) to Mastodon including a Preview Image
+3. If "fav" the toot when this is a valid Squirrel detection
+4. The Bot checks for new Favs and finds mine
+5. The according Video is found in the LiteDB
+5. The Video gets downloaded via SMB-Stuff
+6. The Video gets Resized by FfMpeg
+7. The resized video gets uploaded to Mastodon
+8. A public toot containing the video is created
+
+(Using standard Mastodon-Features, all toots will get deleted after two weeks reducing the space required)
+
+
+## But WHY?
+
+I am **very** aware that this was mostly a waste of time. A lot of time for a simple "Lets show when there is a squirrel". Simone Gierts once did a great TED - Talk (Why you should make useless things)[https://www.youtube.com/watch?v=c0bsKc4tiuY]. While she talks about robots, by fun thing to do was alway coding. No matter how useless the results are.
+So: Yes. I totally agree with her. Creating stupid things just because it is fun, with noone asking why this takes so long and even be able to quit if something becomes boring is a nice diversion to the normal coding reality I have for paying the rent.
+
+I hope you also had some fun reading this; I had writing it :)
 
