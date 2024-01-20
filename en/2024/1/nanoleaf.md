@@ -18,8 +18,6 @@ _Categories_: [homeautomation](/en/categories#homeautomation)
 
 _Tags_: [homeassistant](/en/tags#homeassistant) - [homeautomation](/en/tags#homeautomation) - [nanoleaf](/en/tags#nanoleaf)
 
-■ [.net.work](/) » [en](/en) » [2023](/en#2023)  » 12 » How to track a squirrel
-
 # Setting single Panels on Nanoleaf using Home Assistant
 
 I went deep into Home Assistant automation currently and - as everybod knows who ever went this road - more ideas came up. So my newest idea was to use the Hex-Panels from Nanoleaf to display some information. For example if the washing machine is ready, I have an appointment, the Smartphone Battery gets low and so on.
