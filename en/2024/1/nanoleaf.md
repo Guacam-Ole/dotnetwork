@@ -1,19 +1,22 @@
 ---
-title: "Setting single Panels on NanoLeaf using HomeAssistant"
+title: "Setting single Panels on NanoLeaf using Home Assistant"
 date: "2024-1-20"
 categories: 
   - "homeautomation"
 tags:
-  - "hass"
   - "homeassistant"
   - "homeautomation"
   - "nanoleaf"
 ---
 ■ [.net.work](/) » [en](/en) » [2023](/en#2023)  » 12 » How to track a squirrel
 
-# Setting single Panels on Nanoleaf using Homeassistant
+# Setting single Panels on Nanoleaf using Home Assistant
 
 I went deep into Home Assistant automation currently and - as everybod knows who ever went this road - more ideas came up. So my newest idea was to use the Hex-Panels from Nanoleaf to display some information. For example if the washing machine is ready, I have an appointment, the Smartphone Battery gets low and so on.
+
+![NanoLeaf with different Colors on the wall](https://github.com/Guacam-Ole/dotnetwork/assets/4692497/eaa1c25f-8b92-420c-b71d-0eee8d6758ab)
+
+
 This entry describes how I managed to do that.
 
 _I collected all this information from different sources. THe most important was from sygys who posted the Home Assistant configuration: https://community.home-assistant.io/t/nanoleaf-per-tile-light-control-build-in-ha/442720
