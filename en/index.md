@@ -1,5 +1,12 @@
 # Archive 
 
+## 2024
+
+### 1
+
+- [Setting single Panels on NanoLeaf using Home Assistant](/en/2024/1/nanoleaf)
+
+
 ## 2023
 
 ### 12

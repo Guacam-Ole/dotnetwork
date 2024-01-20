@@ -1,4 +1,5 @@
 ---
+createnav: "0.0.2"
 title: "Setting single Panels on NanoLeaf using Home Assistant"
 date: "2024-1-20"
 categories: 
@@ -8,7 +9,14 @@ tags:
   - "homeautomation"
   - "nanoleaf"
 ---
-■ [.net.work](/) » [en](/en) » [2023](/en#2023)  » 12 » How to track a squirrel
+■ [.net.work](/) » [en](/en) » [2024](/en#2024)  » 1 » Setting single Panels on NanoLeaf using Home Assistant
+
+# Setting single Panels on NanoLeaf using Home Assistant
+_Published:_ 20/01/2024 00:00:00
+
+_Categories_: [homeautomation](/en/categories#homeautomation)
+
+_Tags_: [homeassistant](/en/tags#homeassistant) - [homeautomation](/en/tags#homeautomation) - [nanoleaf](/en/tags#nanoleaf)
 
 # Setting single Panels on Nanoleaf using Home Assistant
 
