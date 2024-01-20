@@ -18,6 +18,9 @@
 - [IMAP-HTML-Autoresponder with PHP](/en/2015/02/imap-html-php-autoresponder-autoreply)
 - [SCRUM and Git: Optimized Gitflow // with a lot of fancy colors :)](/en/2015/03/scrum-and-git-optimized-gitflow-with-a-lot-of-fancy-colors)
 
+## homeautomation
+- [Setting single Panels on NanoLeaf using Home Assistant](/en/2024/1/nanoleaf)
+
 ## linux-en
 - [Automate your Synology Surveillancestation with some simple Linux - commands](/en/2016/01/automate-your-synology-surveillancestation-with-some-simple-linux-commands)
 - [Control your Harmony Hub with a Raspberry Pi (Linux)](/en/2016/01/control-your-harmony-hub-with-a-raspberry-pi-linux)

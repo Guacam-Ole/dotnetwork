@@ -43,6 +43,12 @@
 - [Control your Harmony Hub with a Raspberry Pi (Linux)](/en/2016/01/control-your-harmony-hub-with-a-raspberry-pi-linux)
 - [Tracking fitbit presence under Linux (Raspberry Pi 2)](/en/2016/02/tracking-fitbit-presence-under-linux-raspberry-pi-2)
 
+## homeassistant
+- [Setting single Panels on NanoLeaf using Home Assistant](/en/2024/1/nanoleaf)
+
+## homeautomation
+- [Setting single Panels on NanoLeaf using Home Assistant](/en/2024/1/nanoleaf)
+
 ## homematic
 - [Displaying Data from HomeMatic Actors on a WebInterface](/en/2016/07/displaying-data-from-homematic-actors-on-a-webinterface)
 
@@ -51,6 +57,9 @@
 
 ## mastodon
 - [How to track a squirrel](/en/2023/12/squirrel)
+
+## nanoleaf
+- [Setting single Panels on NanoLeaf using Home Assistant](/en/2024/1/nanoleaf)
 
 ## office365
 - [It's because they at Microsoft hate web developers](/en/2016/06/its-because-they-at-microsoft-hate-web-developers)
