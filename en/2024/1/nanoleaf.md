@@ -85,7 +85,7 @@ Now you have to write down all PanelIds. At least those you want to modifiy. Bec
 
 ### Configure Rest in Home Assistant
 Go to your beloved Home Assistant Configuration (configuration.yaml) and add the following entries:
-{% comment %}
+{% raw %}
 ```
 rest_command:
   nanoleaf_wood:
@@ -117,7 +117,7 @@ rest_command:
       }
     content_type: "application/json"
 ```
-{% endcomment %}
+{% endraw %}
 Replace the IP with your Nenoleaf - IP and the secret with your secret (before "/effects"). It is up to you if you want one or more different calls. The numbers in the "set all" - part have to be replaced by the `panelId`s you retrieved earlier.
 
 What comes next is of course testing your config and then restarting Home Assistant.
